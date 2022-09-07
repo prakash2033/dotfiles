@@ -1,0 +1,9 @@
+#To ignore
+cache.db
+cache.db.lock
+history.search
+normal_user/ranger/.config/ranger/plugins/*
+normal_user/w3m/.w3m/cookie
+normal_user/w3m/.w3m/history
+normal_user/mpv/.config/mpv/watch_later/
+normal_user/newsboat/.newsboat/history.cmdline
