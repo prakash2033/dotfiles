@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles macos
 
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
