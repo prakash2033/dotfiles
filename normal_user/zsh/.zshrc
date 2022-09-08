@@ -48,6 +48,10 @@ cfg-history() { $EDITOR $HISTFILE ;}
 #
 # }}}
 
+#-------- For youtube-dl playback {{{
+unsetopt nomatch
+# }}}
+
 # -------- Aliases {{{
 alias h='cd $HOME && la' 
 alias dox='cd ~/Documents' 
@@ -79,8 +83,8 @@ alias ga='git add .'
 alias gc='git commit'
 alias gch='git checkout $(git branch | fzf)'
 alias gD='git branch -D $(git branch | fzf)'
-alias gd='git diff'
-alias gds='git diff --staged'
+alias gd='git diff --color | diff-so-fancy'
+alias gds='git diff --staged --color | diff-so-fancy'
 alias gs='git status'
 alias gp='git pull'
 alias gps='git push'
