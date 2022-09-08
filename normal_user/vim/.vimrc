@@ -23,7 +23,7 @@ set history=100                      " Keep 100 undo
 set wildmenu                         " Better command-line completion
 set scrolloff=10                     " Always keep 10 lines after or before when scrolling
 set sidescrolloff=5                  " Always keep 5 lines after or before when side scrolling
-set noshowmode                       " Don't display the current mode
+" set noshowmode                       " Don't display the current mode
 set gdefault                         " The substitute flag g is on
 set hidden                           " Hide the buffer instead of closing when switching
 set backspace=indent,eol,start       " The normal behaviour of backspace
