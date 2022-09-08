@@ -40,6 +40,10 @@ set fileencoding=utf-8               " The encoding written to file.
 set synmaxcol=300                    " Don't try to highlight long lines
 " set guioptions-=T                    " Don't show toolbar in Gvim
 
+" move thru word wrapped line
+nnoremap k gk
+nnoremap j gj
+
 " Open all cmd args in new tabs
 execute ":silent :tab all"
 
