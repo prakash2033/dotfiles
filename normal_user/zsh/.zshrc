@@ -47,3 +47,64 @@ cfg-history() { $EDITOR $HISTFILE ;}
 
 #
 # }}}
+
+# -------- Aliases {{{
+alias h='cd $HOME && la' 
+alias dox='cd ~/Documents' 
+alias dl='cd ~/Downloads' 
+alias px='cd ~/Pictures' 
+alias mu='cd ~/Music' 
+alias vv='cd ~/Videos' 
+alias sc='cd ~/.scripts' 
+alias cfg='cd ~/.config'  
+alias repo='cd ~/Public/gitrepo' 
+alias dot='cd ~/Public/gitrepo/dotfiles' 
+alias dotv2='cd ~/Public/gitrepo/dotfiles_v2' 
+alias notes='cd ~/Public/gitrepo/shownotes' 
+alias wiki='cd ~/Public/gitrepo/wiki' 
+
+alias dev='cd $HOME/dev'                                                       
+alias code='cd $HOME/code'                                             
+alias tos='cd $HOME/dev/tote-tocc-tos'                                      
+alias tosnew='cd $HOME/dev/tote-tocc-tos-new'                                  
+alias label='cd $HOME/dev/tote-tocc-labelservice'                            
+alias vin='cd $HOME/dev/tote-tocc-vin-service'                            
+alias software='cd $HOME/dev/tote-tocc-softwareservice'                        
+alias service='cd $HOME/dev/tote-tocc-services-ui'                          
+alias notifi='cd $HOME/dev/tote-tocc-notificationservice' 
+# }}} 
+
+# -------- Git {{{
+alias ga='git add .'
+alias gc='git commit'
+alias gch='git checkout $(git branch | fzf)'
+alias gD='git branch -D $(git branch | fzf)'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gs='git status'
+alias gp='git pull'
+alias gps='git push'
+alias glNoGraph='git log --color=always \
+--format="%C(cyan)%h%Creset %C(blue)%ar%Creset%C(auto)%d%Creset \
+%C(yellow)%s%+b %C(black)%ae%Creset" "$@"'
+
+_gitLogLineToHash="echo {} |
+grep -o '[a-f0-9]\{7\}' |
+head -1"
+
+_viewGitLogLine="$_gitLogLineToHash | 
+xargs -I % sh -c 'git show --color=always % | 
+diff-so-fancy'"
+
+glog() {  # search for commit with preview and copy hash
+  glNoGraph |
+      fzf -i -e --no-sort --reverse \
+          --tiebreak=index --no-multi \
+          --ansi --preview="$_viewGitLogLine" \
+          --header "enter: view, M-y: copy hash" \
+          --bind "enter:execute:$_viewGitLogLine   |
+          less -R" \
+          --bind "alt-y:execute:$_gitLogLineToHash |
+          xclip -r -selection clipboard"
+}
+# }}}
