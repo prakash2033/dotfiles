@@ -1,7 +1,19 @@
 alias ls='ls --color'
 autoload -U colors && colors
 export PS1="%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[green]%}$ %{$reset_color%}"
+setopt autocd   # Automatically cd into typed directory.
 
+# Basic auto/tab complete:
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
+
+# Load syntax highlighting; should be last.
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+# Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 fzf-history-widget() {
@@ -23,7 +35,7 @@ unsetopt caseglob
 
 # }}}
 
-#-------- History {{{
+-------- History {{{
 #------------------------------------------------------
 # get more info: $man zshoptions
 setopt APPEND_HISTORY
@@ -76,6 +88,10 @@ alias vin='cd $HOME/dev/tote-tocc-vin-service'
 alias software='cd $HOME/dev/tote-tocc-softwareservice'                        
 alias service='cd $HOME/dev/tote-tocc-services-ui'                          
 alias notifi='cd $HOME/dev/tote-tocc-notificationservice' 
+
+alias ytv='youtube-viewer'
+
+alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 # }}} 
 
 # -------- Git {{{
@@ -111,14 +127,4 @@ glog() {  # search for commit with preview and copy hash
           --bind "alt-y:execute:$_gitLogLineToHash |
           xclip -r -selection clipboard"
 }
-# }}}
-
-# -------- Perl for YouTube-Viewer {{{
-
-PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
-
 # }}}
