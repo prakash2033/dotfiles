@@ -35,7 +35,7 @@ unsetopt caseglob
 
 # }}}
 
--------- History {{{
+#-------- History {{{
 #------------------------------------------------------
 # get more info: $man zshoptions
 setopt APPEND_HISTORY
