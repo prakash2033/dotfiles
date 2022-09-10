@@ -38,6 +38,7 @@ set showbreak=↪
 set encoding=utf-8                   " The encoding displayed.
 set fileencoding=utf-8               " The encoding written to file.
 set synmaxcol=300                    " Don't try to highlight long lines
+set clipboard=unnamedplus
 " set guioptions-=T                    " Don't show toolbar in Gvim
 
 " move thru word wrapped line
