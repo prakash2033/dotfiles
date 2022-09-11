@@ -15,7 +15,7 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 set encoding=utf-8
 set fileencoding=utf-8 
 "}}}
