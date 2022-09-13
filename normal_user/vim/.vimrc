@@ -12,6 +12,7 @@ set incsearch
 set nohlsearch
 set ruler
 set cursorline
+set noshowmode
 set laststatus=2 
 set noswapfile
 set nobackup
@@ -39,6 +40,7 @@ Plug 'https://github.com/arcticicestudio/nord-vim.git'
 Plug 'https://github.com/sirver/UltiSnips'    " snippet program only, no code snippet provided
 Plug 'https://github.com/honza/vim-snippets'  " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'  " :help surround
+Plug 'https://github.com/itchyny/lightline.vim' "better statusbar"
 " Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
 call plug#end()
@@ -55,26 +57,6 @@ hi FoldColumn cterm=bold ctermfg=DarkBlue ctermbg=none
 
 "refocus folds; close any other fold except the one that you are on
 nnoremap ,z zMzvzz
-
-" folding hotkeys
-" S-v zf while in visual line mode create fold
-" C-v zf while is visual block mode create fold
-" zf#j   creates a fold from the cursor down numbers of lines.
-" zf/    string creates a fold from the cursor to string .
-" za     When on a closed fold, open it.and vice-versa.
-" zA     When on a closed fold, open it recursively.and vice-versa
-" zj     moves the cursor to the next fold.
-" zk     moves the cursor to the previous fold.
-" zo     opens a fold at the cursor.
-" zO     opens all folds at the cursor.
-" zm     increases the foldlevel by one.
-" zM     closes all open folds.
-" zr     decreases the foldlevel by one.
-" zR     decreases the foldlevel to zero -- all folds will be open.
-" zd     deletes the fold at the cursor.
-" zE     deletes all folds.
-" [z     move to start of open fold.
-" ]z     move to end of open fold.
 
 "}}}
 
@@ -126,6 +108,10 @@ map <leader>md :InstantMarkdownPreview<CR>
 "}}}
 
 "-------- Colorscheme and theme {{{
+if !has('gui_running')
+  set t_Co=256
+endif
+
 syntax enable
 set background=dark
 
