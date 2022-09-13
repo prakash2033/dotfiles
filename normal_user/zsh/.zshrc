@@ -80,7 +80,6 @@ alias notes='cd ~/Public/gitrepo/shownotes'
 alias wiki='cd ~/Public/gitrepo/wiki' 
 
 alias dev='cd $HOME/dev'                                                       
-alias code='cd $HOME/code'                                             
 alias tos='cd $HOME/dev/tote-tocc-tos'                                      
 alias tosnew='cd $HOME/dev/tote-tocc-tos-new'                                  
 alias label='cd $HOME/dev/tote-tocc-labelservice'                            
