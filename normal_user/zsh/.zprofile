@@ -13,7 +13,7 @@ export PATH="$PATH:$GOPATH/bin"
 export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 export LESS=$LESS" -S -R"
-export TERM="screen-256color"
+export TERM="xterm-256color"
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
