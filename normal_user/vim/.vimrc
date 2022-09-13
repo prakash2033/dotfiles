@@ -91,15 +91,15 @@ noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
 " Do this in normal mode...
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
+nnoremap <Left>  :echo "Use h"<CR>
+nnoremap <Right> :echo "Use l"<CR>
+nnoremap <Up>    :echo "Use k"<CR>
+nnoremap <Down>  :echo "Use j"<CR>
 " ...and in insert mode
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+inoremap <Left>  <ESC>:echo "Use h"<CR>
+inoremap <Right> <ESC>:echo "Use l"<CR>
+inoremap <Up>    <ESC>:echo "Use k"<CR>
+inoremap <Down>  <ESC>:echo "Use j"<CR>
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
