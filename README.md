@@ -1,5 +1,9 @@
-# dotfiles macos
+# dotfiles
 
+    # apps
+    sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
+    sudo apt install sassc gettext # for compiling pop os gtk theme
+    
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
