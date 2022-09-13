@@ -61,7 +61,8 @@ nnoremap ,z zMzvzz
 "}}}
 
 "-------- Keybindings {{{
-nnoremap <silent> <leader>l :set relativenumber! <bar> set nu!<CR>
+" toggle relative numbering
+nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 
 " Move thru word wrapped line 
 nnoremap k gk
@@ -72,16 +73,24 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-" Do this in normal mode...
-nnoremap <Left>  :echo "Use h"<CR>
-nnoremap <Right> :echo "Use l"<CR>
-nnoremap <Up>    :echo "Use k"<CR>
-nnoremap <Down>  :echo "Use j"<CR>
-" ...and in insert mode
-inoremap <Left>  <ESC>:echo "Use h"<CR>
-inoremap <Right> <ESC>:echo "Use l"<CR>
-inoremap <Up>    <ESC>:echo "Use k"<CR>
-inoremap <Down>  <ESC>:echo "Use j"<CR>
+" Remove newbie crutches in Insert Mode
+inoremap <Down> <Nop>
+inoremap <Left> <Nop>
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+
+" Remove newbie crutches in Normal Mode
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+
+" Remove newbie crutches in Visual Mode
+vnoremap <Down> <Nop>
+vnoremap <Left> <Nop>
+vnoremap <Right> <Nop>
+vnoremap <Up> <Nop>
+
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
