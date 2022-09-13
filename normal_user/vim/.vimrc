@@ -6,6 +6,8 @@ set expandtab
 set ai
 set number
 set relativenumber
+set ignorecase
+set smartcase
 set incsearch
 set nohlsearch
 set ruler
@@ -18,6 +20,9 @@ set undofile
 set clipboard+=unnamedplus
 set encoding=utf-8
 set fileencoding=utf-8 
+set shortmess+=I
+set backspace=indent,eol,start
+set hidden
 "}}}
 
 "-------- Plugins {{{
@@ -84,6 +89,17 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
+
+" Do this in normal mode...
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+" ...and in insert mode
+inoremap <Left>  <ESC>:echoe "Use h"<CR>
+inoremap <Right> <ESC>:echoe "Use l"<CR>
+inoremap <Up>    <ESC>:echoe "Use k"<CR>
+inoremap <Down>  <ESC>:echoe "Use j"<CR>
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
