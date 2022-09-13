@@ -79,6 +79,11 @@ nnoremap <silent> <leader>l :set relativenumber! <bar> set nu!<CR>
 " Move thru word wrapped line 
 nnoremap k gk
 nnoremap j gj
+
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
