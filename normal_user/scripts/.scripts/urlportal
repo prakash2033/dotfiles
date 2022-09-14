@@ -44,7 +44,7 @@
 #### }}}
 ########################## VARIABLE SECTION ########################## {{{
 DEFAULT="$BROWSER"
-VIDEO_QUEUE="tsp mpv --ontop --no-focus-on-open --no-border --force-window --autofit=500x280 --geometry=-15-53"
+VIDEO_QUEUE="ts mpv --ontop --no-focus-on-open --no-border --force-window --autofit=500x280 --geometry=-15-53"
 # VIDEO_QUEUE_ALT="ts quvi dump "$LINK" -b quiet --exec 'mpv %u'"
 # VIDEO_CLIP="mpv --loop --quiet --ontop --no-focus-on-open --no-border --force-window --autofit=900x600 --geometry=-15+60"
 VIDEO_CLIP="mpv --ontop --no-focus-on-open --no-border --force-window --autofit=900x600 --geometry=-15+60"
@@ -56,7 +56,7 @@ VIDEO_CLIP="mpv --ontop --no-focus-on-open --no-border --force-window --autofit=
 # IMAGECLI="feh -. -B black -g 900x600+260+160"
 IMAGECLI="feh -B black -Z --scale-down -g 1920x1080"
 # LIVEFEED='streamlink -p "mpv --cache 2048 --ontop --no-border --force-window --autofit=500x280 --geometry=-15-60"'
-LIVEFEED="tsp streamlink"
+LIVEFEED="ts streamlink"
 DDL_PATH=~/Downloads/plowshare
 DDL_QUEUE_FAST=~/.config/plowshare/queuefast.txt
 #### }}}
