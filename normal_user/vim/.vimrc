@@ -12,7 +12,6 @@ set incsearch
 set nohlsearch
 set ruler
 set cursorline
-set noshowmode
 set laststatus=2 
 set noswapfile
 set nobackup
@@ -40,7 +39,6 @@ Plug 'https://github.com/arcticicestudio/nord-vim.git'
 Plug 'https://github.com/sirver/UltiSnips'    " snippet program only, no code snippet provided
 Plug 'https://github.com/honza/vim-snippets'  " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'  " :help surround
-Plug 'https://github.com/itchyny/lightline.vim' "better statusbar"
 " Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
 call plug#end()
@@ -117,10 +115,6 @@ map <leader>md :InstantMarkdownPreview<CR>
 "}}}
 
 "-------- Colorscheme and theme {{{
-if !has('gui_running')
-  set t_Co=256
-endif
-
 syntax enable
 set background=dark
 
