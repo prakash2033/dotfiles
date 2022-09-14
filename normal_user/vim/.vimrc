@@ -17,13 +17,17 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-" set clipboard+=unnamedplus
 set clipboard^=unnamed,unnamedplus
 set encoding=utf-8
 set fileencoding=utf-8 
 set shortmess+=I
 set backspace=indent,eol,start
 set hidden
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 "}}}
 
 "-------- Plugins {{{
