@@ -1,7 +1,9 @@
+# -------- Prompt{{{
 alias ls='ls --color'
 autoload -U colors && colors
 export PS1="%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[green]%}$ %{$reset_color%}"
 setopt autocd   # Automatically cd into typed directory.
+# }}}
 
 # -------- Git Status RPrompt{{{
 # Load version control information
@@ -22,19 +24,23 @@ setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
 # }}}
 
-# Basic auto/tab complete:
+# -------- Basic auto/tab complete:{{{
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
+# }}}
 
+# -------- Source {{{
 # Load syntax highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# }}}
 
+# -------- History widget fzf{{{
 fzf-history-widget() {
   local selected
   if selected=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf -q "$LBUFFER" +s -e -i --tac --height 10% | sed 's/ *[0-9]* *//' ); then
@@ -44,7 +50,7 @@ fzf-history-widget() {
 }
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
-
+# }}}
 
 #-------- Globbing {{{
 #------------------------------------------------------
