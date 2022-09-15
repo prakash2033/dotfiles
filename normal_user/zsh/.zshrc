@@ -127,3 +127,8 @@ glog() {  # search for commit with preview and copy hash
           xclip -r -selection clipboard"
 }
 # }}}
+
+# -------- Functions {{{
+stop-umbrella() { sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
+start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
+# }}}
