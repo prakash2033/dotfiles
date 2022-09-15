@@ -4,6 +4,8 @@
     brew install font-jetbrains-mono-nerd-font
     brew install zsh-syntax-highlighting
     
+    touch ~/.hushlogin #remove last login on terminal start
+    
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
