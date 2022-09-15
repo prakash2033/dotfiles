@@ -3,6 +3,25 @@ autoload -U colors && colors
 export PS1="%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[green]%}$ %{$reset_color%}"
 setopt autocd   # Automatically cd into typed directory.
 
+# -------- Git Status RPrompt{{{
+# Load version control information
+autoload -Uz add-zsh-hook vcs_info
+add-zsh-hook precmd vcs_info
+
+# Enable checking for (un)staged changes, enabling use of %u and %c
+zstyle ':vcs_info:*' check-for-changes true
+# Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
+zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' stagedstr ' +'
+# Set the format of the Git information for vcs_info
+zstyle ':vcs_info:git:*' formats       ' %b%u%c'
+zstyle ':vcs_info:git:*' actionformats ' %b|%a%u%c'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+RPROMPT=\$vcs_info_msg_0_
+# }}}
+
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
