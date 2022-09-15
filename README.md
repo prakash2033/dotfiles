@@ -1,8 +1,7 @@
 # dotfiles
 
     # apps
-    sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
-    sudo apt install sassc gettext # for compiling pop os gtk theme
+    brew install font-jetbrains-mono-nerd-font
     
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
