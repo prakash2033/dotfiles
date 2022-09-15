@@ -34,7 +34,7 @@ _comp_options+=(globdots)		# Include hidden files.
 
 # -------- Source {{{
 # Load syntax highlighting; should be last.
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

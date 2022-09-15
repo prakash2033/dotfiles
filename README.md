@@ -2,6 +2,7 @@
 
     # apps
     brew install font-jetbrains-mono-nerd-font
+    brew install zsh-syntax-highlighting
     
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
