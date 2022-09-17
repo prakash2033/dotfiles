@@ -1,21 +1,46 @@
+# -------- Prompt{{{
 alias ls='ls --color'
 autoload -U colors && colors
 export PS1="%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[green]%}$ %{$reset_color%}"
 setopt autocd   # Automatically cd into typed directory.
+# }}}
 
-# Basic auto/tab complete:
+# -------- Git Status RPrompt{{{
+# Load version control information
+autoload -Uz add-zsh-hook vcs_info
+add-zsh-hook precmd vcs_info
+
+# Enable checking for (un)staged changes, enabling use of %u and %c
+zstyle ':vcs_info:*' check-for-changes true
+# Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
+zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' stagedstr ' +'
+# Set the format of the Git information for vcs_info
+zstyle ':vcs_info:git:*' formats       ' %b%u%c'
+zstyle ':vcs_info:git:*' actionformats ' %b|%a%u%c'
+
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+RPROMPT=\$vcs_info_msg_0_
+# }}}
+
+# -------- Basic auto/tab complete:{{{
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
+# }}}
 
+# -------- Source {{{
 # Load syntax highlighting; should be last.
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# }}}
 
+# -------- History widget fzf{{{
 fzf-history-widget() {
   local selected
   if selected=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf -q "$LBUFFER" +s -e -i --tac --height 10% | sed 's/ *[0-9]* *//' ); then
@@ -25,7 +50,7 @@ fzf-history-widget() {
 }
 zle     -N   fzf-history-widget
 bindkey '^R' fzf-history-widget
-
+# }}}
 
 #-------- Globbing {{{
 #------------------------------------------------------
@@ -126,4 +151,9 @@ glog() {  # search for commit with preview and copy hash
           --bind "alt-y:execute:$_gitLogLineToHash |
           xclip -r -selection clipboard"
 }
+# }}}
+
+# -------- Functions {{{
+stop-umbrella() { sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
+start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
 # }}}
