@@ -17,12 +17,17 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-set clipboard+=unnamedplus
+set clipboard^=unnamed,unnamedplus
 set encoding=utf-8
 set fileencoding=utf-8 
 set shortmess+=I
 set backspace=indent,eol,start
 set hidden
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 "}}}
 
 "-------- Plugins {{{
@@ -66,10 +71,10 @@ nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 nnoremap k gk
 nnoremap j gj
 
-noremap <Leader>y "*y
-noremap <Leader>p "*p
-noremap <Leader>Y "+y
-noremap <Leader>P "+p
+" noremap <Leader>y "*y
+" noremap <Leader>p "*p
+" noremap <Leader>Y "+y
+" noremap <Leader>P "+p
 
 " Remove newbie crutches in Insert Mode
 inoremap <Down> <Nop>
