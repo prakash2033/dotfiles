@@ -3,6 +3,7 @@
     # apps
     brew install font-jetbrains-mono-nerd-font
     brew install zsh-syntax-highlighting
+    brew install reattach-to-user-namespace
     
     touch ~/.hushlogin #remove last login on terminal start
     
