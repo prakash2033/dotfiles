@@ -9,6 +9,7 @@
     sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
     
     sudo apt install zsh zsh-syntax-highlighting
+    chsh -s /usr/bin/zsh
     
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
