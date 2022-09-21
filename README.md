@@ -8,7 +8,7 @@
     sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell- acpi xclip
     sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
     
-    sudo apt install tmux htop newsboat task-spooler python3-pip python-is-python3 rtv feh ranger imagemagick aptitude lynx bluez blueman gvfs-backends
+    sudo apt install tmux htop newsboat task-spooler python3-pip python-is-python3 rtv feh ranger imagemagick aptitude lynx bluez blueman gvfs-backends libxext-dev -y
     
     sudo apt install zsh zsh-syntax-highlighting
     chsh -s /usr/bin/zsh
