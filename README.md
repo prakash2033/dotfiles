@@ -8,6 +8,8 @@
     sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell- acpi xclip
     sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
     
+    sudo apt install zsh zsh-syntax-highlighting
+    
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
