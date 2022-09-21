@@ -4,6 +4,9 @@
     sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
     sudo apt install sassc gettext # for compiling pop os gtk theme
     
+    sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell- acpi xclip
+    sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
+    
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
