@@ -15,7 +15,7 @@
     # Clone repo
     mkdir -p ~/Public/gitrepo 
     cd ~/Public/gitrepo
-    git clone https://github.com/prakash2033/dotfiles_v2.git
+    git clone https://github.com/prakash2033/dotfiles.git
     
     ## symlink all folders (trailing slash */) in dotfiles dir to home dir
     cd ~/Public/gitrepo/dotfiles/normal_user
