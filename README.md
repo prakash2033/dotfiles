@@ -1,7 +1,7 @@
 # dotfiles
 
     # apps
-    sudo apt install curl stow git
+    sudo apt install curl stow git fzf
     sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
     sudo apt install sassc gettext # for compiling pop os gtk theme
     
