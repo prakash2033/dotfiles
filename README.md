@@ -1,6 +1,7 @@
 # dotfiles
 
     # apps
+    sudo apt install curl stow
     sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
     sudo apt install sassc gettext # for compiling pop os gtk theme
     
@@ -10,7 +11,12 @@
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+    
+    # Clone repo
+    mkdir -p ~/Public/gitrepo 
+    cd ~/Public/gitrepo
+    git clone https://github.com/prakash2033/dotfiles_v2.git
+    
     ## symlink all folders (trailing slash */) in dotfiles dir to home dir
     cd ~/Public/gitrepo/dotfiles/normal_user
     stow -v -t ~ */
