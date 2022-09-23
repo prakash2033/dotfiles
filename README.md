@@ -10,6 +10,8 @@
     
     sudo apt install tmux htop newsboat task-spooler python3-pip python-is-python3 rtv feh ranger imagemagick aptitude lynx bluez blueman gvfs-backends libxext-dev -y
     
+    pip3 install yt-dlp
+    
     sudo apt install zsh zsh-syntax-highlighting
     chsh -s /usr/bin/zsh
     
