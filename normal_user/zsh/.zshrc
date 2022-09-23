@@ -1,7 +1,7 @@
 # -------- Prompt{{{
 alias ls='ls --color'
 autoload -U colors && colors
-export PS1="%{$fg[green]%}%n@%m %{$fg[blue]%}%~ %{$fg[green]%}$ %{$reset_color%}"
+export PS1="%{$fg[green]%}[%D{%L:%M:%S%p} %{$fg[blue]%}%~ %{$fg[green]%}]$ %{$reset_color%}"
 setopt autocd   # Automatically cd into typed directory.
 # }}}
 
