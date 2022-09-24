@@ -4,12 +4,6 @@
 # | | | |  __/\ V  V /\__ \ |_) | (_) | (_| | |_ 
 # |_| |_|\___| \_/\_/ |___/_.__/ \___/ \__,_|\__|
 #                                          
-# DESC: Configuration and Themes for Newsboat
-# http://www.youtube.com/user/gotbletu
-# https://twitter.com/gotbletu
-# https://github.com/gotbletu
-# gotbletu@gmail.com
-
 #-------- settings {{{
 #------------------------------------------------------
 # http://blog.sanctum.geek.nz/rss-with-newsbeuter/
@@ -20,7 +14,7 @@ reload-time 150                     # update all feeds every x minutes
 reload-threads 4                    # parallel
 reload-only-visible-feeds yes       # manually reloading all feeds will only reload the currently visible feeds
 suppress-first-reload yes           # do not reload feeds on first startup
-# scrolloff 10                        # keep cursor above and below set line
+scrolloff 10                        # keep cursor above and below set line
 mark-as-read-on-hover yes
 notify-beep yes
 # user-agent "Liferea/1.4.14 (Linux; en_US.UTF8; http://liferea.sf.net/)"
