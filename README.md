@@ -4,6 +4,7 @@
     sudo apt install curl stow git fzf
     sudo apt install vim-gtk3 # run :echo has('clipboard') in vim to check if +clipboard available
     sudo apt install sassc gettext # for compiling pop os gtk theme
+    sudo apt install libfuse2 # for jetbrains toolbox run
     
     sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell- acpi xclip
     sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
