@@ -13,6 +13,12 @@
     
     pip3 install yt-dlp
     
+    # chromium-browser
+    sudo add-apt-repository ppa:savoury1/chromium -y
+    sudo add-apt-repository ppa:savoury1/ffmpeg4 -y
+    sudo apt-get update
+    sudo apt install chromium-browser -y
+    
     sudo apt install zsh zsh-syntax-highlighting
     chsh -s /usr/bin/zsh
     
