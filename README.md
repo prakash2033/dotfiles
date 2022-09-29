@@ -6,7 +6,7 @@
     sudo apt install sassc gettext # for compiling pop os gtk theme
     sudo apt install libfuse2 # for jetbrains toolbox run
     
-    sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell- acpi xclip
+    sudo apt install fonts-noto-color-emoji dconf-editor gnome-shell-extensions chrome-gnome-shell lm-sensors acpi xclip
     sudo apt install -y libssl-dev libffi-dev python3-dev build-essential
     
     sudo apt install tmux htop newsboat task-spooler python3-pip python-is-python3 rtv feh ranger imagemagick aptitude lynx bluez blueman gvfs-backends libxext-dev -y
