@@ -159,19 +159,19 @@ case "$LINK" in
 ########################## IMAGE SECTION ########################## {{{
     *22pixx.xyz/ia-*)
         LINK="$(echo "$LINK" | sed 's/ia-//g' | sed 's/\.html//g')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *bitpic.me/v/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<img src="\K[^"]+' | tail -n1 | while read -r line; do echo "https://bitpic.me/$line"; done)"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *blameless.work/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *blameless.work/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *dailyimages.xyz/*.html)
         # LINK="$(curl --data "submit=Continue to image..." --location "$LINK" | grep scaleImg | grep -oP 'img src="\K[^"]+')"
@@ -180,50 +180,49 @@ case "$LINK" in
         ;;
     *damimage.com/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *dimtus.com/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *discountxpic.xyz/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *discountxpic.xyz/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *.fastpic.ru/big/*)
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *erophotopixxx.com/*.html)
         LINK="$(curl -s "$LINK" |  grep '<img class' | head -n1 |  grep -oP 'src="\K[^"]+' | while read -r line; do echo "https://erophotopixxx.com$line"; done)"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *trans.firm.in//img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *trans.firm.in//upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *freebunker.com/*)
         LINK="${LINK/img\//tn\/i}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *freescreens.ru/allimage/*)
         LINK="${LINK/-thumb/}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *freescreens.ru/*)
         LINK="$(echo "$LINK/1/" | sed 's/freescreens.ru/picpic.online/')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *funimg.net/img*)
         LINK="$(curl --data "imgContinue=Click here to view image" --location "$LINK" | grep -oP 'var linkid="\K[^"]+' | while read -r line; do curl -s "$line" ; done | grep -oP 'src="\K[^"]+' | grep upload )"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *hdmoza.com//img*)
         # LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
@@ -232,28 +231,28 @@ case "$LINK" in
         ;;
     *hdmoza.com//upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *hotimage.uk/img*)
         # LINK="$(curl --data "imgContinue=Continue to image ..." --location "$(echo $LINK | sed 's@http://@https://www.@')" | grep centred | grep -oP 'src=\047\K[^\047]+')"
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "${LINK/http:\/\//https:\/\/www.}" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *hotimage.uk/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *hotsic.ru/img*)
         LINK="$(curl --data "imgContinue=Click To View The Image ... " --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pic.hotimg.site/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *ibb.co/*)
         LINK="$(lynx -listonly -nonumbers -dump "$LINK" | grep image)"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *iceimg.net/*)
         # LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
@@ -262,71 +261,71 @@ case "$LINK" in
         ;;
     *imagebam.com/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagecurl.com/viewer.php?file=*)
         LINK="$(echo "$LINK" | sed 's@https://@https://cdn.@' | sed 's@/viewer.php?file=@/images/@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagedecode.com/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagedecode.com/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagehub.pro/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagerar.com/t/*)
         LINK="${LINK/\/t/\/u}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagerar.com/imgy-u/*)
         LINK="$(echo "$LINK" | sed 's/imgy-u/u/g' | sed 's/.html//g')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagescomplete.xyz/image/*)
         LINK="$(lynx -source "$LINK" | grep embed-code-2 | grep -oP 'value="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imageshtorm.com/img*)
         LINK="$(curl -s "$LINK" | grep onclick | grep -oP '<a href=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imageshtorm.com/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imagespublic.tk/img*)
         LINK="$(lynx -source "$LINK" | grep -oP '<img src=\047\K[^\047]+' | sed 's/small/big/')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imageteam.org/*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     */imagetwist.com/*)
         LINK="$(curl -s "$LINK" | grep -oP '<p style="display: block; text-align:center;"><img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imageuploads.co.uk/image/*)
         LINK="$(lynx -source "$LINK" | grep image-viewer-container | grep -oP '<img src="\K[^"]+' | sed 's@\.md@@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *img-central.com/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *img2share.com/*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgadult.com/img*)
         LINK="$(curl -s "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+' | sed 's/small/big/')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgbaron.com/*.html)
         # LINK="$(curl --data "submit=Continue to image..." --location "$LINK" | grep scaleImg | grep -oP 'img src="\K[^"]+')"
@@ -335,23 +334,23 @@ case "$LINK" in
         ;;
     *imgbox.com/*)
         LINK="$(curl -s "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgclick.ru/allimage/*)
         LINK="${LINK/-thumb/}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgcris.com/*)
         LINK="$(lynx -listonly -nonumbers -dump "$LINK" | grep images)"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgdone.com/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgflip.com/i/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgfrost.net/*)
         # LINK="$(curl --data "submit=Continue to image..." --location "$LINK" | grep scaleImg | grep -oP 'img src="\K[^"]+')"
@@ -360,23 +359,23 @@ case "$LINK" in
         ;;
     *i.imghost.top/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgjazz.com/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgmak.com/image*)
         LINK="$(curl -s "$LINK" | grep -oP '<img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *new.imgmercy.com/image/*)
         LINK="$(lynx -source "$LINK" | grep image-viewer-container | grep -oP '<img src="\K[^"]+' | sed 's@\.md@@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgpeak.com/*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgsalem.com/*)
         # LINK="$(curl --data "imgContinue=Continue to image ... " --location "$LINK" | grep centred | grep -oP 'src="\K[^"]+')"
@@ -396,11 +395,11 @@ case "$LINK" in
     #     ;;
     *imgstudio.org/img*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgtornado.com/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imgtorrnt.in/view.php?id=*)
         # LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
@@ -408,24 +407,24 @@ case "$LINK" in
         tmux new-window -n pixcli && tmux send-keys "echo 'Last Tested: 9/13/19 Not Supported Javascript Website' && sleep 3 && tmux kill-pane" 'Enter'
         ;;
     *i.imgur.com/*| *imgur.com/*.*)
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
 # imgur multi links album/gallery (e.g https://imgur.com/a/5DhTEXV )
     *imgur.com/*)
         LINK="(lynx -source "$(echo $LINK | cut -d'#' -f1)" | grep post-image-container | grep -oP '<div id=\"\K[^\"]+' | while read line; do echo '%s\n' https://i.imgur.com/"\$line".png; done | urlview)"
-        tmux split-window && tmux send-keys "$LINK && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imguur.pictures/thumb-*)
         LINK="${LINK/thumb-/image-}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *imguur.pictures/share-*)
         LINK="$(echo "$LINK" | sed 's/share-/image-/' | sed 's/html/jpg/')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *instagram.com/p/*)
         LINK="$(curl -s "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *kvador.com/*)
         # LINK="$(curl --data "submit=Continue to image..." --location "$LINK" | grep scaleImg | grep -oP 'img src="\K[^"]+')"
@@ -434,27 +433,27 @@ case "$LINK" in
         ;;
     *money-pic.ru/allimage/*)
         LINK="${LINK/-thumb/}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *money-pic.ru/*)
         LINK="$(curl -s "$LINK/1/" | grep allimage | grep -oP '<img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *mstimg.com/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *nikapic.ru/upload/small/*)
         LINK="${LINK/small/big}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *i.nmfiles.com/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *orangepics.xyz/image/*)
         LINK="$(lynx -source "$LINK" | grep embed-code-2 | grep -oP 'value="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *picbaron.com/*.html)
         # LINK="$(curl --data "submit=Continue to image..." --location "$LINK" | grep scaleImg | grep -oP 'img src="\K[^"]+')"
@@ -463,87 +462,87 @@ case "$LINK" in
         ;;
     *picforall.ru/allimage/*)
         LINK="${LINK/-thumb/}"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *picforall.ru/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<img src="\K[^"]+' | grep "thumb" |sed 's/-thumb//')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *picfuture.com/*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *picmoza.com//img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pixcloud.ru/view*)
         LINK="$(curl -s "$LINK" | grep -oP '<img id="photo" src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *placeimg.net/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pornweb.xyz/*)
         LINK="$(curl -s "$LINK" | grep imagebam | grep -oP '<p><img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pornyfap.com/pic/*)
         LINK="$(curl -s "$LINK" | grep myImg | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *tk.imgsking.com/img-*)
         LINK="$(lynx -source "$LINK" | grep center | grep -oP '<img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pornbaker.men/image/*)
         LINK="$(lynx -source "$LINK" | grep image-viewer-container | grep -oP '<img src="\K[^"]+' | sed 's@\.md@@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *proimg.site/image/*)
         LINK="$(lynx -source "$LINK" | grep image-viewer-container | grep -oP '<img src="\K[^"]+' | sed 's@\.md@@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *putaimage.info/image/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *trafficimage.club/image/*)
         LINK="$(lynx -source "$LINK" | grep image-viewer-container | grep -oP '<img src="\K[^"]+' | sed 's@\.md@@')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *pbs.twimg.com/*)
         LINK="$LINK"
         # LINK="$(lynx -source "$LINK" | grep -oP '<img src="\K[^"]+' | sed 's@small@big@' )"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *ubapacola.xyz/img-*)
         LINK="$(curl -s "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *unporn.site/img*)
         LINK="$(lynx -source "$LINK" | grep -oP '<img src="\K[^"]+' | sed 's@small@big@' )"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *wallpaperspic.pw/*)
         LINK="$(curl -s "$LINK" | grep imagebam | grep -oP '<p><img src="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *xaoutchouc.live/img*)
         LINK="$(lynx -source "$LINK" | grep -oP '<img src=\047\K[^\047]+' | sed 's/small/big/')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *xxximagetpb.org/*)
         LINK="$(lynx -source "$LINK" | grep -oP '<meta property="og:image" content="\K[^"]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *xxxwebdlxxx.org/img*)
         LINK="$(curl --data "imgContinue=Continue to image ..." --location "$LINK" | grep centred | grep -oP 'src=\047\K[^\047]+')"
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *.jpg|*.jpeg|*.png|*:large)
-        tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
+        $IMAGECLI $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
 #### }}}
 ########################## AUDIO SECTION ########################## {{{
@@ -622,10 +621,10 @@ case "$LINK" in
         tmux new-window -n view && tmux send-keys "vim '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *.html)
-        tmux new-window -n browse && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
+        $DEFAULT $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
     *)
-        tmux new-window -n browse && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
+        $DEFAULT $LINK </dev/null >/dev/null 2>&1 & disown
         ;;
 #### }}}
 
