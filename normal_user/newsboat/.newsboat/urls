@@ -33,7 +33,9 @@
 
 "query:All Unread Articles:unread = \"yes\""
 "query:All Articles DDL-DataHoarder:tags # \"DDL-DataHoarder\"" "DDL-DataHoarder"
+"query:All Articles Linux:tags # \"Linux\"" "Linux"
 "query:All Articles Linux-Subreddit:tags # \"Linux-Subreddit\"" "Linux-Subreddit"
+"query:All Articles Mac:tags # \"Mac\"" "Mac"
 "query:All Articles Azure-Subreddit:tags # \"Azure-Subreddit\"" "Azure-Subreddit"
 "query:All Articles NSFW-Subreddit:tags # \"NSFW-Subreddit\"" "NSFW-Subreddit"
 "query:All Articles Popular-Subreddit:tags # \"Popular-Subreddit\"" "Popular-Subreddit"
@@ -68,7 +70,6 @@ https://www.reddit.com/r/commandline/.rss "Linux-Subreddit"
 https://www.reddit.com/r/unixporn/.rss "Linux-Subreddit"
 https://www.reddit.com/r/UsabilityPorn/.rss "Linux-Subreddit"
 https://www.reddit.com/r/pkgoftheday/.rss "Linux-Subreddit"
-https://www.reddit.com/r/gnu/.rss "Linux-Subreddit"
 https://www.reddit.com/r/pop_os/.rss "Linux-Subreddit"
 https://www.reddit.com/r/archlinux/.rss "Linux-Subreddit"
 https://www.reddit.com/r/linux_devices/.rss "Linux-Subreddit"
@@ -86,6 +87,13 @@ https://www.reddit.com/r/coolgithubprojects/.rss "Linux-Subreddit"
 https://www.reddit.com/r/selfhosted/.rss "Linux-Subreddit"
 
 # }}}
+# -------- Linux{{{
+http://feeds.feedburner.com/d0od "Linux" "OMG! Ubuntu!"
+https://www.linuxjournal.com/node/feed "Linux" "Linux Journal" 
+ # }}}
+ # -------- Mac{{{
+ http://9to5mac.com/feed/ "Mac" "9to5Mac"
+ # }}}
 # -------- Plex-Subreddit {{{
 
 https://www.reddit.com/r/PleX/.rss "Plex-Subreddit"
@@ -93,7 +101,6 @@ https://www.reddit.com/r/PleX/.rss "Plex-Subreddit"
 # }}}
 # -------- Azure-Subreddit {{{
 https://www.reddit.com/r/AZURE/.rss "Azure-Subreddit"
-
 # }}}
 # -------- NSFW-subreddit {{{
 https://www.reddit.com/r/leaked4u/.rss "NSFW-Subreddit"
@@ -103,12 +110,10 @@ https://www.reddit.com/r/nsfw/.rss "NSFW-Subreddit"
 https://www.reddit.com/r/popular/.rss "Popular-Subreddit"
 # }}}
 # -------- Web Development {{{
-
 https://www.reddit.com/r/webdev/.rss "Dev-Subreddit"
 https://www.reddit.com/r/dotnet/.rss "Dev-Subreddit"
 https://www.reddit.com/r/angular/.rss "Dev-Subreddit"
 https://www.reddit.com/r/kubernetes/.rss "Dev-Subreddit"
-
 # }}}
 #-------- News {{{
 
