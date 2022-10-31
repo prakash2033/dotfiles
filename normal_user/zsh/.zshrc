@@ -122,7 +122,7 @@ alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 # -------- Git {{{
 alias ga='git add .'
 alias gc='git commit'
-alias gch='git checkout $(git branch -a | fzf)'
+alias gch='git checkout $(git branch | fzf)'
 alias gD='git branch -D $(git branch | fzf)'
 alias gd='git diff --color | diff-so-fancy'
 alias gds='git diff --staged --color | diff-so-fancy'
