@@ -6,7 +6,8 @@
     # install git & stow
     brew install git stow
     
-    touch ~/.hushlogin #remove last login on terminal start
+    #remove last login on terminal start
+    touch ~/.hushlogin
     
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
