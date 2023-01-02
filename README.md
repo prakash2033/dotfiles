@@ -3,8 +3,8 @@
     # install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    # install git
-    brew install git
+    # install git & stow
+    brew install git stow
     
     touch ~/.hushlogin #remove last login on terminal start
     
