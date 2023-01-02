@@ -11,6 +11,11 @@
     # vim plug install. Run :PlugInstall inside vim
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    
+    ## clone repo
+    mkdir -p ~/Public/gitrepo
+    cd ~/Public/gitrepo
+    git clone https://github.com/prakash2033/dotfiles.git
 
     ## symlink all folders (trailing slash */) in dotfiles dir to home dir
     cd ~/Public/gitrepo/dotfiles/normal_user
