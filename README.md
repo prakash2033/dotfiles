@@ -3,10 +3,8 @@
     # install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-    # apps
-    brew install font-jetbrains-mono-nerd-font
-    brew install zsh-syntax-highlighting
-    brew install reattach-to-user-namespace
+    # install git
+    brew install git
     
     touch ~/.hushlogin #remove last login on terminal start
     
