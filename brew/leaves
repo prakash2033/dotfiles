@@ -18,4 +18,5 @@ telnet
 tmux
 vim
 wget
+zsh-autosuggestions
 zsh-syntax-highlighting
