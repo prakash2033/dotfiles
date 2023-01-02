@@ -1,9 +1,11 @@
 adoptopenjdk
 eloston-chromium
+font-jetbrains-mono-nerd-font
 git
 kindle
 obs
 qbittorrent
+reattach-to-user-namespace
 spotify
 vagrant
 virtualbox
@@ -11,3 +13,4 @@ visual-studio-code
 wireshark
 xquartz
 zotero
+zsh-syntax-highlighting
