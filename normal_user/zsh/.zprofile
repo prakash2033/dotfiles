@@ -7,7 +7,6 @@ export URLPORTAL=~/.scripts/urlportal
 export RTV_BROWSER=$URLPORTAL 
 export IMAGEVIEWER="feh" 
 export IMAGECLI="feh"
-export NVM_DIR="$HOME/.config/nvm"
 export GOPATH=~/.go
 export PATH="$PATH:$GOPATH/bin"
 export DOTNET_ROOT="$HOME/.dotnet"
@@ -19,9 +18,6 @@ export TERM="xterm-256color"
 export W3M_HOTKEY_OPTIONS=':O'
 export W3M_HOTKEY_LINK_BEGIN='f'
 export W3M_HOTKEY_RELOAD='r'
-
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -d "$HOME/.scripts" ] && PATH="$HOME/.scripts:$PATH" 
 [ -d "/usr/sbin" ] && PATH="/usr/sbin:$PATH"
