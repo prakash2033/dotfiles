@@ -1,6 +1,7 @@
 #To ignore
 cache.db
 cache.db.lock
+.DS_Store
 history.search
 normal_user/ranger/.config/ranger/plugins/*
 normal_user/w3m/.w3m/cookie
