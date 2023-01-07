@@ -37,7 +37,6 @@
 "query:All Articles Linux-Subreddit:tags # \"Linux-Subreddit\"" "Linux-Subreddit"
 "query:All Articles Mac:tags # \"Mac\"" "Mac"
 "query:All Articles Azure-Subreddit:tags # \"Azure-Subreddit\"" "Azure-Subreddit"
-"query:All Articles NSFW-Subreddit:tags # \"NSFW-Subreddit\"" "NSFW-Subreddit"
 "query:All Articles Popular-Subreddit:tags # \"Popular-Subreddit\"" "Popular-Subreddit"
 "query:All Articles Video-Linux:tags # \"Video-Linux\"" "Video-Linux"
 "query:All Articles YouTube-Videos:tags # \"YouTube-Videos\"" "YouTube-Videos"
@@ -101,10 +100,6 @@ https://www.reddit.com/r/PleX/.rss "Plex-Subreddit"
 # }}}
 # -------- Azure-Subreddit {{{
 https://www.reddit.com/r/AZURE/.rss "Azure-Subreddit"
-# }}}
-# -------- NSFW-subreddit {{{
-https://www.reddit.com/r/leaked4u/.rss "NSFW-Subreddit"
-https://www.reddit.com/r/nsfw/.rss "NSFW-Subreddit"
 # }}}
 # -------- Popular-subreddit {{{
 https://www.reddit.com/r/popular/.rss "Popular-Subreddit"
