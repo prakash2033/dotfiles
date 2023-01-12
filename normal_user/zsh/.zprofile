@@ -1,6 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
-export BROWSER="/Applications/Chromium.app/Contents/MacOS/Chromium"
+export BROWSER="open"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export URLPORTAL=~/.scripts/urlportal 
