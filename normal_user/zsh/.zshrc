@@ -1,9 +1,9 @@
 # -------- Prompt{{{
 alias ls='ls --color'
 autoload -U colors && colors
-# export PS1="%{$fg[green]%}[%D{%L:%M:%S%p} %{$fg[blue]%}%~ %{$fg[green]%}]$ %{$reset_color%}"
-# export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%(?.$fg[green].$fg[red])$%b%f " 
+export PS1="%{$fg[green]%}[%D{%L:%M:%S%p} %{$fg[blue]%}%~%{$fg[green]%}]$ %{$reset_color%}"
+#export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+#export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%(?.$fg[green].$fg[red])$%b%f " 
 setopt autocd   # Automatically cd into typed directory.
 # }}}
 
@@ -15,11 +15,13 @@ add-zsh-hook precmd vcs_info
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
 # Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
-zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' unstagedstr ' !'
 zstyle ':vcs_info:*' stagedstr ' +'
 # Set the format of the Git information for vcs_info
 zstyle ':vcs_info:git:*' formats       ' %b%u%c'
 zstyle ':vcs_info:git:*' actionformats ' %b|%a%u%c'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
+zstyle ':vcs_info:bzr:*' use-simple true
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
