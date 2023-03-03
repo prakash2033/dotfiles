@@ -143,6 +143,7 @@ alias gds='git diff --staged --color | diff-so-fancy'
 alias gs='git status'
 alias gp='git pull'
 alias gps='git push'
+alias gf='git fetch --all'
 alias glNoGraph='git log --color=always \
 --format="%C(cyan)%h%Creset %C(blue)%ar%Creset%C(auto)%d%Creset \
 %C(yellow)%s%+b %C(black)%ae%Creset" "$@"'
