@@ -15,13 +15,24 @@ add-zsh-hook precmd vcs_info
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
 # Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
-zstyle ':vcs_info:*' unstagedstr ' !'
-zstyle ':vcs_info:*' stagedstr ' +'
+zstyle ':vcs_info:*' unstagedstr '!'
+zstyle ':vcs_info:*' stagedstr '+'
 # Set the format of the Git information for vcs_info
 zstyle ':vcs_info:git:*' formats       ' %b%u%c'
 zstyle ':vcs_info:git:*' actionformats ' %b|%a%u%c'
 zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
 zstyle ':vcs_info:bzr:*' use-simple true
+
+ # Add up/down arrows after branch name, if there are changes to pull/to push
+    zstyle ':vcs_info:git+post-backend:*' hooks git-post-backend-updown
+    +vi-git-post-backend-updown() {
+      git rev-parse @{upstream} >/dev/null 2>&1 || return
+      local -a x; x=( $(git rev-list --left-right --count HEAD...@{upstream} ) )
+      hook_com[branch]+="%f" # end coloring
+      (( x[2] )) && hook_com[branch]+="↓"
+      (( x[1] )) && hook_com[branch]+="↑"
+      return 0
+    }
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
