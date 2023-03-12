@@ -1,4 +1,8 @@
 # -------- Prompt with Git Info{{{
+alias ls='ls --color'
+autoload -U colors && colors
+setopt autocd   # Automatically cd into typed directory.
+
 # Load version control information
 autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
@@ -6,7 +10,6 @@ precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
 setopt PROMPT_SUBST
-#PROMPT='%F{040}%n%f at %F{166}%m%f in F{031}${PWD/#$HOME/~}%f ${vcs_info_msg_0_} %{$fg_bold[white]%}>{$reset_color%}'
 export PS1='%F{040}%n%f %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%F{040}>%{$reset_color%} '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
@@ -43,10 +46,6 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
-
-alias ls='ls --color'
-autoload -U colors && colors
-setopt autocd   # Automatically cd into typed directory.
 # }}}
 
 #-------- Vim Mode {{{
