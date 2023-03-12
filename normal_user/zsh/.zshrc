@@ -1,27 +1,23 @@
-# -------- Prompt{{{
-alias ls='ls --color'
-autoload -U colors && colors
-# export PS1="%{$fg[green]%}[%n %{$fg[blue]%}%~%{$fg[red]%} $vcs_info_msg_0_ %{$fg[orange]%}]$ %{$reset_color%}"
-export PS1="%{$fg[green]%}[%n %{$fg[blue]%}%~%{$fg[green]%}]$ %{$reset_color%}"
-#export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
-#export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%(?.$fg[green].$fg[red])$%b%f " 
-setopt autocd   # Automatically cd into typed directory.
-# }}}
-
-# -------- Git Status RPrompt{{{
+# -------- Prompt with Git Info{{{
 # Load version control information
-autoload -Uz add-zsh-hook vcs_info
-add-zsh-hook precmd vcs_info
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info)
+
+# Set up prompt (with git branch name)
+setopt PROMPT_SUBST
+#PROMPT='%F{040}%n%f at %F{166}%m%f in F{031}${PWD/#$HOME/~}%f ${vcs_info_msg_0_} %{$fg_bold[white]%}>{$reset_color%}'
+export PS1='%F{040}%n%f %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%F{040}>%{$reset_color%} '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
 # Set custom strings for an unstaged vcs repo changes (*) and staged changes (+)
-zstyle ':vcs_info:*' unstagedstr '!'
-zstyle ':vcs_info:*' stagedstr '+'
+zstyle ':vcs_info:*' unstagedstr '%F{166}!'
+zstyle ':vcs_info:*' stagedstr '%F{040}+'
 # Set the format of the Git information for vcs_info
-zstyle ':vcs_info:git:*' formats       ' %b%u%c'
-zstyle ':vcs_info:git:*' actionformats ' %b|%a%u%c'
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%b:r%r'
+zstyle ':vcs_info:git:*' formats       '%F{011} %b%u%c%m'
+zstyle ':vcs_info:git:*' actionformats '%F{011} %b|%a%u%c'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{011}%b:r%r'
 zstyle ':vcs_info:bzr:*' use-simple true
 
  # Add up/down arrows after branch name, if there are changes to pull/to push
@@ -30,14 +26,27 @@ zstyle ':vcs_info:git+post-backend:*' hooks git-post-backend-updown
   git rev-parse @{upstream} >/dev/null 2>&1 || return
   local -a x; x=( $(git rev-list --left-right --count HEAD...@{upstream} ) )
   hook_com[branch]+="%f" # end coloring
-  (( x[2] )) && hook_com[branch]+="↓"
-  (( x[1] )) && hook_com[branch]+="↑"
+  (( x[2] )) && hook_com[branch]+="%F{040}↓"
+  (( x[1] )) && hook_com[branch]+="%F{166}↑"
   return 0
+}
+
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
++vi-git-untracked() {
+  if [[ $(git rev-parse --is-inside-work-tree 2> /dev/null) == 'true' ]] && \
+     git status --porcelain | grep -m 1 '^??' &>/dev/null
+  then
+    hook_com[misc]='%F{166}?'
+  fi
 }
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
+
+alias ls='ls --color'
+autoload -U colors && colors
+setopt autocd   # Automatically cd into typed directory.
 # }}}
 
 #-------- Vim Mode {{{
@@ -61,7 +70,7 @@ KEYTIMEOUT=1
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
     # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS1="%{$fg[green]%}${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
     RPS2=$RPS1
     zle reset-prompt
 }
