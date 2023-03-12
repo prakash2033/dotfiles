@@ -1,6 +1,7 @@
 # -------- Prompt{{{
 alias ls='ls --color'
 autoload -U colors && colors
+# export PS1="%{$fg[green]%}[%n %{$fg[blue]%}%~%{$fg[red]%} $vcs_info_msg_0_ %{$fg[orange]%}]$ %{$reset_color%}"
 export PS1="%{$fg[green]%}[%n %{$fg[blue]%}%~%{$fg[green]%}]$ %{$reset_color%}"
 #export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 #export PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}%(?.$fg[green].$fg[red])$%b%f " 
@@ -37,6 +38,49 @@ zstyle ':vcs_info:git+post-backend:*' hooks git-post-backend-updown
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
 RPROMPT=\$vcs_info_msg_0_
+# }}}
+
+#-------- Vim Mode {{{
+#------------------------------------------------------
+# enable vim mode on commmand line
+bindkey -v
+
+# edit command with editor
+# http://stackoverflow.com/a/903973
+# usage: type someshit then hit Esc+v
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# no delay entering normal mode
+# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
+# 10ms for key sequences
+KEYTIMEOUT=1
+
+# show vim status
+# http://zshwiki.org/home/examples/zlewidgets
+function zle-line-init zle-keymap-select {
+    # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# add missing vim hotkeys
+# fixes backspace deletion issues
+# http://zshwiki.org/home/zle/vi-mode
+bindkey -a u undo
+# bindkey -a '^R' redo  # conflicts with history search hotkey
+bindkey -a '^T' redo
+bindkey '^?' backward-delete-char #backspace
+
+# history search in vim mode
+# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+bindkey -M viins '^r' history-incremental-search-backward
+bindkey -M vicmd '^r' history-incremental-search-backward
+
 # }}}
 
 # -------- Basic auto/tab complete:{{{
