@@ -190,8 +190,6 @@ alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 # -------- Git {{{
 alias ga='git add .'
 alias gc='git commit'
-alias gch='git checkout $(git branch | fzf)'
-alias gchr='git checkout $(git branch -a | fzf | cut -c 18-)'
 alias gD='git branch -D $(git branch | fzf)'
 alias gd='git diff --color | diff-so-fancy'
 alias gds='git diff --staged --color | diff-so-fancy'
@@ -221,6 +219,10 @@ glog() {  # search for commit with preview and copy hash
           less -R" \
           --bind "alt-y:execute:$_gitLogLineToHash |
           xclip -r -selection clipboard"
+}
+
+gch() {
+  git checkout $(git branch -a | fzf | sed 's/remotes\/origin\///')
 }
 # }}}
 
