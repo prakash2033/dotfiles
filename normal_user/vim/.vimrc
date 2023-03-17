@@ -57,6 +57,7 @@ call plug#end()
 
 "-------- Folding {{{
 "------------------------------------------------------
+" za - open and close fold, zR - open all, zM - close all, zF - create fold
 " enable folding; http://vim.wikia.com/wiki/Folding
 set foldmethod=marker
 
