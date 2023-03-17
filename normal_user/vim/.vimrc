@@ -43,7 +43,8 @@ Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'https://github.com/arcticicestudio/nord-vim.git'
 Plug 'https://github.com/sirver/UltiSnips'    " snippet program only, no code snippet provided
 Plug 'https://github.com/honza/vim-snippets'  " code snippet of many programming language
-Plug 'https://github.com/tpope/vim-surround'  " :help surround
+Plug 'https://github.com/tpope/vim-surround'  " Help surround with :h
+Plug 'https://github.com/scrooloose/nerdtree' " File explorer
 " Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
 call plug#end()
@@ -94,6 +95,10 @@ vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
 
+" NerdTree keybinding
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
@@ -124,6 +129,12 @@ syntax enable
 set background=dark
 
 colorscheme gruvbox"
+"}}}
+
+"-------- NerdTree {{{
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+" Shift + I to show dotfiles
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 "}}}
 
 "-------- Auto source vimrc {{{
