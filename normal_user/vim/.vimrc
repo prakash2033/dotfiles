@@ -35,16 +35,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'https://github.com/vimwiki/vimwiki.git'
 Plug 'https://github.com/tomtom/tcomment_vim.git'
-Plug 'https://github.com/suan/vim-instant-markdown.git'
-" Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'https://github.com/suan/vim-instant-markdown', {'for': 'markdown'} " Install nodejs mini server by running  npm -g install instant-markdown-d
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'https://github.com/arcticicestudio/nord-vim.git'
-Plug 'https://github.com/sirver/UltiSnips'    " snippet program only, no code snippet provided
-Plug 'https://github.com/honza/vim-snippets'  " code snippet of many programming language
-Plug 'https://github.com/tpope/vim-surround'  " Help surround with :h
-Plug 'https://github.com/scrooloose/nerdtree' " File explorer
+Plug 'https://github.com/sirver/UltiSnips'               " snippet program only, no code snippet provided
+Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
+Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
+Plug 'https://github.com/scrooloose/nerdtree'            " File explorer
 
 "Git
 Plug 'https://github.com/airblade/vim-gitgutter'         " Git gutter
@@ -71,6 +70,7 @@ nnoremap ,z zMzvzz
 "}}}
 
 "-------- Keybindings {{{
+" Default vim leader \
 " toggle relative numbering
 nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 
