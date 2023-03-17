@@ -45,8 +45,14 @@ Plug 'https://github.com/sirver/UltiSnips'    " snippet program only, no code sn
 Plug 'https://github.com/honza/vim-snippets'  " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'  " Help surround with :h
 Plug 'https://github.com/scrooloose/nerdtree' " File explorer
-" Plug 'https://github.com/ctrlpvim/ctrlp.vim'
 
+"Git
+Plug 'https://github.com/airblade/vim-gitgutter'         " Git gutter
+Plug 'https://github.com/tpope/vim-fugitive'             " Git interface
+Plug 'https://github.com/tpope/vim-rhubarb'              " Enable GBrowse from fugitive for GitHub
+Plug 'https://github.com/junegunn/gv.vim'                " TIG like navigation for vim
+Plug 'https://github.com/xuyuanp/nerdtree-git-plugin'    " Show status of files in NerdTree
+Plug 'https://github.com/tveskag/nvim-blame-line'        " Add git blame on line
 call plug#end()
 "}}}
 
