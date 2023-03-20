@@ -18,8 +18,8 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{166}!'
 zstyle ':vcs_info:*' stagedstr '%F{040}+'
 # Set the format of the Git information for vcs_info
-zstyle ':vcs_info:git:*' formats       ' %F{011} %b%u%c%m'
-zstyle ':vcs_info:git:*' actionformats '%F{011} %b|%a%u%c'
+zstyle ':vcs_info:git:*' formats       ' %F{011}(%b%u%c%m%F{011})'
+zstyle ':vcs_info:git:*' actionformats '%F{011}(%b|%a%u%c%F{011})'
 zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{011}%b:r%r'
 zstyle ':vcs_info:bzr:*' use-simple true
 
