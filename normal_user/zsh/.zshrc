@@ -10,7 +10,7 @@ precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
 setopt PROMPT_SUBST
-export PS1='%{$fg[green]%}[%D{%L:%M:%S%p}] %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%(?.%F{040}.%F{red})$%{$reset_color%} '
+export PS1='%F{011}[%D{%L:%M:%S%p}] %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%(?.%F{040}.%F{red})$%{$reset_color%} '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
