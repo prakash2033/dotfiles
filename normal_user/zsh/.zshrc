@@ -10,7 +10,7 @@ precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
 setopt PROMPT_SUBST
-export PS1='%{$fg[green]%}[%D{%L:%M:%S%p}] %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%(?.%F{040}.%F{red})$%{$reset_color%} '
+export PS1='%F{green}[%D{%L:%M:%S%p}] %F{031}${PWD/#$HOME/~}%f${vcs_info_msg_0_} %{$reset_color%}%{$fs_bold[white]%}%(?.%F{green}.%F{red})$%{$reset_color%} '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -18,9 +18,9 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{166}!'
 zstyle ':vcs_info:*' stagedstr '%F{040}+'
 # Set the format of the Git information for vcs_info
-zstyle ':vcs_info:git:*' formats       ' %F{011}(%b%u%c%m%F{011})'
-zstyle ':vcs_info:git:*' actionformats '%F{011}(%b|%a%u%c%F{011})'
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{011}%b:r%r'
+zstyle ':vcs_info:git:*' formats       ' %F{yellow}(%b%u%c%m%F{yellow})'
+zstyle ':vcs_info:git:*' actionformats '%F{yellow}(%b|%a%u%c%F{yellow})'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{yellow}%b:r%r'
 zstyle ':vcs_info:bzr:*' use-simple true
 
  # Add up/down arrows after branch name, if there are changes to pull/to push
