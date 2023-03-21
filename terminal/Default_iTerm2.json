@@ -408,7 +408,12 @@
   },
   "Columns" : 80,
   "HotKey Alternate Shortcuts" : [
-
+    {
+      "charactersIgnoringModifiers" : "`",
+      "modifiers" : 0,
+      "keyCode" : 50,
+      "characters" : "`"
+    }
   ],
   "Visual Bell" : true,
   "Custom Directory" : "No",
