@@ -185,6 +185,7 @@ alias vin='cd $HOME/dev/tote-tocc-vin-service'
 alias software='cd $HOME/dev/tote-tocc-softwareservice'                        
 alias service='cd $HOME/dev/tote-tocc-services-ui'                          
 alias notifi='cd $HOME/dev/tote-tocc-notificationservice' 
+alias zos='cd $HOME/dev/tote-tocc-zos-connect' 
 
 alias ytv='youtube-viewer'
 
