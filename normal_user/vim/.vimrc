@@ -72,6 +72,8 @@ nnoremap ,z zMzvzz
 
 "-------- Keybindings {{{
 " Default vim leader \
+let mapleader=" "
+let maplocalleader=" "
 " toggle relative numbering
 nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 
