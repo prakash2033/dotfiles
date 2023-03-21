@@ -135,7 +135,8 @@ map <leader>md :InstantMarkdownPreview<CR>
 syntax enable
 set background=dark
 
-colorscheme gruvbox"
+colorscheme gruvbox
+
 "}}}
 
 "-------- NerdTree {{{
