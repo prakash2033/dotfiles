@@ -112,8 +112,8 @@ https://www.reddit.com/r/kubernetes/.rss "Dev-Subreddit"
 # }}}
 #-------- News {{{
 
-# https://feeds.thelocal.com/rss/se "News"
-https://morss.it/https://feeds.thelocal.com/rss/se "News"
+https://feeds.thelocal.com/rss/se "News"
+# https://morss.it/https://feeds.thelocal.com/rss/se "News"
 https://www.nagpurtoday.in/latest-news/rss "News"
 # https://news.google.com/rss?hl=en-IN&gl=IN&ceid=IN:en "News"
 # https://news.google.com/rss/search?q=volvo%20cars&hl=en-IN&gl=IN&ceid=IN:en "News"
