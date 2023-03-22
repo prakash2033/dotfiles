@@ -95,14 +95,6 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 
 # }}}
 
-# -------- Basic auto/tab complete:{{{
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-# }}}
-
 # -------- Source {{{
 # Load syntax highlighting; should be last.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -110,6 +102,18 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Brew Shell Completion for 
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+# }}}
+
+# -------- Basic auto/tab complete:{{{
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 # }}}
 
 # -------- History widget fzf{{{
