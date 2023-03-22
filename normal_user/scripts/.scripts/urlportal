@@ -577,6 +577,10 @@ case "$LINK" in
 #### }}}
 ########################## OTHER SECTION ########################## {{{
 
+# Afttonbladet News website
+    *www.aftonbladet.se/nyheter/a/*)
+        open -a Google\ Chrome $LINK </dev/null >/dev/null 2>&1 & disown
+        ;;
 # reddit comments
     *reddit.com/r/*/comments/*)
         tmux new-window -n rtv && tmux send-keys "rtv -l $LINK && tmux kill-pane" 'Enter'
