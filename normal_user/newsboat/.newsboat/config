@@ -16,7 +16,7 @@
 #
 #notify-xterm yes
 auto-reload yes                     # auto reload or use crontab instead ( 0 */2 * * * /usr/bin/newsboat -x reload )
-reload-time 150                     # update all feeds every x minutes
+reload-time 30                      # update all feeds every x minutes
 reload-threads 4                    # parallel
 reload-only-visible-feeds yes       # manually reloading all feeds will only reload the currently visible feeds
 suppress-first-reload yes           # do not reload feeds on first startup
