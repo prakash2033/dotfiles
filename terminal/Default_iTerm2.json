@@ -25,7 +25,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.85882353782653809
   },
-  "HotKey Window Floats" : true,
+  "HotKey Window Floats" : false,
   "Right Option Key Sends" : 0,
   "Character Encoding" : 4,
   "Selection Color" : {
