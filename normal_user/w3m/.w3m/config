@@ -71,7 +71,7 @@ urimethodmap ~/.w3m/urimethodmap, /opt/homebrew/Cellar/w3m/0.5.3_7/etc/w3m/urime
 editor /usr/bin/vi
 mailto_options 1
 mailer 
-extbrowser /usr/bin/firefox
+extbrowser $BROWSER
 extbrowser2 
 extbrowser3 
 extbrowser4 
