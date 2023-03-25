@@ -23,3 +23,5 @@ vim
 wget
 zsh-autosuggestions
 zsh-syntax-highlighting
+poppler
+ffmpegthumbnailer
