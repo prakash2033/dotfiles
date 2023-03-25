@@ -7,3 +7,6 @@
 
 
 keymap  e       EXTERN_LINK ~/.scripts/urlportal
+keymap  C-d     NEXT_HALF_PAGE
+keymap  C-u     PREV_HALF_PAGE
+
