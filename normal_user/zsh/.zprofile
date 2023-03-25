@@ -1,5 +1,6 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
+export FZF_DEFAULT_COMMAND='find .'
 export BROWSER="open"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 

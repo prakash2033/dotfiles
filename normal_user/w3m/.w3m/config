@@ -78,7 +78,7 @@ urimethodmap ~/.w3m/urimethodmap, /usr/etc/w3m/urimethodmap
 editor $EDITOR
 mailto_options 1
 mailer /usr/bin/mail
-extbrowser ~/.scripts/ninjutsu/urlportal
+extbrowser ~/.scripts/urlportal
 extbrowser2
 extbrowser3
 extbrowser4
