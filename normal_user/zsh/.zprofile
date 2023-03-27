@@ -27,6 +27,13 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 
+# -------- Task Spooler {{{
+
+find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};done;return 1; }   
+export SPOOL=$(find_spool ts tsp)
+
+# }}}
+
 # -------- Perl for YouTube-Viewer {{{    
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;

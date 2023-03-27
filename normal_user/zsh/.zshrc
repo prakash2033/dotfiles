@@ -12,7 +12,7 @@ precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
 setopt PROMPT_SUBST
-export PS1='%F{green}[%D{%L:%M:%S%p}]%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{green}.%F{red})$%{$reset_color%} '
+export PS1='%F{green}[%D{%L:%M:%S%p}]%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{green}.%F{red})$%F{$reset_color%}%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -104,7 +104,10 @@ source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Brew Shell Completion for 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 
 # }}}
 
