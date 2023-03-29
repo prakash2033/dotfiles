@@ -9,7 +9,7 @@
     # remove last login on terminal start
     touch ~/.hushlogin
     
-    # vim plug install. Run :PlugInstall inside vim
+    # vim plug install. Run :PlugInstall inside vim. Install vim-gtk aka gvim in linux
     curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     
