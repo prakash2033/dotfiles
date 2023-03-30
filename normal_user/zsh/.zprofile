@@ -28,6 +28,18 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 
+# -------- Add colors to the less and man commands {{{
+export LESS=-R
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESS_TERMCAP_mb=$'\e[1;31mm'    # begin blinking
+export LESS_TERMCAP_md=$'\e[1;36m'     # begin bold
+export LESS_TERMCAP_us=$'\e[1;332m'    # begin underline
+export LESS_TERMCAP_so=$'\e[1;44;33m'  # begin standout-mode - info box
+export LESS_TERMCAP_me=$'\e[0m'        # end mode
+export LESS_TERMCAP_ue=$'\e[0m'        # end underline
+export LESS_TERMCAP_se=$'\e[0m'        # end standout-mode
+# }}}
+
 # -------- Perl for YouTube-Viewer {{{    
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
@@ -37,5 +49,7 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 # }}} 
 
 # -------- Set PATH, MANPATH, etc., for Homebrew. {{{ 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+#
+[ -d "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # }}} 
