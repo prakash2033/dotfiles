@@ -106,6 +106,15 @@ vnoremap <Left> <Nop>
 vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
 
+" CTRL-Tab is next tab
+noremap <C-Tab> :<C-U>tabnext<CR>
+inoremap <C-Tab> <C-\><C-N>:tabnext<CR>
+cnoremap <C-Tab> <C-C>:tabnext<CR>
+" CTRL-SHIFT-Tab is previous tab
+noremap <C-S-Tab> :<C-U>tabprevious<CR>
+inoremap <C-S-Tab> <C-\><C-N>:tabprevious<CR>
+cnoremap <C-S-Tab> <C-C>:tabprevious<CR>
+
 " NerdTree keybinding
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
