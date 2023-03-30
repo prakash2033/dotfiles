@@ -121,7 +121,7 @@ nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" Fzf Keybinding 
+" Fzf Keybinding ESC,  CTRL-C , CTRL-G and CTRL-Q to close fzf vim
 nnoremap <silent> <C-p> :FZF -m<CR>
 nnoremap <silent> <Leader><Enter> :Buffers<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
