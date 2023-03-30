@@ -44,6 +44,8 @@ Plug 'https://github.com/sirver/UltiSnips'               " snippet program only,
 Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
 Plug 'https://github.com/scrooloose/nerdtree'            " File explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf.vim'               " Fzf vim to browse files in vim
 
 "Git
 Plug 'https://github.com/airblade/vim-gitgutter'         " Git gutter
@@ -105,9 +107,27 @@ vnoremap <Right> <Nop>
 vnoremap <Up> <Nop>
 
 " NerdTree keybinding
+nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Fzf Keybinding 
+nnoremap <silent> <C-p> :FZF -m<CR>
+nnoremap <silent> <Leader><Enter> :Buffers<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+
+"}}}
+
+" -------- RipGrep {{{
+
+" Allow passing optional flags into the Rg command.
+"   Example: :Rg myterm -g '*.md'
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \ "rg --column --line-number --no-heading --color=always --smart-case " .
+  \ <q-args>, 1, fzf#vim#with_preview(), <bang>0)
+
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
@@ -143,9 +163,21 @@ colorscheme gruvbox
 "}}}
 
 "-------- NerdTree {{{
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Start NERDTree when Vim starts with a directory argument.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in') |
+    \ execute 'NERDTree' argv()[0] | wincmd p | enew | execute 'cd '.argv()[0] | endif
+
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 " Shift + I to show dotfiles
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 "}}}
 
 "-------- Auto source vimrc {{{

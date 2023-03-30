@@ -1,6 +1,7 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
-export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+export FZF_DEFAULT_OPTS="--color=dark"
 export BROWSER="open"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
