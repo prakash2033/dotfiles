@@ -249,3 +249,11 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # }}}
+
+# -------- Task Spooler {{{
+
+find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};done;return 1; }
+export SPOOL=$(find_spool ts tsp)
+
+# }}}
+
