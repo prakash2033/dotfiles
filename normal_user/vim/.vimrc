@@ -44,7 +44,7 @@ Plug 'https://github.com/sirver/UltiSnips'               " snippet program only,
 Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
 Plug 'https://github.com/scrooloose/nerdtree'            " File explorer
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim'               " Fzf vim to browse files in vim
 
 "Git
