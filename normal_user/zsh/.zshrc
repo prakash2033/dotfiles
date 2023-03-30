@@ -251,6 +251,14 @@ alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 
 # -------- Functions {{{
 
+sedot () {
+	du -a ~/.* ~/.*/*/.* ~/*/* ~/ | awk '{print $2}' | fzf -i | xargs -r $EDITOR
+}
+
+se(){
+	find . | fzf -i | xargs -r $EDITOR
+}
+
 cfg-newsboat() { $EDITOR ~/.newsboat/config ;}
 cfg-newsboat-queue() { $EDITOR ~/.newsboat/queue ;}
 cfg-newsboat-urls() { $EDITOR ~/.newsboat/urls ;}
@@ -264,6 +272,14 @@ cfg-w3m-keymap() { $EDITOR ~/.w3m/keymap ;}
 cfg-zprofile() { $EDITOR ~/.zprofile ;}
 cfg-zshrc() { $EDITOR ~/.zshrc ;}
 
+stop-umbrella() { sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
+start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
+
+# }}}
+
+
+# -------- Keybindings {{{
+bindkey -s '^o' 'se\n'
 # }}}
 
 # -------- Git {{{
@@ -303,11 +319,6 @@ glog() {  # search for commit with preview and copy hash
 gch() {
   git checkout $(git branch -a | fzf | sed 's/remotes\/origin\///')
 }
-# }}}
-
-# -------- Functions {{{
-stop-umbrella() { sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
-start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
 # }}}
 
 # -------- Node version manager{{{
