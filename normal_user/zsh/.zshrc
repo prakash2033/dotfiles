@@ -277,7 +277,6 @@ start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.Ro
 
 # }}}
 
-
 # -------- Keybindings {{{
 bindkey -s '^o' 'se\n'
 # }}}
