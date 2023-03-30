@@ -111,13 +111,51 @@ fi
 
 # }}}
 
-# -------- Basic auto/tab complete:{{{
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files.
-# }}}
+#-------- Autocomplete {{{
+#------------------------------------------------------
+# http://www.refining-linux.org/archives/40/ZSH-Gem-5-Menu-selection/
+# https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/completion.zsh
+
+
+autoload -U compinit && compinit        # enable autocompletion
+fpath+=(~/.zsh/completion)              # set path to custom autocompletion
+zstyle ':completion:*' menu select      # to activate the menu, press tab twice
+
+# do not autoselect the first completion entry
+unsetopt menu_complete
+
+# autocompletion CLI switches for aliases
+setopt completealiases
+
+zstyle ':completion:*' list-colors ''   # show colors on menu completion
+
+# http://unix.stackexchange.com/a/297000
+# tab completion from both ends
+setopt complete_in_word
+setopt glob_complete                    # wildcard completion eg. *-tar
+
+# setopt auto_menu         # show completion menu on succesive tab press
+# setopt always_to_end
+
+# show dots if tab compeletion is taking long to load
+expand-or-complete-with-dots() {
+  echo -n "\e[31m......\e[0m"
+  zle expand-or-complete
+  zle redisplay
+}
+zle -N expand-or-complete-with-dots
+bindkey "^I" expand-or-complete-with-dots
+
+# autocomplete case-insensitive (all),partial-word and then substring
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z-_}={A-Za-z_-}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+
+# better completion for killall
+zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
+
+# when new programs is installed, auto update autocomplete without reloading shell
+zstyle ':completion:*' rehash true
+
+#}}}
 
 # -------- History widget fzf{{{
 fzf-history-widget() {
@@ -197,7 +235,26 @@ alias zos='cd $HOME/dev/tote-tocc-zos-connect'
 alias ytv='youtube-viewer'
 
 alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
+
 # }}} 
+
+
+# -------- Functions {{{
+
+cfg-newsboat() { $EDITOR ~/.newsboat/config ;}
+cfg-newsboat-queue() { $EDITOR ~/.newsboat/queue ;}
+cfg-newsboat-urls() { $EDITOR ~/.newsboat/urls ;}
+cfg-ranger() { $EDITOR ~/.config/ranger/rc.conf ;}
+cfg-ranger-commands() { $EDITOR ~/.config/ranger/commands.py ;}
+cfg-tmuxrc() { $EDITOR ~/.tmux.conf ;}
+cfg-urlportal() { $EDITOR ~/.scripts/urlportal ;}
+cfg-vimrc() { $EDITOR ~/.vimrc ;}
+cfg-w3m() { $EDITOR ~/.w3m/config ;}
+cfg-w3m-keymap() { $EDITOR ~/.w3m/keymap ;}
+cfg-zprofile() { $EDITOR ~/.zprofile ;}
+cfg-zshrc() { $EDITOR ~/.zshrc ;}
+
+# }}}
 
 # -------- Git {{{
 alias ga='git add .'
