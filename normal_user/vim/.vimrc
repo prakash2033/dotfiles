@@ -46,9 +46,11 @@ Plug 'https://github.com/arcticicestudio/nord-vim.git'
 Plug 'https://github.com/sirver/UltiSnips'               " snippet program only, no code snippet provided
 Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
-Plug 'https://github.com/scrooloose/nerdtree'            " File explorer
+Plug 'https://github.com/preservim/nerdtree'            " File explorer
 Plug 'https://github.com/junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'https://github.com/junegunn/fzf.vim'               " Fzf vim to browse files in vim
+Plug 'https://github.com/vim-scripts/AutoComplPop'       " Automatically show Vim's complete menu while typing.
+Plug 'https://github.com/jiangmiao/auto-pairs'
 
 "Git
 Plug 'https://github.com/airblade/vim-gitgutter'         " Git gutter
@@ -189,6 +191,10 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists('s:std_in
 
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+      \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 " Shift + I to show dotfiles
