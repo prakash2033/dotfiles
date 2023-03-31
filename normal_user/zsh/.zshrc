@@ -207,6 +207,7 @@ unsetopt nomatch
 # }}}
 
 # -------- Aliases {{{
+alias v='vim' 
 alias h='cd $HOME && la' 
 alias dox='cd ~/Documents' 
 alias dl='cd ~/Downloads' 
@@ -217,9 +218,7 @@ alias sc='cd ~/.scripts'
 alias cfg='cd ~/.config'  
 alias repo='cd ~/Public/gitrepo' 
 alias dot='cd ~/Public/gitrepo/dotfiles' 
-alias dotv='vim ~/Public/gitrepo/dotfiles' 
 alias dotv2='cd ~/Public/gitrepo/dotfiles_v2' 
-alias dotv2v='vim ~/Public/gitrepo/dotfiles_v2' 
 alias notes='cd ~/Public/gitrepo/shownotes' 
 alias wiki='cd ~/Public/gitrepo/wiki' 
 
@@ -233,16 +232,6 @@ alias software='cd $HOME/dev/tote-tocc-softwareservice'
 alias service='cd $HOME/dev/tote-tocc-services-ui'                          
 alias notifi='cd $HOME/dev/tote-tocc-notificationservice' 
 alias zos='cd $HOME/dev/tote-tocc-zos-connect' 
-
-alias tosv='vim $HOME/dev/tote-tocc-tos'
-alias tosnewv='vim $HOME/dev/tote-tocc-tos-new'
-alias db2v='vim $HOME/dev/tote-tocc-db2service'
-alias labelv='vim $HOME/dev/tote-tocc-labelservice'
-alias vinv='vim $HOME/dev/tote-tocc-vin-service'
-alias softwarev='vim $HOME/dev/tote-tocc-softwareservice'
-alias servicev='vim $HOME/dev/tote-tocc-services-ui'
-alias notifiv='vim $HOME/dev/tote-tocc-notificationservice'
-alias zosv='vim $HOME/dev/tote-tocc-zos-connect'
 
 alias ytv='youtube-viewer'
 alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
