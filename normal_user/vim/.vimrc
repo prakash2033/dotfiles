@@ -126,7 +126,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " <C-v> to open in vertical split
 " <C-x> to open in horizontal split
 
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-p> :GFiles<CR>
 " nnoremap <silent> <Leader><Enter> :Buffers<CR>
 nnoremap <silent> <C-b> :Buffers<CR>
 nnoremap <silent> <Leader>l :Lines<CR>
