@@ -24,6 +24,7 @@ set shortmess+=I
 set backspace=indent,eol,start
 set hidden
 set mouse+=a
+set ttimeoutlen=0 # removes delay in closing fzf vim window
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
@@ -172,6 +173,9 @@ let g:gruvbox_contrast_dark = 'medium'
 colorscheme gruvbox
 
 "}}}
+
+" -------- AutoCommands {{{
+"  }}}
 
 "-------- NerdTree {{{
 " Start NERDTree when Vim is started without file arguments.
