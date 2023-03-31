@@ -207,7 +207,8 @@ unsetopt nomatch
 # }}}
 
 # -------- Aliases {{{
-alias v='vim' 
+alias v='nvim' 
+alias vim='nvim' 
 alias h='cd $HOME && la' 
 alias dox='cd ~/Documents' 
 alias dl='cd ~/Downloads' 
