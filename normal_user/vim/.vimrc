@@ -24,7 +24,7 @@ set shortmess+=I
 set backspace=indent,eol,start
 set hidden
 set mouse+=a
-set ttimeoutlen=0 # removes delay in closing fzf vim window
+set ttimeoutlen=0 " removes delay in closing fzf vim window
 if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
