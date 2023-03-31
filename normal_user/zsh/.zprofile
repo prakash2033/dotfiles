@@ -1,6 +1,5 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
-export XDG_DATA_HOME="$HOME/.local/share" 
-export FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
+export XDG_DATA_HOME="$HOME/.local/share"
 export FZF_DEFAULT_OPTS="--color=dark"
 export BROWSER="open"
 export EDITOR='vim'
@@ -29,6 +28,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 
 # -------- Add colors to the less and man commands {{{
+    
 export LESS=-R
 export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
 export LESS_TERMCAP_mb=$'\e[1;31mm'    # begin blinking
@@ -38,18 +38,21 @@ export LESS_TERMCAP_so=$'\e[1;44;33m'  # begin standout-mode - info box
 export LESS_TERMCAP_me=$'\e[0m'        # end mode
 export LESS_TERMCAP_ue=$'\e[0m'        # end underline
 export LESS_TERMCAP_se=$'\e[0m'        # end standout-mode
+
 # }}}
 
 # -------- Perl for YouTube-Viewer {{{    
+
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="$HOME/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="$HOME/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
 PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;                                                                                                   
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;    
+
 # }}} 
 
 # -------- Set PATH, MANPATH, etc., for Homebrew. {{{ 
-#
-[ -d "/opt/homebrew/bin/brew" ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # }}} 

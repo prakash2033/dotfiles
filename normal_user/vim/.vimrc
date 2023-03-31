@@ -28,6 +28,8 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+
+let g:fzf_layout = { 'down': '40%' }
 "}}}
 
 "-------- Plugins {{{
@@ -116,9 +118,14 @@ map <C-l> <C-w>l
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 " Fzf Keybinding ESC,  CTRL-C , CTRL-G and CTRL-Q to close fzf vim
-nnoremap <silent> <C-p> :FZF -m<CR>
-nnoremap <silent> <Leader><Enter> :Buffers<CR>
-nnoremap <silent> <Leader>l :Lines<CR>
+" Enter to open in current window
+" <C-t> to open in new tab
+" <C-v> to open in vertical split
+" <C-x> to open in horizontal split
+
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-b> :Buffers<CR>
+nnoremap <silent> <C-l> :Lines<CR>
 
 "}}}
 
