@@ -9,3 +9,4 @@ normal_user/w3m/.w3m/history
 normal_user/w3m/.w3m/*.gz
 normal_user/mpv/.config/mpv/watch_later/
 normal_user/newsboat/.newsboat/history.cmdline
+normal_user/nvim/.config/nvim/plugin/*
