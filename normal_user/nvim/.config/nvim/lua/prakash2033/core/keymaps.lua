@@ -64,6 +64,9 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window max
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
+-- undo tree
+keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>") --undo tree
+
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
@@ -76,7 +79,27 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 -- keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
-keymap.set("n", "<leader>gs", vim.cmd.Git)
+keymap.set("n", "<leader>gs", "<cmd>Git<CR>")
+
+--harpoon by theprimagen
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
+
+keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
+keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
+
+vim.keymap.set("n", "<C-h>", function()
+  ui.nav_file(1)
+end) --navigate to 1st file in harpoon
+vim.keymap.set("n", "<C-t>", function()
+  ui.nav_file(2)
+end) --navigate to 2nd file in harpoon
+vim.keymap.set("n", "<C-n>", function()
+  ui.nav_file(3)
+end) --navigate to 3rd file in harpoon
+vim.keymap.set("n", "<C-s>", function()
+  ui.nav_file(4)
+end) --navigate to 4th file in harpoon
 
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
