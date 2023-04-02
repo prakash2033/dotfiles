@@ -89,16 +89,16 @@ local ui = require("harpoon.ui")
 keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
 keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
 
-keymap.set("n", "<C-s>", function()
+keymap.set("n", "<C-w>", function()
   ui.nav_file(1)
 end) --navigate to 1st file in harpoon
-keymap.set("n", "<C-d>", function()
+keymap.set("n", "<C-r>", function()
   ui.nav_file(2)
 end) --navigate to 2nd file in harpoon
-keymap.set("n", "<C-f>", function()
+keymap.set("n", "<C-t>", function()
   ui.nav_file(3)
 end) --navigate to 3rd file in harpoon
-keymap.set("n", "<C-g>", function()
+keymap.set("n", "<C-y>", function()
   ui.nav_file(4)
 end) --navigate to 4th file in harpoon
 
