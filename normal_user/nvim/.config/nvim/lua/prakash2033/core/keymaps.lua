@@ -81,23 +81,23 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 -- keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 keymap.set("n", "<leader>gs", "<cmd>Git<CR>")
 
---harpoon by theprimagen
+-- harpoon by theprimagen
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
 keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
 keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
 
-vim.keymap.set("n", "<C-h>", function()
+keymap.set("n", "<C-s>", function()
   ui.nav_file(1)
 end) --navigate to 1st file in harpoon
-vim.keymap.set("n", "<C-t>", function()
+keymap.set("n", "<C-d>", function()
   ui.nav_file(2)
 end) --navigate to 2nd file in harpoon
-vim.keymap.set("n", "<C-n>", function()
+keymap.set("n", "<C-f>", function()
   ui.nav_file(3)
 end) --navigate to 3rd file in harpoon
-vim.keymap.set("n", "<C-s>", function()
+keymap.set("n", "<C-g>", function()
   ui.nav_file(4)
 end) --navigate to 4th file in harpoon
 
