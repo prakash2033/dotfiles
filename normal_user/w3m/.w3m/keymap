@@ -5,6 +5,14 @@
 #   \_/\_/  |____/|_|  |_| |_|\_\___|\__, |_| |_| |_|\__,_| .__/ 
 #                                    |___/                |_|    
 
+# -------- Shortcuts
+# { next tab
+# } previous tab
+# number followed by [ jump to link
+# number followed by ] jump to link backward
+# ctrl + q close tab
+# Q - close w3m
+# e open in urlportal
 
 keymap  e       EXTERN_LINK ~/.scripts/urlportal
 # keymap  SPC     NEXT_HALF_PAGE
