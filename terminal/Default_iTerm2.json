@@ -300,7 +300,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.15686275064945221
   },
-  "HotKey Window Dock Click Action" : 0,
+  "HotKey Window Dock Click Action" : 2,
   "Default Bookmark" : "No",
   "Cursor Color" : {
     "Red Component" : 0.92156863212585449,
@@ -359,7 +359,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.60000002384185791
   },
-  "HotKey Window AutoHides" : true,
+  "HotKey Window AutoHides" : false,
   "Command" : "",
   "Terminal Type" : "xterm-256color",
   "Horizontal Spacing" : 1,
