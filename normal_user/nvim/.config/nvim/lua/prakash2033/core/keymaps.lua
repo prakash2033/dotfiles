@@ -10,6 +10,28 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
 
+-- Move thru word wrapped line
+keymap.set("n", "j", "gj")
+keymap.set("n", "k", "gk")
+
+--Remove newbie crutches in Insert Mode
+keymap.set("i", "<Down>", "<Nop>")
+keymap.set("i", "<Left>", "<Nop>")
+keymap.set("i", "<Right>", "<Nop>")
+keymap.set("i", "<Up>", "<Nop>")
+
+--Remove newbie crutches in Normal Mode
+keymap.set("n", "<Down>", "<Nop>")
+keymap.set("n", "<Left>", "<Nop>")
+keymap.set("n", "<Right>", "<Nop>")
+keymap.set("n", "<Up>", "<Nop>")
+
+--Remove newbie crutches in Visual Mode
+keymap.set("v", "<Down>", "<Nop>")
+keymap.set("v", "<Left>", "<Nop>")
+keymap.set("v", "<Right>", "<Nop>")
+keymap.set("v", "<Up>", "<Nop>")
+
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 
@@ -94,13 +116,13 @@ keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
 keymap.set("n", "<C-w>", function()
   ui.nav_file(1)
 end) --navigate to 1st file in harpoon
-keymap.set("n", "<C-r>", function()
+keymap.set("n", "<C-t>", function()
   ui.nav_file(2)
 end) --navigate to 2nd file in harpoon
-keymap.set("n", "<C-t>", function()
+keymap.set("n", "<C-y>", function()
   ui.nav_file(3)
 end) --navigate to 3rd file in harpoon
-keymap.set("n", "<C-y>", function()
+keymap.set("n", "<C-u>", function()
   ui.nav_file(4)
 end) --navigate to 4th file in harpoon
 
