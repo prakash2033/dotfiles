@@ -123,7 +123,7 @@ end) --navigate to 2nd file in harpoon
 keymap.set("n", "<C-y>", function()
   ui.nav_file(3)
 end) --navigate to 3rd file in harpoon
-keymap.set("n", "<C-u>", function()
+keymap.set("n", "<C-i>", function()
   ui.nav_file(4)
 end) --navigate to 4th file in harpoon
 
