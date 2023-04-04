@@ -13,6 +13,7 @@
 # ctrl + q close tab
 # Q - close w3m
 # e open in urlportal
+# M - open in external browser
 
 keymap  e       EXTERN_LINK ~/.scripts/urlportal
 # keymap  SPC     NEXT_HALF_PAGE
