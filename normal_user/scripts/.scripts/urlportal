@@ -626,10 +626,10 @@ case "$LINK" in
         tmux new-window -n view && tmux send-keys "vim '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *.html)
-        tmux new-window -n browse && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
+        tmux split-window -p 80 && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *)
-        tmux new-window -n browse && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
+        tmux split-window -p 80 && tmux send-keys "$DEFAULT '$LINK' && tmux kill-pane" 'Enter'
         ;;
 #### }}}
 
