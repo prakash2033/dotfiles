@@ -319,7 +319,7 @@ define-filter "gotbletu" "feedtitle =~ \"gotbletu\" or description =~ \"gotbletu
 # highlight article "\\[image\\ [0-9]+\\]" green default
 #
 # # }}}
-#-------- Theme: Solarized-dark Modded {{{
+#-------- Theme: Solarized-dark Modded by prakash {{{
 #------------------------------------------------------
 ## source: https://github.com/newsboat/newsboat/blob/master/contrib/colorschemes/solarized-dark
 
