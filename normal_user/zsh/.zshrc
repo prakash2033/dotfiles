@@ -12,7 +12,7 @@ precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
 setopt PROMPT_SUBST
-export PS1='%F{green}[%D{%L:%M:%S%p}]%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{green}.%F{red})$%F{$reset_color%}%f '
+export PS1='%F{yellow}[%*]%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{green}.%F{red})$%F{$reset_color%}%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -71,7 +71,7 @@ KEYTIMEOUT=1
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
     # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    INSERT="%F{green}-- INSERT --%f"
+    INSERT="%F{222}-- INSERT --%f"
     NORMAL="%F{blue}-- NORMAL --%f"
     RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
     RPS2=$RPS1
