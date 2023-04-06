@@ -131,7 +131,7 @@ bind-key w toggle-source-view
 # Note: some links with ? in url doesnt open, not sure how to escape it directly ATM
 
 # macro o set browser "tmux split-window && tmux send-keys '$BROWSERCLI %u && tmux kill-pane\n'"; open-in-browser-and-mark-read ; set browser "$BROWSER %u"
-macro o set browser "tmux split-window -p 80 && tmux send-keys '$BROWSERCLI %u && tmux kill-pane\n'"; open-in-browser ; set browser "$URLPORTAL %u"
+macro o set browser "tmux new-window -n browse && tmux send-keys '$BROWSERCLI %u && tmux kill-pane\n'"; open-in-browser ; set browser "$URLPORTAL %u"
 macro z set browser "tmux split-window -p 80 && tmux send-keys '$BROWSERCLI_IMAGE %u && tmux kill-pane\n'"; open-in-browser ; set browser "$URLPORTAL %u"
 
 macro b set browser "tmux split-window -p 80 && tmux send-keys 'browsh -startup-url %u && tmux kill-pane\n'"; open-in-browser ; set browser "$URLPORTAL %u"
