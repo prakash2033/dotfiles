@@ -11,6 +11,8 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info)
 
 # Set up prompt (with git branch name)
+# color hues 
+# for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 setopt PROMPT_SUBST
 export PS1='%F{yellow}%n%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
 
@@ -96,9 +98,12 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 # }}}
 
 # -------- Source {{{
-# Load syntax highlighting; should be last.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
+
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -323,4 +328,3 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
-
