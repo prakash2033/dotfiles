@@ -71,7 +71,7 @@ KEYTIMEOUT=1
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
     # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    INSERT="%F{222}-- INSERT --%f"
+    INSERT="%F{yellow}-- INSERT --%f"
     NORMAL="%F{blue}-- NORMAL --%f"
     RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
     RPS2=$RPS1
