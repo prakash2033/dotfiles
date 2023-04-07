@@ -27,7 +27,7 @@ vim.opt.colorcolumn = "100"
 vim.opt.foldmethod = "marker"
 
 -- no swap file
-vim.opt.noswapfile = true
+vim.opt.swapfile = false
 
 -- appearance
 
