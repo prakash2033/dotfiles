@@ -214,6 +214,7 @@ unsetopt nomatch
 # -------- Aliases {{{
 alias v='nvim' 
 alias vim='nvim' 
+alias w3m='w3m -cookie' 
 alias h='cd $HOME && la' 
 alias dox='cd ~/Documents' 
 alias dl='cd ~/Downloads' 
