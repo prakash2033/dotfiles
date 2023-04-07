@@ -26,6 +26,9 @@ vim.opt.colorcolumn = "100"
 -- fold
 vim.opt.foldmethod = "marker"
 
+-- no swap file
+vim.opt.noswapfile = true
+
 -- appearance
 
 -- turn on termguicolors for nightfly colorscheme to work
