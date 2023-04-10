@@ -370,8 +370,8 @@ define-filter "gotbletu" "feedtitle =~ \"gotbletu\" or description =~ \"gotbletu
 color background         default   default
 color listnormal         default   default
 color listnormal_unread  default   default
-color listfocus          yellow    color236   bold
-color listfocus_unread   yellow    color236   bold
+color listfocus          yellow    color237   bold
+color listfocus_unread   yellow    color237   bold
 color info               default   black
 color article            default   default
 
