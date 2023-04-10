@@ -14,10 +14,10 @@ precmd_functions+=( precmd_vcs_info)
 # color hues 
 # for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}; done
 # ZSH understands the colors black, red, green, yellow, blue, magenta, cyan and white by default
-# %n => user, %m => hostname
+# %n => user, %m => hostname, text between %U and %u will be underlined
 setopt PROMPT_SUBST
 # export PS1='%F{yellow}%n%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
-export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%U%m%u%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
+export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
