@@ -17,7 +17,7 @@ precmd_functions+=( precmd_vcs_info)
 # %n => user, %m => hostname
 setopt PROMPT_SUBST
 # export PS1='%F{yellow}%n%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
-export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f %F{magenta}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
+export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%U%m%u%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -25,9 +25,9 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{166}!%f'
 zstyle ':vcs_info:*' stagedstr '%F{040}+%f'
 # Set the format of the Git information for vcs_info
-zstyle ':vcs_info:git:*' formats       '%F{yellow}(%b%u%c%m%F{yellow})%f '
-zstyle ':vcs_info:git:*' actionformats '%F{yellow}(%b|%a%u%c%F{yellow})%f '
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{yellow}%b:r%r%f '
+zstyle ':vcs_info:git:*' formats       '%F{242}(%f%F{yellow}%b%u%c%m%F{yellow}%f%F{242})%f'
+zstyle ':vcs_info:git:*' actionformats '%%F{242}(%f%F{yellow}b|%a%u%c%F{yellow}%f%F{242})%f'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{yellow}%b:r%r%f'
 zstyle ':vcs_info:bzr:*' use-simple true
 
  # Add up/down arrows after branch name, if there are changes to pull/to push
@@ -52,53 +52,55 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
-RPROMPT=\$vcs_info_msg_0_
+# RPROMPT=\$vcs_info_msg_0_
+# ${vcs_info_msg_0_}
+# RPS2=$vcs_info_msg_0_
 # }}}
 
-#-------- Vim Mode {{{
-#------------------------------------------------------
-# enable vim mode on commmand line
-bindkey -v
-
-# edit command with editor
-# http://stackoverflow.com/a/903973
-# usage: type someshit then hit Esc+v
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-
-# no delay entering normal mode
-# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
-# 10ms for key sequences
-KEYTIMEOUT=1
-
-# show vim status
-# http://zshwiki.org/home/examples/zlewidgets
-function zle-line-init zle-keymap-select {
-    # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    INSERT="%F{yellow}-- INSERT --%f"
-    NORMAL="%F{blue}-- NORMAL --%f"
-    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-# add missing vim hotkeys
-# fixes backspace deletion issues
-# http://zshwiki.org/home/zle/vi-mode
-bindkey -a u undo
-# bindkey -a '^R' redo  # conflicts with history search hotkey
-bindkey -a '^T' redo
-bindkey '^?' backward-delete-char #backspace
-
-# history search in vim mode
-# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
-
-# }}}
+# #-------- Vim Mode {{{
+# #------------------------------------------------------
+# # enable vim mode on commmand line
+# # bindkey -v
+#
+# # edit command with editor
+# # http://stackoverflow.com/a/903973
+# # usage: type someshit then hit Esc+v
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey -M vicmd v edit-command-line
+#
+# # no delay entering normal mode
+# # https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
+# # 10ms for key sequences
+# KEYTIMEOUT=1
+#
+# # show vim status
+# # http://zshwiki.org/home/examples/zlewidgets
+# function zle-line-init zle-keymap-select {
+#     # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+#     INSERT="%F{yellow}-- INSERT --%f"
+#     NORMAL="%F{blue}-- NORMAL --%f"
+#     RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+#
+# # add missing vim hotkeys
+# # fixes backspace deletion issues
+# # http://zshwiki.org/home/zle/vi-mode
+# bindkey -a u undo
+# # bindkey -a '^R' redo  # conflicts with history search hotkey
+# bindkey -a '^T' redo
+# bindkey '^?' backward-delete-char #backspace
+#
+# # history search in vim mode
+# # http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+# bindkey -M viins '^r' history-incremental-search-backward
+# bindkey -M vicmd '^r' history-incremental-search-backward
+#
+# # }}}
 
 # -------- Source {{{
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
