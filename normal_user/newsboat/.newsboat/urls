@@ -41,7 +41,7 @@
 "query:All Articles Video-Linux:tags # \"Video-Linux\"" "Video-Linux"
 "query:All Articles YouTube-Videos:tags # \"YouTube-Videos\"" "YouTube-Videos"
 "query:All Articles News:tags # \"News\"" "News"
-"query:All Articles Svenska-News:tags # \"Svenska-News\"" "Svenska-News"
+# "query:All Articles Svenska-News:tags # \"Svenska-News\"" "Svenska-News"
 "query:All Articles Tech-News:tags # \"Tech-News\"" "Tech-News"
 "query:All Articles Plex-Subreddit:tags # \"Plex-Subreddit\"" "Plex-Subreddit"
 "query:All Articles Dev-Subreddit:tags # \"Dev-Subreddit\"" "Dev-Subreddit"
@@ -130,9 +130,9 @@ https://blog.angular.io/feed "Tech-News"
 # https://azurecomcdn.azureedge.net/en-us/updates/feed/ "Tech-News"
 
 # }}}
-#-------- Svenska News {{{
-https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/ "Svenska-News"
-#}}}
+# -------- Svenska News {{{
+# https://rss.aftonbladet.se/rss2/small/pages/sections/senastenytt/ "Svenska-News"
+# #}}}
 # -------- Video-Linux {{{
 https://www.youtube.com/feeds/videos.xml?channel_id=UCvEdeev3sZoxi5hMksZI4KA "Video-Linux" "~jakejw93 - Linux Gaming"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCXD2cy-5xnwTcvTNoUqbnKw "Video-Linux" "~sneekylinux"
