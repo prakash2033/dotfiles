@@ -17,7 +17,7 @@ precmd_functions+=( precmd_vcs_info)
 # %n => user, %m => hostname, text between %U and %u will be underlined
 setopt PROMPT_SUBST
 # export PS1='%F{yellow}%n%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
-export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
+export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{yellow}.%F{red})$%F{$reset_color%}%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
