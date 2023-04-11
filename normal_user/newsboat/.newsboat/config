@@ -123,6 +123,8 @@ bind-key w toggle-source-view
 #-------- macros {{{
 #------------------------------------------------------
 # Note: macro prefix key ( default: , )
+bind-key z macro-prefix
+unbind-key ,
 
 # open in cli web browser
 # w3m: https://www.youtube.com/watch?v=Z22cFTB-uqg
