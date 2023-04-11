@@ -1,3 +1,7 @@
+-- References
+-- YouTube ThePrimeagen: 0 to LSP : Neovim RC From Scratch https://www.youtube.com/watch?v=w7i4amO_zaE&t=966s
+-- YouTube Josean Martinez: How I Setup Neovim On My Mac To Make It Amazing - Complete Guide https://www.youtube.com/watch?v=vdn_pKJUda8
+
 -- set leader key to space
 vim.g.mapleader = " "
 
@@ -14,23 +18,12 @@ keymap.set("i", "jk", "<ESC>")
 keymap.set("n", "j", "gj")
 keymap.set("n", "k", "gk")
 
---Remove newbie crutches in Insert Mode
-keymap.set("i", "<Down>", "<Nop>")
-keymap.set("i", "<Left>", "<Nop>")
-keymap.set("i", "<Right>", "<Nop>")
-keymap.set("i", "<Up>", "<Nop>")
-
---Remove newbie crutches in Normal Mode
-keymap.set("n", "<Down>", "<Nop>")
-keymap.set("n", "<Left>", "<Nop>")
-keymap.set("n", "<Right>", "<Nop>")
-keymap.set("n", "<Up>", "<Nop>")
-
---Remove newbie crutches in Visual Mode
-keymap.set("v", "<Down>", "<Nop>")
-keymap.set("v", "<Left>", "<Nop>")
-keymap.set("v", "<Right>", "<Nop>")
-keymap.set("v", "<Up>", "<Nop>")
+--Remove newbie crutches in Insert, Normal and Visual Mode
+keymap.set({ "i", "n", "v" }, "<Down>", "<Nop>")
+keymap.set({ "i", "n", "v" }, "<Left>", "<Nop>")
+keymap.set({ "i", "n", "v" }, "<Right>", "<Nop>")
+keymap.set({ "i", "n", "v" }, "<Up>", "<Nop>")
+keymap.set("n", "Q", "<Nop>")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -40,27 +33,27 @@ keymap.set("n", "x", '"_x')
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>") -- increment
+keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- movement keymaps
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-keymap.set("n", "J", "mzJ`z")
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv") --move selected line down
+keymap.set("v", "K", ":m '<-2<CR>gv=gv") --move selected line up
+keymap.set("n", "J", "mzJ`z") --keeps cursor at the beginning instead of eol
+keymap.set("n", "<C-d>", "<C-d>zz") --scroll down half page and keeps cursor in middle
+keymap.set("n", "<C-u>", "<C-u>zz") --scroll down half page and keeps cursor in middle
+keymap.set("n", "n", "nzzzv") --keeps cursor in middle while searching forward
+keymap.set("n", "N", "Nzzzv") --keeps cursor in middle while searching backward
 
 -- greatest remap ever
-keymap.set("x", "<leader>p", [["_dP]])
+keymap.set("x", "<leader>p", [["_dP]]) --deletes highlighted word in void register and then paste it over
 
 -- next greatest remap ever
-keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+keymap.set({ "n", "v" }, "<leader>y", [["+y]]) --yanks into system clipboard in normal and visual mode
 keymap.set("n", "<leader>Y", [["+Y]])
-
-keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+keymap.set({ "n", "v" }, "<leader>d", [["_d]]) --deletes to void register
 
 -- This is going to get me cancelled
-keymap.set("i", "<C-c>", "<Esc>")
+keymap.set("i", "<C-c>", "<Esc>") --also helps to exit in vertical insert mode Ctrl+v, Shift+I, "text", Ctrl+C
 
 -- find and replace
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -79,6 +72,9 @@ keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
 ----------------------
 -- Plugin Keybinds
 ----------------------
+
+-- Formatting
+keymap.set("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>")
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
@@ -127,5 +123,5 @@ keymap.set("n", "<C-i>", function()
   ui.nav_file(4)
 end) --navigate to 4th file in harpoon
 
--- restart lsp server (not on youtube nvim video)
+-- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
