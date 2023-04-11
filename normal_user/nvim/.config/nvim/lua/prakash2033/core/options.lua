@@ -23,7 +23,7 @@ opt.cursorline = true -- highlight the current cursor line
 -- color column
 vim.opt.colorcolumn = "100"
 
--- fold
+-- fold can be read here :h usr_28.txt
 vim.opt.foldmethod = "indent"
 
 -- no swap file
