@@ -24,7 +24,7 @@ opt.cursorline = true -- highlight the current cursor line
 vim.opt.colorcolumn = "100"
 
 -- fold
-vim.opt.foldmethod = "marker"
+vim.opt.foldmethod = "indent"
 
 -- no swap file
 vim.opt.swapfile = false
