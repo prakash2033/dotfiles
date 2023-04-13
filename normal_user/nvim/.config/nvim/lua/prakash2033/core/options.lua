@@ -21,10 +21,10 @@ opt.smartcase = true -- if you include mixed case in your search, assumes you wa
 opt.cursorline = true -- highlight the current cursor line
 
 -- color column
-vim.opt.colorcolumn = "100"
+opt.colorcolumn = "100"
 
 -- fold can be read here :h usr_28.txt
-vim.opt.foldmethod = "indent"
+opt.foldmethod = "indent"
 
 -- no swap file
 vim.opt.swapfile = false
