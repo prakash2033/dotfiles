@@ -25,6 +25,7 @@ opt.colorcolumn = "100"
 
 -- fold can be read here :h usr_28.txt
 opt.foldmethod = "indent"
+opt.foldopen = "all"
 
 -- no swap file
 vim.opt.swapfile = false
