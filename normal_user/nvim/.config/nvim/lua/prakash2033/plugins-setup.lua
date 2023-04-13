@@ -13,7 +13,7 @@ local packer_bootstrap = ensure_packer() -- true if packer was just installed
 
 -- autocommand that reloads neovim and installs/updates/removes plugins
 -- when file is saved
-vim.cmd([[ 
+vim.cmd([[
   augroup packer_user_config
     autocmd!
     autocmd BufWritePost plugins-setup.lua source <afile> | PackerSync
@@ -114,6 +114,13 @@ return packer.startup(function(use)
 
   use("ThePrimeagen/harpoon")
   use("mbbill/undotree")
+
+  --fzf-lua
+  use({
+    "ibhagwan/fzf-lua",
+    -- optional for icon support
+    requires = { "nvim-tree/nvim-web-devicons" },
+  })
 
   if packer_bootstrap then
     require("packer").sync()

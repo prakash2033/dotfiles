@@ -86,6 +86,10 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 -- undo tree
 keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>") --undo tree
 
+--fzf-lua
+vim.keymap.set("n", "<C-b>", "<cmd>lua require('fzf-lua').buffers()<CR>", { silent = true })
+vim.keymap.set("n", "<C-f>", "<cmd>lua require('fzf-lua').grep()<CR>", { silent = true })
+
 -- telescope
 keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -104,24 +108,24 @@ keymap.set("n", "<leader>ggs", "<cmd>Telescope git_status<cr>") -- list current 
 keymap.set("n", "<leader>gs", "<cmd>Git<CR>")
 
 -- harpoon by theprimagen
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-
-keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
-keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
-
-keymap.set("n", "<C-w>", function()
-  ui.nav_file(1)
-end) --navigate to 1st file in harpoon
-keymap.set("n", "<C-t>", function()
-  ui.nav_file(2)
-end) --navigate to 2nd file in harpoon
-keymap.set("n", "<C-y>", function()
-  ui.nav_file(3)
-end) --navigate to 3rd file in harpoon
-keymap.set("n", "<C-i>", function()
-  ui.nav_file(4)
-end) --navigate to 4th file in harpoon
+-- local mark = require("harpoon.mark")
+-- local ui = require("harpoon.ui")
+--
+-- keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
+-- keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
+--
+-- keymap.set("n", "<C-w>", function()
+--   ui.nav_file(1)
+-- end) --navigate to 1st file in harpoon
+-- keymap.set("n", "<C-t>", function()
+--   ui.nav_file(2)
+-- end) --navigate to 2nd file in harpoon
+-- keymap.set("n", "<C-y>", function()
+--   ui.nav_file(3)
+-- end) --navigate to 3rd file in harpoon
+-- keymap.set("n", "<C-i>", function()
+--   ui.nav_file(4)
+-- end) --navigate to 4th file in harpoon
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
