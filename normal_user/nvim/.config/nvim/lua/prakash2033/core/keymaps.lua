@@ -88,12 +88,10 @@ keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<CR>") --undo tree
 
 -- telescope
 keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<C-g>", "<cmd>Telescope git_files<cr>") -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
+keymap.set("n", "<C-f>", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
+keymap.set("n", "<C-b>", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
 
 -- telescope git commands (not on youtube nvim video)
@@ -102,26 +100,6 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>ggs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 keymap.set("n", "<leader>gs", "<cmd>Git<CR>")
-
--- harpoon by theprimagen
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-
-keymap.set("n", "<leader>a", mark.add_file) --add file to harpoon
-keymap.set("n", "<C-e>", ui.toggle_quick_menu) --toggle harpoon popup
-
-keymap.set("n", "<C-w>", function()
-  ui.nav_file(1)
-end) --navigate to 1st file in harpoon
-keymap.set("n", "<C-t>", function()
-  ui.nav_file(2)
-end) --navigate to 2nd file in harpoon
-keymap.set("n", "<C-y>", function()
-  ui.nav_file(3)
-end) --navigate to 3rd file in harpoon
-keymap.set("n", "<C-i>", function()
-  ui.nav_file(4)
-end) --navigate to 4th file in harpoon
 
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

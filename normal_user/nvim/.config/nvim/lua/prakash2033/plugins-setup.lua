@@ -112,7 +112,6 @@ return packer.startup(function(use)
   -- vim wiki markdown
   use("vimwiki/vimwiki") --vim wiki markdown
 
-  use("ThePrimeagen/harpoon")
   use("mbbill/undotree")
 
   if packer_bootstrap then
