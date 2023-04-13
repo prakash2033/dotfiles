@@ -309,11 +309,11 @@ glog() {  # search for commit with preview and copy hash
       fzf -i -e --no-sort --reverse \
           --tiebreak=index --no-multi \
           --ansi --preview="$_viewGitLogLine" \
-          --header "enter: view, M-y: copy hash" \
+          --header "enter: view, C-y: copy hash" \
           --bind "enter:execute:$_viewGitLogLine   |
           less -R" \
-          --bind "alt-y:execute:$_gitLogLineToHash |
-          xclip -r -selection clipboard"
+          --bind "ctrl-y:execute:$_gitLogLineToHash |
+          pbcopy"
 }
 
 gch() {
