@@ -24,8 +24,7 @@ opt.cursorline = true -- highlight the current cursor line
 opt.colorcolumn = "100"
 
 -- fold can be read here :h usr_28.txt
-opt.foldmethod = "indent"
-opt.foldopen = "all"
+opt.foldmethod = "marker"
 
 -- no swap file
 vim.opt.swapfile = false
