@@ -36,7 +36,7 @@ nvimtree.setup({
     },
   },
   open_on_tab = true,
-  update_focused_file = { enable = true, update_cwd = true, ignore_list = {} },
+  update_focused_file = { enable = true, update_cwd = true, ignore_list = { ".git" } },
   git = {
     ignore = false, --show gitignore file with different
   },
