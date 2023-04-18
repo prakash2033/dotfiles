@@ -29,11 +29,13 @@ nvimtree.setup({
   -- window splits
   actions = {
     open_file = {
+      resize_window = true,
       window_picker = {
         enable = false,
       },
     },
   },
+  open_on_tab = true,
   git = {
     ignore = false, --show gitignore file with different
   },

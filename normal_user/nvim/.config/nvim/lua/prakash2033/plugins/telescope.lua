@@ -22,6 +22,13 @@ telescope.setup({
         ["<esc>"] = actions.close, -- ESC in insert mode to quit telescope
       },
     },
+    -- path_display = { "smart" },
+    path_display = {
+      shorten = {
+        len = 1,
+        exclude = { 1, -1 },
+      },
+    },
   },
 })
 
