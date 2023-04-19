@@ -114,9 +114,6 @@ return packer.startup(function(use)
 
   use("mbbill/undotree")
 
-  -- Autosave
-  use("Pocco81/auto-save.nvim")
-
   if packer_bootstrap then
     require("packer").sync()
   end
