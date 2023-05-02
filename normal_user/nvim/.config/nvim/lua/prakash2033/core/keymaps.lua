@@ -102,8 +102,5 @@ keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git bra
 keymap.set("n", "<leader>ggs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 keymap.set("n", "<leader>gs", "<cmd>Git<CR>")
 
---Autosave
-vim.api.nvim_set_keymap("n", "<leader>as", ":ASToggle<CR>", {})
-
 -- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
