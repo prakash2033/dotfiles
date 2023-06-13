@@ -267,7 +267,7 @@ cfg-ranger() { $EDITOR ~/.config/ranger/rc.conf ;}
 cfg-ranger-commands() { $EDITOR ~/.config/ranger/commands.py ;}
 cfg-tmuxrc() { $EDITOR ~/.tmux.conf ;}
 cfg-urlportal() { $EDITOR ~/.scripts/urlportal ;}
-cfg-vimrc() { $EDITOR ~/.vimrc ;}
+cfg-vimrc() { $EDITOR ~/.config/nvim ;}
 cfg-w3m() { $EDITOR ~/.w3m/config ;}
 cfg-w3m-keymap() { $EDITOR ~/.w3m/keymap ;}
 cfg-zprofile() { $EDITOR ~/.zprofile ;}
