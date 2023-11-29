@@ -14,6 +14,7 @@ export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
+export ANDROID_HOME="/Users/PVISHWA1/Library/Android/sdk"
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
@@ -26,6 +27,10 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
+[ -d "$HOME/dev/flutter/bin" ] && PATH="$HOME/dev/flutter/bin:$PATH"
+[ -d "$ANDROID_HOME/tools" ] && PATH="$ANDROID_HOME/tools:$PATH"
+[ -d "$ANDROID_HOME/tools/bin" ] && PATH="$ANDROID_HOME/tools/bin:$PATH"
+[ -d "$ANDROID_HOME/platform-tools" ] && PATH="$ANDROID_HOME/platform-tools:$PATH"
 
 # -------- Add colors to the less and man commands {{{
     
