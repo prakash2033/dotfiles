@@ -66,7 +66,7 @@ shopt -s nocasematch
 LINK="$1"
 case "$LINK" in
     *bitchute.com/*)
-        $VIDEO_QUEUE "$LINK"
+        $VIDEO_QUEUE "$LINK" > /dev/null 2>&1 &
         ;;
     *clippituser.tv/*)
         nohup $VIDEO_CLIP "$LINK" > /dev/null 2>&1 &
@@ -115,10 +115,10 @@ case "$LINK" in
         nohup $VIDEO_CLIP "$LINK" > /dev/null 2>&1 &
         ;;
     *clips.twitch.tv/*)
-        $VIDEO_QUEUE "$LINK"
+        $VIDEO_QUEUE "$LINK" > /dev/null 2>&1 &
         ;;
     *twitch.tv/*)
-        $LIVEFEED "$LINK"
+        $LIVEFEED "$LINK" > /dev/null 2>&1 &
         ;;
     *webmshare.com/play/*)
         LINK="$(curl -s "$LINK" | grep -oP '<meta property="og:video" content="\K[^"]+' | sed 's@^@https:@')"
@@ -134,7 +134,8 @@ case "$LINK" in
         nohup $VIDEO_CLIP "$LINK" > /dev/null 2>&1 &
         ;;
     *youtube.com/watch*|*youtu.be/*)
-        $VIDEO_QUEUE "$LINK"
+        $VIDEO_QUEUE "$LINK" > /dev/null 2>&1 &
+
         ;;
     *nagpurtoday.in/video*)
         $VIDEO_QUEUE "$LINK"
