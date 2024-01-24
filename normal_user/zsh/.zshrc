@@ -106,9 +106,9 @@ setopt PROMPT_SUBST
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
+#ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
+#ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
+#ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -217,8 +217,8 @@ unsetopt nomatch
 # }}}
 
 # -------- Aliases {{{
-alias v='nvim' 
-alias vim='nvim' 
+# alias v='nvim' 
+# alias vim='nvim' 
 alias w3m='w3m -cookie' 
 alias h='cd $HOME && la' 
 alias dox='cd ~/Documents' 
