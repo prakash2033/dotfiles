@@ -338,3 +338,9 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
+
+# --------- WSL DirColors {{{
+
+test -r ~/.dir_colors && eval "$(dircolors -b ~/.dir_colors)" || eval "$(dircolors -b)"
+
+# }}}
