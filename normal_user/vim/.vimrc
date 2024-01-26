@@ -84,6 +84,12 @@ let maplocalleader=" "
 " toggle relative numbering
 nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 
+" jk for Esc
+inoremap kj <esc>
+inoremap jk <esc>
+vnoremap kj <esc>
+vnoremap jk <esc>
+
 " Move thru word wrapped line 
 nnoremap k gk
 nnoremap j gj
