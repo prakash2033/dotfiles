@@ -4,6 +4,8 @@ cache.db.lock
 .DS_Store
 history.search
 normal_user/ranger/.config/ranger/plugins/*
+normal_user/w3m/.w3m/siteconf
+normal_user/w3m/.w3m/user-agent/
 normal_user/w3m/.w3m/cookie
 normal_user/w3m/.w3m/history
 normal_user/w3m/.w3m/*.gz
