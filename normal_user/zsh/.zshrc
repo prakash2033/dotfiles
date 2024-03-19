@@ -21,7 +21,9 @@ precmd_functions+=( precmd_vcs_info)
 setopt PROMPT_SUBST
 # export PS1='%F{yellow}%n%f %F{blue}%~%f ${vcs_info_msg_0_}%(?.%F{cyan}.%F{red})$%F{$reset_color%}%f '
 # export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%~%f${vcs_info_msg_0_}%(?.%F{yellow}.%F{red})$%F{$reset_color%}%f '
-export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%(5~|%-1~/…/%3~|%4~)%f${vcs_info_msg_0_}%(?.%F{yellow}.%F{red})$%F{$reset_color%}%f '
+#export PS1='%F{yellow}%n%f%F{242}@%f%F{blue}%m%f%F{242}:%f%F{magenta}%(5~|%-1~/…/%3~|%4~)%f${vcs_info_msg_0_}%(?.%F{yellow}.%F{red})$%F{$reset_color%}%f ' regular gruvbox schme
+export PS1=$'%F{white}[%n%f%F{white}@%f%F{white}%m]%F{blue}[%(5~|%-1~/…/%3~|%4~)]%f${vcs_info_msg_0_}%(?.%F{green}.%F{red})\n$%F{$reset_color%}%f '
+# export PS1="%{%F{white}%}%n%{%f%}@%{%F{green}%}%m:%{%F{magenta}%}%~%{$%f%}%  "
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
@@ -110,9 +112,16 @@ setopt PROMPT_SUBST
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
+# curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash
+# for gruvbox colorscheme
+# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
+# ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
+# ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
+
+# for green colorscheme
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=10,underline
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=10,underline
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=10
 
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
