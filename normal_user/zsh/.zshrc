@@ -108,17 +108,6 @@ setopt PROMPT_SUBST
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
-# curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash
-# for gruvbox colorscheme
-ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[precommand]=fg=222,underline
-ZSH_HIGHLIGHT_STYLES[arg0]=fg=222
-
-# for green colorscheme
-# ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=10,underline
-# ZSH_HIGHLIGHT_STYLES[precommand]=fg=10,underline
-# ZSH_HIGHLIGHT_STYLES[arg0]=fg=10
-
 # Load zsh autosuggestion
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
