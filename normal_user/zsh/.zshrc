@@ -19,7 +19,7 @@ precmd_functions+=( precmd_vcs_info)
 # ZSH understands the colors black, red, green, yellow, blue, magenta, cyan and white by default
 # %n => user, %m => hostname, text between %U and %u will be underlined
 setopt PROMPT_SUBST
-export PS1=$'%F{blue}┌──%F{white}[%n@%m]%F{blue}[%(5~|%-1~/…/%3~|%4~)${vcs_info_msg_0_}%F{blue}]\n%F{blue}└─%(?.%F{green}.%F{red})\U0001F5E1 $ '
+PS1=$'%F{blue}┌──%F{white}[%n@%m]%F{blue}[%(5~|%-1~/…/%3~|%4~)${vcs_info_msg_0_}%F{blue}]\n%F{blue}└─%(?.%F{green}.%F{red})$%f '
 
 # Enable checking for (un)staged changes, enabling use of %u and %c
 zstyle ':vcs_info:*' check-for-changes true
