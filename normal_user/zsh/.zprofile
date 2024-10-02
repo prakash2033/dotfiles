@@ -2,7 +2,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export FZF_DEFAULT_OPTS="--color=dark"
 export BROWSER="open"
-export EDITOR='nvim'
+export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export URLPORTAL=~/.scripts/urlportal 
 export RTV_BROWSER=$URLPORTAL 
