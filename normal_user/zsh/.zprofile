@@ -56,8 +56,8 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 # }}} 
 
-# -------- Set PATH, MANPATH, etc., for Homebrew. {{{ 
-
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# }}} 
+# # -------- Set PATH, MANPATH, etc., for Homebrew. {{{ 
+#
+# eval "$(/opt/homebrew/bin/brew shellenv)"
+#
+# # }}} 
