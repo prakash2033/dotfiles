@@ -15,6 +15,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
 export ANDROID_HOME="/Users/PVISHWA1/Library/Android/sdk"
+export LIBVIRT_DEFAULT_URI="'qemu:///system'"
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
@@ -55,9 +56,3 @@ PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;    
 
 # }}} 
-
-# # -------- Set PATH, MANPATH, etc., for Homebrew. {{{ 
-#
-# eval "$(/opt/homebrew/bin/brew shellenv)"
-#
-# # }}} 
