@@ -259,3 +259,5 @@ export SPOOL=$(find_spool ts tsp)
 
 # }}}
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
