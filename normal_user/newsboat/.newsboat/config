@@ -11,7 +11,7 @@
 # http://blog.sanctum.geek.nz/rss-with-newsbeuter/
 #
 #notify-xterm yes
-auto-reload yes                     # auto reload or use crontab instead ( 0 */2 * * * /usr/bin/newsboat -x reload )
+auto-reload yes                     # auto reload or use crontab instead. crontab -e ( 0 */2 * * * /usr/bin/newsboat -x reload )
 reload-time 60                      # update all feeds every x minutes
 reload-threads 4                    # parallel
 reload-only-visible-feeds yes       # manually reloading all feeds will only reload the currently visible feeds

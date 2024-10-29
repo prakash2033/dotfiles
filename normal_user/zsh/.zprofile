@@ -1,7 +1,8 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
 export FZF_DEFAULT_COMMAND='find .'
-export BROWSER="open"
+export BROWSER="google-chrome"
+export BROWSER_PRIVATE="google-chrome --incognito"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export URLPORTAL=~/.scripts/urlportal 
