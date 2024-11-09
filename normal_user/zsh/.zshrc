@@ -74,10 +74,9 @@ KEYTIMEOUT=1
 # show vim status with date
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
-    local DATE=$(date +"%Y-%m-%d %H:%M:%S")
-    INSERT="%F{yellow}${DATE}%f"
-    NORMAL="%F{blue}${DATE}%f"
-    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}} "
+    INSERT="%F{yellow}$(date +'%Y-%m-%d %H:%M:%S')%f"
+    NORMAL="%F{blue}$(date +'%Y-%m-%d %H:%M:%S')%f"
+    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
     RPS2=$RPS1
     zle reset-prompt
 }
