@@ -49,6 +49,8 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 
 # Set up the prompt (with git branch name)
 setopt PROMPT_SUBST
+
+# Set RPROMPT to include vcs_info_msg_0_ and the current date
 RPROMPT=\$vcs_info_msg_0_
 # }}}
 
@@ -69,13 +71,13 @@ bindkey -M vicmd v edit-command-line
 # 10ms for key sequences
 KEYTIMEOUT=1
 
-# show vim status
+# show vim status with date
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
-    # RPS1="$vcs_info_msg_0_ ${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
-    INSERT="%F{green}-- INSERT --%f"
-    NORMAL="%F{blue}-- NORMAL --%f"
-    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
+    local DATE=$(date +"%Y-%m-%d %H:%M:%S")
+    INSERT="%F{yellow}${DATE}%f"
+    NORMAL="%F{blue}${DATE}%f"
+    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}} "
     RPS2=$RPS1
     zle reset-prompt
 }
@@ -99,6 +101,7 @@ bindkey -M vicmd '^r' history-incremental-search-backward
 
 # -------- Source {{{
 # Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
