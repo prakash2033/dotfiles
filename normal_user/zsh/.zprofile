@@ -15,6 +15,7 @@ export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
+export LIBVIRT_DEFAULT_URI='qemu:///system'
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
@@ -27,7 +28,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
-[ -d "$HOME/.env" ] && source $HOME/.env
+[ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # -------- Perl for YouTube-Viewer {{{    
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
