@@ -22,9 +22,9 @@ zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{166}!%f'
 zstyle ':vcs_info:*' stagedstr '%F{040}+%f'
 # Set the format of the Git information for vcs_info
-zstyle ':vcs_info:git:*' formats       '%F{yellow}(%b%u%c%m%F{yellow})%f '
-zstyle ':vcs_info:git:*' actionformats '%F{yellow}(%b|%a%u%c%F{yellow})%f '
-zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{yellow}%b:r%r%f '
+zstyle ':vcs_info:git:*' formats       '%F{yellow}(%b%u%c%m%F{yellow})%f'
+zstyle ':vcs_info:git:*' actionformats '%F{yellow}(%b|%a%u%c%F{yellow})%f'
+zstyle ':vcs_info:(svn|bzr):*' branchformat '%F{yellow}%b:r%r%f'
 zstyle ':vcs_info:bzr:*' use-simple true
 
  # Add up/down arrows after branch name, if there are changes to pull/to push
