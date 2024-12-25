@@ -38,6 +38,5 @@ PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;    
 # }}} 
 
-# -------- Homebrew{{{
-[ -d "$HOME/.scripts" ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-# }}}
+[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg > /dev/null 2>&1 && exec startx $HOME/.xinitrc
+
