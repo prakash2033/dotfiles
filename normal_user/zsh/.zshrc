@@ -260,3 +260,4 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
+export LIBVIRT_DEFAULT_URI="qemu:///system"
