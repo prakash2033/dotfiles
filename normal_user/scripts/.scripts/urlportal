@@ -663,6 +663,6 @@ case "$LINK" in
     #     LINK="$(echo "http://imgsmarts.info/pic.jpeg?pic_id="$pic_id_value"&sig="$sig_value"&referer="$referer_value"")"
     #     # tmux new-window -n pixcli && tmux send-keys "$IMAGECLI '$LINK' && tmux kill-pane" 'Enter'
     #     # nohup $BROWSER "$LINK" > /dev/null 2>&1 &
-    #     $BROWSER "$LINK"
+    #     $BROWSER "$LINK" &
     #     ;;
 esac

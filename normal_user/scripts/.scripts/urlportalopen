@@ -576,19 +576,6 @@ case "$LINK" in
 #### }}}
 ########################## OTHER SECTION ########################## {{{
 
-# Afttonbladet News website
-    *www.aftonbladet.se/nyheter/a/*)
-        open -a Google\ Chrome $LINK </dev/null >/dev/null 2>&1 & disown
-        ;;
-# reddit comments
-    *reddit.com/r/*/comments/*)
-        tmux new-window -n tuir && tmux send-keys "tuir -l $LINK && tmux kill-pane" 'Enter'
-        ;;
-# reddit subreddit or user
-    *reddit.com/r/*|*reddit.com/u/*|*reddit.com/user/*)
-        LINK="$(echo "$LINK" | awk -F '.com' '{print $2}')"
-        tmux new-window -n tuir && tmux send-keys "tuir -s $LINK && tmux kill-pane" 'Enter'
-        ;;
 # cyberlocker download without captcha code
     *zippyshare.com/*|*mediafire.com/file/*|*sendspace.com/file/*)
         if pgrep -f $DDL_QUEUE_FAST > /dev/null

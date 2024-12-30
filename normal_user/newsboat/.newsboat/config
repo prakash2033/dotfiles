@@ -23,7 +23,7 @@ notify-beep yes
 # article-sort-order  date-desc
 # feed-sort-order firsttag
 confirm-exit no
-browser ~/.scripts/urlportal
+browser ~/.scripts/urlportalopen
 # download-full-page yes		# for feeds with link only then dl full page
 download-retries 4
 download-timeout 120
@@ -140,11 +140,6 @@ macro b set browser "tmux split-window -p 80 && tmux send-keys 'browsh -startup-
 # macro ] set browser "$BROWSER"; open-in-browser ; set browser "$BROWSER %u"
 macro w set browser "$BROWSER"; open-in-browser ; set browser "$URLPORTAL %u"
 macro n set browser "$BROWSER_PRIVATE"; open-in-browser ; set browser "$URLPORTAL %u"
-
-# read reddit comments with rtv (reddit terminal viewer)
-# rtv: https://www.youtube.com/watch?v=jc2ZVSof5-g
-# macro r set browser "rtv -l %u"; open-in-browser ; set browser "$BROWSER %u"
-macro r set browser "tmux split-window -p 80 && tmux send-keys 'rtv -l %u && tmux kill-pane\n'"; open-in-browser ; set browser "$URLPORTAL %u"
 
 # readability
 # macro [ set browser "tmux split-window -p 80 && tmux send-keys 'w3m http://justread.mpgarate.com/read?url=%u && tmux kill-pane\n'"; open-in-browser ; set browser "$BROWSER %u"
