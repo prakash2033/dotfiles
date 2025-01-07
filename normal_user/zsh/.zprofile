@@ -6,7 +6,6 @@ export BROWSER_PRIVATE="brave --incognito"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export URLPORTAL=~/.scripts/urlportal
-export URLPORTALOPEN=~/.scripts/urlportalopen
 export RTV_BROWSER=$URLPORTAL 
 export IMAGEVIEWER="feh" 
 export IMAGECLI="feh"
@@ -29,6 +28,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
+# [ -d "$HOME/myenv/bin" ] && PATH="$HOME/myenv/bin:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # -------- Perl for YouTube-Viewer {{{    

@@ -9,7 +9,7 @@ set relativenumber
 set ignorecase
 set smartcase
 set incsearch
-set nohlsearch
+set hlsearch
 set ruler
 set cursorline
 set laststatus=2 
