@@ -581,6 +581,9 @@ case "$LINK" in
     *thelocal.se/*)
         nohup $BROWSER "$LINK" > /dev/null 2>&1 &
         ;;
+    *news.google.com/*)
+        nohup $BROWSER "$LINK" > /dev/null 2>&1 &
+        ;;
 # reddit comments
     # *reddit.com/r/*/comments/*)
         # tmux new-window -n rtv && tmux send-keys "rtv -l $LINK && tmux kill-pane" 'Enter'
