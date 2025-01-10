@@ -51,52 +51,52 @@ zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
 setopt PROMPT_SUBST
 
 # Set RPROMPT to include vcs_info_msg_0_ and the current date
-RPROMPT=\$vcs_info_msg_0_
+#RPROMPT=\$vcs_info_msg_0_
 # }}}
 
-#-------- Vim Mode {{{
-#------------------------------------------------------
-# enable vim mode on commmand line
-bindkey -v
-
-# edit command with editor
-# http://stackoverflow.com/a/903973
-# usage: type someshit then hit Esc+v
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey -M vicmd v edit-command-line
-
-# no delay entering normal mode
-# https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
-# 10ms for key sequences
-KEYTIMEOUT=1
-
-# show vim status with date
-# http://zshwiki.org/home/examples/zlewidgets
-function zle-line-init zle-keymap-select {
-    INSERT="%F{yellow}$(date +'%Y-%m-%d %r')%f"
-    NORMAL="%F{blue}$(date +'%Y-%m-%d %r')%f"
-    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
-    RPS2=$RPS1
-    zle reset-prompt
-}
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-# add missing vim hotkeys
-# fixes backspace deletion issues
-# http://zshwiki.org/home/zle/vi-mode
-bindkey -a u undo
-# bindkey -a '^R' redo  # conflicts with history search hotkey
-bindkey -a '^T' redo
-bindkey '^?' backward-delete-char #backspace
-
-# history search in vim mode
-# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
-bindkey -M viins '^r' history-incremental-search-backward
-bindkey -M vicmd '^r' history-incremental-search-backward
-
-# }}}
+# #-------- Vim Mode {{{
+# #------------------------------------------------------
+# # enable vim mode on commmand line
+# bindkey -v
+#
+# # edit command with editor
+# # http://stackoverflow.com/a/903973
+# # usage: type someshit then hit Esc+v
+# autoload -U edit-command-line
+# zle -N edit-command-line
+# bindkey -M vicmd v edit-command-line
+#
+# # no delay entering normal mode
+# # https://github.com/pda/dotzsh/blob/master/keyboard.zsh#L10
+# # 10ms for key sequences
+# KEYTIMEOUT=1
+#
+# # show vim status with date
+# # http://zshwiki.org/home/examples/zlewidgets
+# function zle-line-init zle-keymap-select {
+#     INSERT="%F{yellow}$(date +'%Y-%m-%d %r')%f"
+#     NORMAL="%F{blue}$(date +'%Y-%m-%d %r')%f"
+#     RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
+#     RPS2=$RPS1
+#     zle reset-prompt
+# }
+# zle -N zle-line-init
+# zle -N zle-keymap-select
+#
+# # add missing vim hotkeys
+# # fixes backspace deletion issues
+# # http://zshwiki.org/home/zle/vi-mode
+# bindkey -a u undo
+# # bindkey -a '^R' redo  # conflicts with history search hotkey
+# bindkey -a '^T' redo
+# bindkey '^?' backward-delete-char #backspace
+#
+# # history search in vim mode
+# # http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r_working_anymore
+# bindkey -M viins '^r' history-incremental-search-backward
+# bindkey -M vicmd '^r' history-incremental-search-backward
+#
+# # }}}
 
 # -------- Source {{{
 # Load syntax highlighting; should be last.
@@ -260,4 +260,3 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
-export LIBVIRT_DEFAULT_URI="qemu:///system"
