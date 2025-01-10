@@ -5,6 +5,7 @@
 
     # install git & stow
     brew install git stow
+    sudo apt install git stow vim vim-gtk3
     
     # remove last login on terminal start
     touch ~/.hushlogin
