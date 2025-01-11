@@ -22,6 +22,21 @@
     sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
     sudo chmod a+rx /usr/local/bin/yt-dlp
 
+    mkdir -p ~/Public/gitrepo 
+    cd ~/Public/gitrepo
+    git clone https://github.com/prakash2033/dotfiles_v2.git
+    git clone https://github.com/so-fancy/diff-so-fancy.git
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+    git clone https://github.com/prakash2033/shownotes.git
+    git clone https://github.com/michael-lazar/rtv.git
+    
+    # change to zsh shell
+    chsh -s /usr/bin/zsh
+    
+    # vim plug install. Run :PlugInstall inside vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
     # install brew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
