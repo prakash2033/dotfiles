@@ -30,7 +30,7 @@ if &term =~ '^screen'
 endif
 "}}}
 
-" Install vim-plug if not found{{{
+" -------- Install vim plug {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
