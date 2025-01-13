@@ -1,7 +1,7 @@
 # dotfiles
 
     # Install packages
-    sudo apt install xterm tmux zsh zsh-syntax-highlighting -y
+    sudo apt install zoxide xterm tmux zsh zsh-syntax-highlighting -y
     sudo apt install git stow coreutils xdotool sxiv cmus htop newsboat -y
     sudo apt install jq fzf dmenu qpdfview task-spooler -y
     sudo apt install xcb libxcb-util0-dev libxcb-cursor-dev -y
