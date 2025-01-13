@@ -26,9 +26,9 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "/usr/sbin" ] && PATH="/usr/sbin:$PATH"
 [ -d "$HOME/Public/gitrepo/diff-so-fancy" ] && PATH="$HOME/Public/gitrepo/diff-so-fancy:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+[ -d "$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin" ] && PATH="$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
-# [ -d "$HOME/myenv/bin" ] && PATH="$HOME/myenv/bin:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 
 # -------- Perl for YouTube-Viewer {{{    
