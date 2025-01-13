@@ -44,9 +44,11 @@
     # remove last login on terminal start
     touch ~/.hushlogin
     
-    # vim plug install. Run :PlugInstall inside vim. Install vim-gtk aka gvim in linux
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    # install mov-cli
+    pipx install mov-cli
+    pipx inject mov-cli mov-cli-youtube
+    mov-cli -e
+    sudo apt install chafa # for video previews
     
     ## clone repo
     mkdir -p ~/Public/gitrepo
