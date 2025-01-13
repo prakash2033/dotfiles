@@ -204,7 +204,7 @@ alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 # }}} 
 
 # -------- Git {{{
-alias ga='git add .'
+alias ga='git add'
 alias gc='git commit'
 alias gD='git branch -D $(git branch | fzf)'
 alias gd='git diff --color | diff-so-fancy'
