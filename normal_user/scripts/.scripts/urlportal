@@ -582,7 +582,7 @@ case "$LINK" in
         nohup lynx -accept_all_cookies "$LINK" > /dev/null 2>&1 &
         ;;
     *news.google.com/*)
-        nohup $BROWSER "$LINK" > /dev/null 2>&1 &
+        nohup $lynx -accept_all_cookies "$LINK" > /dev/null 2>&1 &
         ;;
 # reddit comments
     # *reddit.com/r/*/comments/*)
