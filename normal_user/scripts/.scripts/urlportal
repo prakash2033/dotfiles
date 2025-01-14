@@ -578,7 +578,7 @@ case "$LINK" in
 #### }}}
 ########################## OTHER SECTION ########################## {{{
 
-    *thelocal.se/*
+    *thelocal.se/*)
         nohup lynx -accept_all_cookies "$LINK" > /dev/null 2>&1 &
         ;;
     *news.google.com/*)
