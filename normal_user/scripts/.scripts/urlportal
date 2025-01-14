@@ -579,10 +579,10 @@ case "$LINK" in
 ########################## OTHER SECTION ########################## {{{
 
     *thelocal.se/*)
-        nohup lynx -accept_all_cookies "$LINK" > /dev/null 2>&1 &
+        tmux new-window -n browse && tmux send-keys "lynx -accept_all_cookies '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *news.google.com/*)
-        nohup lynx -accept_all_cookies "$LINK" > /dev/null 2>&1 &
+        tmux new-window -n browse && tmux send-keys "lynx -accept_all_cookies '$LINK' && tmux kill-pane" 'Enter'
         ;;
 # reddit comments
     # *reddit.com/r/*/comments/*)

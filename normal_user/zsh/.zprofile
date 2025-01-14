@@ -5,6 +5,7 @@ export BROWSER="flatpak run io.github.ungoogled_software.ungoogled_chromium"
 export BROWSER_PRIVATE="flatpak run io.github.ungoogled_software.ungoogled_chromium --incognito"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
+export LYNX_CFG="~/.config/lynx/lynx.cfg"
 export URLPORTAL=~/.scripts/urlportal
 export RTV_BROWSER=$URLPORTAL 
 export IMAGEVIEWER="feh" 
