@@ -18,6 +18,7 @@
     
     # Compile newsboat
     sudo apt-get install sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev
+    sudo apt install sqlite3 libstfl-dev asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
     
     ## Google Chrome
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
