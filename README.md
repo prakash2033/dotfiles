@@ -46,7 +46,7 @@
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # install git & stow
-    brew install git stow
+    sudo apt install git stow
     sudo apt install git stow vim vim-gtk3
     
     # remove last login on terminal start
