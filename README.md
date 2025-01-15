@@ -50,6 +50,13 @@
     mov-cli -e
     sudo apt install chafa # for video previews
     
+    # Auto-cpufreq
+    git clone https://github.com/AdnanHodzic/auto-cpufreq.git
+    cd auto-cpufreq && sudo ./auto-cpufreq-installer
+    ## Install daemon
+    sudo auto-cpufreq --install     
+    auto-cpufreq --stats
+    
     ## clone repo
     mkdir -p ~/Public/gitrepo
     cd ~/Public/gitrepo
