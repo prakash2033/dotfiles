@@ -31,6 +31,10 @@
     git clone https://github.com/prakash2033/shownotes.git
     git clone https://github.com/michael-lazar/rtv.git
     
+    # Gogh Colorscheme
+    sudo apt-get install dconf-cli uuid-runtime
+    bash -c "$(wget -qO- https://git.io/vQgMr)"
+    
     # change to zsh shell
     chsh -s /usr/bin/zsh
     
