@@ -15,7 +15,7 @@
   sudo apt install sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
   ```
   
-  # RTV - Terminal for Reddit ![Python3.8](https://askubuntu.com/a/1503634/1004133)
+  # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
   ```
   git clone https://github.com/michael-lazar/rtv.git
   cd rtv
