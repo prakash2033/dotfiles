@@ -70,6 +70,9 @@
     gh auth login
     gh extension install github/gh-copilot 
     
+    # Chatgpt Cli
+    curl -L -o chatgpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x chatgpt && sudo mv chatgpt /usr/local/bin/
+    
     ## clone repo
     mkdir -p ~/Public/gitrepo
     cd ~/Public/gitrepo
