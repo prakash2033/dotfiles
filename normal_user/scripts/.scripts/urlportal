@@ -585,14 +585,14 @@ case "$LINK" in
         tmux new-window -n browse && tmux send-keys "lynx -accept_all_cookies '$LINK' && tmux kill-pane" 'Enter'
         ;;
 # reddit comments
-    # *reddit.com/r/*/comments/*)
-        # tmux new-window -n rtv && tmux send-keys "rtv -l $LINK && tmux kill-pane" 'Enter'
-        # ;;
+    *reddit.com/r/*/comments/*)
+        tmux new-window -n rtv && tmux send-keys "rtv -l $LINK && tmux kill-pane" 'Enter'
+        ;;
 # reddit subreddit or user
-    # *reddit.com/r/*|*reddit.com/u/*|*reddit.com/user/*)
-    #     LINK="$(echo "$LINK" | awk -F '.com' '{print $2}')"
-    #     tmux new-window -n rtv && tmux send-keys "rtv -s $LINK && tmux kill-pane" 'Enter'
-    #     ;;
+    *reddit.com/r/*|*reddit.com/u/*|*reddit.com/user/*)
+        LINK="$(echo "$LINK" | awk -F '.com' '{print $2}')"
+        tmux new-window -n rtv && tmux send-keys "rtv -s $LINK && tmux kill-pane" 'Enter'
+        ;;
 # cyberlocker download without captcha code
     *zippyshare.com/*|*mediafire.com/file/*|*sendspace.com/file/*)
         if pgrep -f $DDL_QUEUE_FAST > /dev/null
