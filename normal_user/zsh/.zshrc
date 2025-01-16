@@ -116,6 +116,10 @@ then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
+# Zoxide
+eval "$(zoxide init zsh)"
+
+
 # }}}
 
 # -------- Basic auto/tab complete:{{{
@@ -263,5 +267,3 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
-
-eval "$(zoxide init zsh)"
