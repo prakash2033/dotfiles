@@ -7,6 +7,7 @@ export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export LYNX_CFG="~/.config/lynx/lynx.cfg"
 export URLPORTAL=~/.scripts/urlportal
+export RTV="~/.myenv3.8/bin/rtv"
 export RTV_BROWSER=$URLPORTAL 
 export IMAGEVIEWER="feh" 
 export IMAGECLI="feh"
