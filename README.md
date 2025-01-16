@@ -73,6 +73,10 @@
     # Chatgpt Cli
     curl -L -o chatgpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x chatgpt && sudo mv chatgpt /usr/local/bin/
     
+    # Ubuntu Specific Customization
+    gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize-or-previews
+    gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+    
     ## clone repo
     mkdir -p ~/Public/gitrepo
     cd ~/Public/gitrepo
