@@ -65,6 +65,11 @@
     sudo auto-cpufreq --install     
     auto-cpufreq --stats
     
+    # Github Cli
+    sudo apt install gh
+    gh auth login
+    gh extension install github/gh-copilot 
+    
     ## clone repo
     mkdir -p ~/Public/gitrepo
     cd ~/Public/gitrepo
