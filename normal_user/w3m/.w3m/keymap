@@ -5,8 +5,7 @@
 #   \_/\_/  |____/|_|  |_| |_|\_\___|\__, |_| |_| |_|\__,_| .__/ 
 #                                    |___/                |_|    
 
-
-keymap  e       EXTERN_LINK ~/.scripts/urlportal
+keymap  e       EXTERN_LINK $BROWSER
 keymap  SPC     NEXT_HALF_PAGE
 keymap  C-d     NEXT_HALF_PAGE
 keymap  C-u     PREV_HALF_PAGE
