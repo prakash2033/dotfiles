@@ -37,7 +37,7 @@
 "query:All Articles Linux-Subreddit:tags # \"Linux-Subreddit\"" "Linux-Subreddit"
 "query:All Articles Mac:tags # \"Mac\"" "Mac"
 "query:All Articles Azure-Subreddit:tags # \"Azure-Subreddit\"" "Azure-Subreddit"
-"query:All Articles Popular-Subreddit:tags # \"Popular-Subreddit\"" "Popular-Subreddit"
+"query:All Articles Favorite-Subreddit:tags # \"Favorite-Subreddit\"" "Favorite-Subreddit"
 "query:All Articles Video-Linux:tags # \"Video-Linux\"" "Video-Linux"
 "query:All Articles YouTube-Videos:tags # \"YouTube-Videos\"" "YouTube-Videos"
 "query:All Articles News:tags # \"News\"" "News"
@@ -64,6 +64,7 @@ https://www.reddit.com/r/DHExchange/.rss "DDL-DataHoarder"
 # ------------------------------------------------------
 
 https://www.reddit.com/r/linux/.rss "Linux-Subreddit"
+https://www.reddit.com/r/fedora/.rss "Linux-Subreddit"
 https://www.reddit.com/r/commandline/.rss "Linux-Subreddit"
 https://www.reddit.com/r/unixporn/.rss "Linux-Subreddit"
 https://www.reddit.com/r/UsabilityPorn/.rss "Linux-Subreddit"
@@ -77,6 +78,7 @@ https://www.reddit.com/r/tmux/.rss "Linux-Subreddit"
 https://www.reddit.com/r/vim_magic/.rss "Linux-Subreddit"
 https://www.reddit.com/r/vim/.rss "Linux-Subreddit"
 https://www.reddit.com/r/linuxprojects/.rss "Linux-Subreddit"
+https://www.reddit.com/r/linuxquestions/.rss "Linux-Subreddit"
 https://www.reddit.com/r/ScriptSwap/.rss "Linux-Subreddit"
 https://www.reddit.com/r/usefulscripts/.rss "Linux-Subreddit"
 https://www.reddit.com/r/debian/.rss "Linux-Subreddit"
@@ -100,8 +102,13 @@ https://www.reddit.com/r/PleX/.rss "Plex-Subreddit"
 # -------- Azure-Subreddit {{{
 https://www.reddit.com/r/AZURE/.rss "Azure-Subreddit"
 # }}}
-# -------- Popular-subreddit {{{
-https://www.reddit.com/r/popular/.rss "Popular-Subreddit"
+# -------- Favorite-subreddit {{{
+https://www.reddit.com/r/popular/.rss "Favorite-Subreddit"
+https://www.reddit.com/r/BuyItForLife/.rss "Favorite-Subreddit"
+https://www.reddit.com/r/hyprland/.rss "Favorite-Subreddit"
+https://www.reddit.com/r/Remarkable/.rss "Favorite-Subreddit"
+https://www.reddit.com/r/RemarkableTablet/.rss "Favorite-Subreddit"
+https://www.reddit.com/r/nagpur/.rss "Favorite-Subreddit"
 # }}}
 # -------- Web Development {{{
 https://www.reddit.com/r/webdev/.rss "Dev-Subreddit"
