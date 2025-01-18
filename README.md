@@ -95,6 +95,7 @@
   ```
   gsettings set org.gnome.shell.extensions.dash-to-dock click-action minimize-or-previews
   gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
+  gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
   ```
 
   ## clone repo
