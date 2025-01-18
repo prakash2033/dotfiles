@@ -2,8 +2,10 @@
 
   # Install packages
   ```
-  sudo apt install zoxide pipx wl-clipboard xterm tmux zsh zsh-syntax-highlighting git stow coreutils xdotool sxiv cmus htop jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
-  python3-pip python-is-python3 w3m   surfraw feh onedrive ranger imagemagick aptitude lynx bluez blueman libxext-dev gvfs-backends -y fortunes fortunes git stow vim vim-gtk3 chafa
+  sudo apt install zoxide pipx wl-clipboard xterm tmux zsh zsh-syntax-highlighting git stow coreutils xdotool sxiv \
+  cmus htop jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
+  python3-pip python-is-python3 w3m   surfraw feh onedrive ranger imagemagick aptitude lynx bluez blueman \
+  libxext-dev gvfs-backends -y fortunes fortunes git stow vim vim-gtk3 chafa
   ```
 
   ```
@@ -12,8 +14,17 @@
   
   # Newsboat dependencies
   ```
-  sudo apt install sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
+  sudo apt install sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
+  asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
   ```
+  
+ # Dotool - Mouse and Keyboard Input everywhere (X11/Wayland/TTY)
+ ```
+ sudo apt install build-essential libevdev-dev libudev-dev golang-go scdoc
+ git clone https://git.sr.ht/~geb/dotool
+ cd dotool
+ ./build.sh && sudo ./build.sh install
+ ```
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
   ```
