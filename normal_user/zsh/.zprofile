@@ -30,9 +30,9 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin" ] && PATH="$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
+[ -d "$HOME/.myenv3.8/bin" ] && PATH="$HOME/.myenv3.8/bin:$PATH" 
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
-[ -f "$HOME/.myenv3.8/bin" ] && source "$HOME/.myenv3.8/bin"
 
 # -------- Perl for YouTube-Viewer {{{    
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
