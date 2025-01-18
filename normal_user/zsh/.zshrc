@@ -268,3 +268,7 @@ find_spool() { for i;do command -v "$i" >/dev/null && { echo "$i"; return 0;};do
 export SPOOL=$(find_spool ts tsp)
 
 # }}}
+
+# -------- Autostart Tmux Session or Attach {{{
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ ${UID} != 0 ]; then tmux new-session -A; else tmux attach ; fi &> /dev/null
+# }}}
