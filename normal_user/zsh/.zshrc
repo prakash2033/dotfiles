@@ -270,5 +270,8 @@ export SPOOL=$(find_spool ts tsp)
 # }}}
 
 # -------- Autostart Tmux Session or Attach {{{
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ ${UID} != 0 ]; then tmux new-session -A; else tmux attach ; fi &> /dev/null
+
+# Check if tmux is available and you're not already inside a tmux session
+if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then tmux ls &>/dev/null || tmux new-session -d -s 0; tmux attach-session -t 0; fi
+
 # }}}
