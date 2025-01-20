@@ -8,10 +8,8 @@ adjust-underline-thickness = -60%
 cursor-style = block
 cursor-style-blink = true
 
-shell-integration = fish
+shell-integration = zsh
 shell-integration-features = no-cursor
-
-keybind = ctrl+d=new_split:right
 
 window-width = 120
 window-height = 45
@@ -21,4 +19,8 @@ confirm-close-surface = false
 clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
 
-theme = GruvboxDark
+theme = GruvboxDarkHard
+# theme = catppuccin-mocha
+
+copy-on-select = clipboard
+scrollback-limit = 134217728

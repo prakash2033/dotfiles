@@ -1,0 +1,9 @@
+[user]
+        email = pvishwa1@volvocars.com
+        name = Prakash Vishwakarma
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[includeIf "gitdir:~/Public/gitrepo/"]
+	path = ~/Public/gitrepo/dotfiles/.gitconfig
