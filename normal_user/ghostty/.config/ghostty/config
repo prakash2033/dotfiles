@@ -1,6 +1,7 @@
 font-family = UbuntuMono Nerd Font
+font-style = Regular
+font-thicken = true
 font-size = 14
-keybind = ctrl+shift+r=reload_config
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
@@ -20,7 +21,8 @@ clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
 
 theme = GruvboxDarkHard
-# theme = catppuccin-mocha
 
 copy-on-select = clipboard
 scrollback-limit = 134217728
+
+keybind = ctrl+shift+r=reload_config
