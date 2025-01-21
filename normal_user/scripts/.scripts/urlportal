@@ -585,7 +585,7 @@ case "$LINK" in
          nohup $BROWSER "$LINK" > /dev/null 2>&1 &
         ;;
 # reddit comments
-    *reddit.com/r/*/comments/*)
+    *reddit.com/r/*/comments/*|*reddit.com/r/*/s/*)
         tmux new-window -n rtv && tmux send-keys "rtv -l $LINK && tmux kill-pane" 'Enter'
         ;;
 # reddit subreddit or user
