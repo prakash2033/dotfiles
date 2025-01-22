@@ -26,3 +26,6 @@ copy-on-select = clipboard
 scrollback-limit = 134217728
 
 keybind = ctrl+shift+r=reload_config
+
+fullscreen = true
+window-decoration = false
