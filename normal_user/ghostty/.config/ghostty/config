@@ -25,8 +25,9 @@ theme = GruvboxDarkHard
 copy-on-select = clipboard
 scrollback-limit = 134217728
 
+fullscreen = true
+# window-decoration = false
+# gtk-titlebar = false
+
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+b=toggle_window_decorations
-
-fullscreen = true
-window-decoration = false
