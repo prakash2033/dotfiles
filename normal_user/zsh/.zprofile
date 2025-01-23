@@ -18,6 +18,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT="true"
 export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
+export GSETTINGS_BACKEND=keyfile
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
