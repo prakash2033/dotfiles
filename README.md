@@ -54,9 +54,10 @@
   gh extension install github/gh-copilot
   ```
   
-  ## Chatgpt Cli
+  ## Chatgpt & Shell Gpt Cli
   ```
   curl -L -o chatgpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x chatgpt && sudo mv chatgpt /usr/local/bin/
+  pipx install shell-gpt
   ```
   
   ## Gogh Colorscheme (Run from outside tmux)

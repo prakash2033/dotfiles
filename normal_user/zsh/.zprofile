@@ -19,6 +19,7 @@ export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 export GSETTINGS_BACKEND=keyfile
+export KUBE_EDITOR="vim"
 
 ## custom w3m hotkeys
 export W3M_HOTKEY_OPTIONS=':O'
