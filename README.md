@@ -18,6 +18,13 @@
   asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
   ```
   
+  # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
+  ```
+  python3.8 -m venv ~/.myenv3.8
+  cd ~/.myenv3.8/bin
+  ./pip install rtv
+  ```
+  
  # Dotool - Mouse and Keyboard Input everywhere (X11/Wayland/TTY)
  ```
  sudo apt install build-essential libevdev-dev libudev-dev golang-go scdoc
@@ -26,14 +33,7 @@
  ./build.sh && sudo ./build.sh install
  sudo udevadm control --reload && sudo udevadm trigger
  ```
-  
-  # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
-  ```
-  git clone https://github.com/michael-lazar/rtv.git
-  cd rtv
-  python setup.py install
-  ```
-  
+ 
   ## Google Chrome
   ```
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
