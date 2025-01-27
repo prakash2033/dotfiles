@@ -54,6 +54,11 @@
   gh extension install github/gh-copilot
   ```
   
+  ## Dev Cli
+  ```
+  curl -sS https://webinstall.dev/k9s | bash
+  ```
+  
   ## Chatgpt & Shell Gpt Cli
   ```
   curl -L -o chatgpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x chatgpt && sudo mv chatgpt /usr/local/bin/
