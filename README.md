@@ -59,11 +59,13 @@
   curl -sS https://webinstall.dev/k9s | bash
   ```
   
-  ## Chatgpt & Shell Gpt Cli
+  ## Chatgpt, Shell Gpt Cli & Ollama
   ```
   curl -L -o chatgpt https://github.com/kardolus/chatgpt-cli/releases/latest/download/chatgpt-linux-amd64 && chmod +x chatgpt && sudo mv chatgpt /usr/local/bin/
   pipx install shell-gpt
   sgpt --install-integration
+  
+  curl -fsSL https://ollama.com/install.sh | sh
   ```
   
   ## Gogh Colorscheme (Run from outside tmux)
