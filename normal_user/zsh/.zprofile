@@ -1,3 +1,4 @@
+# -------- Exports {{{
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
 export FZF_DEFAULT_COMMAND='find .'
@@ -25,7 +26,9 @@ export KUBE_EDITOR="vim"
 export W3M_HOTKEY_OPTIONS=':O'
 export W3M_HOTKEY_LINK_BEGIN='f'
 export W3M_HOTKEY_RELOAD='r'
+# }}}
 
+# -------- PATHS {{{
 [ -d "$HOME/.scripts" ] && PATH="$HOME/.scripts:$PATH" 
 [ -d "/usr/sbin" ] && PATH="/usr/sbin:$PATH"
 [ -d "$HOME/Public/gitrepo/diff-so-fancy" ] && PATH="$HOME/Public/gitrepo/diff-so-fancy:$PATH"
@@ -35,6 +38,8 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.myenv3.8/bin" ] && PATH="$HOME/.myenv3.8/bin:$PATH" 
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+# }}}
 
 # -------- Perl for YouTube-Viewer {{{    
 PATH="$HOME/perl5/bin${PATH:+:${PATH}}"; export PATH;
@@ -44,5 +49,6 @@ PERL_MB_OPT="--install_base \"$HOME/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;    
 # }}} 
 
+# -------- XINITRC {{{
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg > /dev/null 2>&1 && exec startx $HOME/.xinitrc
-
+# }}}

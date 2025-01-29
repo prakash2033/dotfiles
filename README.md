@@ -20,6 +20,14 @@
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
   ```
+  sudo dnf groupinstall "Development Tools"
+  sudo dnf install ncurses-devel openssl-devel libffi-devel bzip2-devel zlib-devel readline-devel sqlite-devel
+  wget https://www.python.org/ftp/python/3.8.16/Python-3.8.16.tgz
+  tar -xf Python-3.8.16.tgz
+  cd Python-3.8.16
+  ./configure --with-ssl --enable-optimizations 
+  make -j$(nproc)
+  sudo make install
   python3.8 -m venv ~/.myenv3.8
   cd ~/.myenv3.8/bin
   ./pip install rtv
