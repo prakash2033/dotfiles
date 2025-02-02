@@ -127,6 +127,7 @@
   git clone https://github.com/prakash2033/shownotes.git
   git clone https://github.com/michael-lazar/rtv.git
   git clone git@github.com:prakash2033/dotfiles.git
+  git clone git@github.com:prakash2033/wiki.git  
   ```
 
   ## symlink all folders (trailing slash */) in dotfiles dir to home dir
