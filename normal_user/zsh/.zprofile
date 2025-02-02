@@ -16,6 +16,7 @@ export GOPATH=~/.go
 export PATH="$PATH:$GOPATH/bin"
 export DOTNET_ROOT="$HOME/.dotnet"
 export DOTNET_CLI_TELEMETRY_OPTOUT="true"
+export SSL_CERT_DIR="~/.dotnet/corefx/cryptography/x509stores/my"
 export LESS=$LESS" -S -R"
 export TERM="xterm-256color"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
