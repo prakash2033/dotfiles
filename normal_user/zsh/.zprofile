@@ -50,5 +50,5 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 # }}} 
 
 # -------- XINITRC {{{
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg > /dev/null 2>&1 && exec startx $HOME/.xinitrc
+#[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg > /dev/null 2>&1 && exec startx $HOME/.xinitrc
 # }}}

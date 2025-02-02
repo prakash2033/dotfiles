@@ -116,6 +116,17 @@
   gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
   gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
   ```
+  
+  # Development setup
+  ```
+  wget https://dot.net/v1/dotnet-install.sh
+  chmod +x dotnet-install.sh
+  ./dotnet-install.sh --channel LTS
+  ./dotnet-install.sh --channel 7.0
+
+  dotnet tool update -g linux-dev-certs
+  dotnet linux-dev-certs install
+  ```
 
   ## clone repo
   ```
