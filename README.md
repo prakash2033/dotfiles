@@ -121,7 +121,7 @@
   ```
   wget https://dot.net/v1/dotnet-install.sh
   chmod +x dotnet-install.sh
-  ./dotnet-install.sh --channel LTS
+  #./dotnet-install.sh --channel LTS
   ./dotnet-install.sh --channel 7.0
 
   dotnet tool update -g linux-dev-certs
