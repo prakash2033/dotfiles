@@ -4,12 +4,17 @@
   ```
   sudo apt install zoxide pipx wl-clipboard xterm tmux zsh zsh-syntax-highlighting git stow coreutils xdotool sxiv \
   cmus htop jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
-  python3-pip python-is-python3 w3m   surfraw feh onedrive ranger imagemagick aptitude lynx bluez blueman \
+  python3-pip python-is-python3 w3m   surfraw feh onedrive ranger imagemagick aptitude lynx \
   libxext-dev gvfs-backends fortunes fortunes git stow vim vim-gtk3 chafa screenkey gnome-weather -y
   ```
 
   ```
   pip3 install ueberzug
+  ```
+
+  # Bluetooth Apps
+  ```
+  bluez blueman
   ```
   
   # Newsboat dependencies
