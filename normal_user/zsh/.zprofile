@@ -8,7 +8,7 @@ export EDITOR='vim'
 export BROWSERCLI="w3m" 
 export LYNX_CFG="~/.config/lynx/lynx.cfg"
 export URLPORTAL=~/.scripts/urlportal
-export RTV="~/.myenv3.8/bin/rtv"
+export RTV="./.myenv3.8/bin/rtv"
 export RTV_BROWSER=$URLPORTAL 
 export IMAGEVIEWER="feh" 
 export IMAGECLI="feh"
@@ -36,7 +36,6 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin" ] && PATH="$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
-[ -d "$HOME/.myenv3.8/bin" ] && PATH="$HOME/.myenv3.8/bin:$PATH" 
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
