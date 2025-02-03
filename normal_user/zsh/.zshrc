@@ -276,7 +276,7 @@ if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then tmux ls &>/dev/null || tm
 
 # }}}
 
-# Shell-GPT integration ZSH v0.2
+# -------- Shell-GPT integration ZSH v0.2 {{{
 _sgpt_zsh() {
 if [[ -n "$BUFFER" ]]; then
     _sgpt_prev_cmd=$BUFFER
@@ -288,4 +288,4 @@ fi
 }
 zle -N _sgpt_zsh
 bindkey '^g' _sgpt_zsh
-
+# }}}
