@@ -19,7 +19,7 @@
   
   # Newsboat dependencies
   ```
-  sudo apt install sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
+  sudo apt install libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
   asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
   ```
   
