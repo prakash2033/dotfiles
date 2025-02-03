@@ -63,8 +63,8 @@
   ```
   ssh-keygen -b 2048 -t rsa
   sudo apt install gh
-  gh auth login
   gh extension install github/gh-copilot
+  gh auth login
   ```
   
   ## Dev Cli
