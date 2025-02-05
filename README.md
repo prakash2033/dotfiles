@@ -2,9 +2,9 @@
 
   # Install packages
   ```
-  sudo apt install zoxide pipx wl-clipboard xterm tmux zsh zsh-syntax-highlighting git stow coreutils xdotool sxiv \
-  cmus htop jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
-  python3-pip python-is-python3 w3m   surfraw feh onedrive ranger imagemagick aptitude lynx \
+  sudo apt install zoxide pipx wl-clipboard tmux zsh zsh-syntax-highlighting git stow coreutils xdotool sxiv \
+  cmus jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
+  python3-pip python-is-python3 w3m surfraw feh onedrive ranger imagemagick aptitude lynx \
   libxext-dev gvfs-backends fortunes fortunes git stow vim vim-gtk3 chafa screenkey gnome-weather \
   btop mpv -y
   ```
@@ -21,7 +21,7 @@
   # Newsboat dependencies
   ```
   sudo apt install libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
-  asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev
+  asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev -y
   ```
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
