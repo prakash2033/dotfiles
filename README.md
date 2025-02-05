@@ -37,6 +37,7 @@
   python3.8 -m venv ~/.myenv3.8
   cd ~/.myenv3.8/bin
   ./pip install rtv
+  sudo mv $(which python3.8)  ~/.myenv3.8/bin/
   ```
   
  # Dotool - Mouse and Keyboard Input everywhere (X11/Wayland/TTY)
