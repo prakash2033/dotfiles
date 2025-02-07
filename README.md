@@ -146,6 +146,9 @@
 
   dotnet tool update -g linux-dev-certs
   dotnet linux-dev-certs install
+  
+  dotnet dev-certs https --clean
+  dotnet dev-certs https --trust
   ```
 
   ## clone repo
