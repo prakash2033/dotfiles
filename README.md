@@ -26,10 +26,8 @@
   cd /tmp
   git clone https://github.com/newsboat/newsboat.git
   cd newsboat
-  vim rust/libnewsboat/src/human_panic.rs 
-  :%/PanicHookInfo/PanicInfo/g
-  make                   #  pass -jN to use N CPU cores, e.g. -j8
-  sudo make install      #  install everything under /usr/local/bin/newsboat
+  sed -i 's/PanicHookInfo/PanicInfo/g' rust/libnewsboat/src/human_panic.rs
+  make -j8 && sudo make install #  pass -jN to use N CPU cores, e.g. -j8
   ```
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
