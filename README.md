@@ -18,10 +18,18 @@
   bluez blueman
   ```
   
-  # Newsboat dependencies
+  # Newsboat
   ```
   sudo apt install libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
   asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev -y
+  
+  cd /tmp
+  git clone https://github.com/newsboat/newsboat.git
+  cd newsboat
+  vim rust/libnewsboat/src/human_panic.rs 
+  :%/PanicHookInfo/PanicInfo/g
+  make                   #  pass -jN to use N CPU cores, e.g. -j8
+  sudo make install      #  install everything under /usr/local/bin/newsboat
   ```
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
