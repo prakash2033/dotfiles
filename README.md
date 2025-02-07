@@ -28,6 +28,8 @@
   cd newsboat
   sed -i 's/PanicHookInfo/PanicInfo/g' rust/libnewsboat/src/human_panic.rs
   make -j8 && sudo make install #  pass -jN to use N CPU cores, e.g. -j8
+  
+  (crontab -l | grep -Fxq "0 */2 * * * /usr/local/bin/newsboat -x reload" || (crontab -l; echo "0 */2 * * * /usr/local/bin/newsboat -x reload")) | crontab -
   ```
   
   # RTV - Terminal for Reddit [Python3.8](https://askubuntu.com/a/1503634/1004133)
