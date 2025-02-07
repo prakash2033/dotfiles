@@ -582,7 +582,7 @@ case "$LINK" in
         tmux new-window -n browse && tmux send-keys "lynx -accept_all_cookies '$LINK' && tmux kill-pane" 'Enter'
         ;;
     *news.google.com/*)
-         nohup $BROWSER "$LINK" > /dev/null 2>&1 &
+         nohup xdg-open "$LINK" > /dev/null 2>&1 &
         ;;
 # reddit comments
     *reddit.com/r/*/comments/*|*reddit.com/r/*/s/*)
