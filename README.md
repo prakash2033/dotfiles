@@ -96,7 +96,7 @@
   curl -fsSL https://ollama.com/install.sh | sh
   ```
   
-  ## Gogh Colorscheme (Run from outside tmux)
+  ## Gogh Colorscheme
   ```
   sudo apt-get install dconf-cli uuid-runtime
   bash -c "$(wget -qO- https://git.io/vQgMr)"
