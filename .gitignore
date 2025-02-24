@@ -9,3 +9,4 @@ normal_user/w3m/.w3m/history
 normal_user/w3m/.w3m/*.gz
 normal_user/mpv/.config/mpv/watch_later/
 normal_user/newsboat/.newsboat/history.cmdline
+normal_user/cosmic/.config/cosmic/com.system76.CosmicAppList/v1/favorites
