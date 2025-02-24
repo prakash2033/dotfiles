@@ -94,6 +94,7 @@
   sgpt --install-integration
   
   curl -fsSL https://ollama.com/install.sh | sh
+  ollama pull mistral:7b-instruct
   ```
   
   ## Gogh Colorscheme
