@@ -1,0 +1,10 @@
+[
+    Home,
+    Documents,
+    Downloads,
+    Music,
+    Pictures,
+    Videos,
+    Path("/home/pvishwa1/dev"),
+    Path("/home/pvishwa1/Documents/Architecture"),
+]
