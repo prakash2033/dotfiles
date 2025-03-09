@@ -32,3 +32,7 @@ scrollback-limit = 134217728
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+b=toggle_window_decorations
 keybind = ctrl+f=toggle_fullscreen
+
+quick-terminal-position="top"
+quick-terminal-autohide="false"
+keybind = ctrl+a=toggle_quick_terminal
