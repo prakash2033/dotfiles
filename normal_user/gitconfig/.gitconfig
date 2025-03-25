@@ -9,3 +9,5 @@
 	path = ~/Public/gitrepo/dotfiles/.gitconfig
 [core]
 	autocrlf = false
+[safe]
+	directory = /opt/update-vcclc
