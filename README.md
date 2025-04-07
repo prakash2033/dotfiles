@@ -26,6 +26,7 @@
   cd /tmp
   git clone https://github.com/newsboat/newsboat.git
   cd newsboat
+  sudo apt-get install pkg-config
   sed -i 's/PanicHookInfo/PanicInfo/g' rust/libnewsboat/src/human_panic.rs
   make -j8 && sudo make install #  pass -jN to use N CPU cores, e.g. -j8
   
