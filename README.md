@@ -146,6 +146,7 @@
   ./dotnet-install.sh --channel LTS
   ./dotnet-install.sh --channel 7.0
 
+  source ~/.zprofile # export PATH="$PATH:/home/pvishwa1/.dotnet/tools" 
   dotnet tool update -g linux-dev-certs
   dotnet linux-dev-certs install
   
