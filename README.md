@@ -43,6 +43,13 @@
   ./configure --with-ssl --enable-optimizations 
   make -j$(nproc)
   sudo make install
+  
+  "Global install
+  python3.8 -m pip install --upgrade pip
+  python3.8 -m pip install setuptools
+  python3.8 -m pip install rtv
+  
+  "Alternative install
   python3.8 -m venv ~/.myenv3.8
   cd ~/.myenv3.8/bin
   ./pip install rtv
