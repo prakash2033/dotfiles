@@ -18,6 +18,9 @@
   bluez blueman
   ```
   
+  # Antivirus
+  `sudo apt-get install clamav` # clamscan filename, sudo freshclam - update virus definitions
+  
   # Newsboat
   ```
   sudo apt install libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
