@@ -19,7 +19,7 @@
   ```
   
   # Antivirus
-  `sudo apt-get install clamav` # clamscan filename, sudo freshclam - update virus definitions
+  `sudo apt-get install clamav` # clamscan filename, sudo freshclam - update virus definitions, clamav-freshclam.service runs automatically
   
   # Newsboat
   ```
