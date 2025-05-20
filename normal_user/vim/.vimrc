@@ -43,7 +43,7 @@ Plug 'https://github.com/altercation/vim-colors-solarized.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'https://github.com/arcticicestudio/nord-vim.git'
-Plug 'https://github.com/sirver/UltiSnips'               " snippet program only, no code snippet provided
+" Plug 'https://github.com/sirver/UltiSnips'               " snippet program only, no code snippet provided
 Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
 Plug 'https://github.com/preservim/nerdtree'            " File explorer
