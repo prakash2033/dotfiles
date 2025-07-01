@@ -20,7 +20,7 @@ scrolloff 10                        # keep cursor above and below set line
 mark-as-read-on-hover yes
 notify-beep yes
 # user-agent "Liferea/1.4.14 (Linux; en_US.UTF8; http://liferea.sf.net/)"
-# article-sort-order  date-desc
+article-sort-order  date-desc
 # feed-sort-order firsttag
 confirm-exit no
 browser ~/.scripts/urlportal
@@ -45,7 +45,7 @@ articlelist-format  "%4i %f %D  %?T?|%-17T|  ?%t"
 datetime-format "%b %d %Y" # date example: Mar 01 2017
 
 show-read-feeds yes
-show-read-articles no
+show-read-articles yes
 
 #notify-program      "/usr/bin/notify-send"
 #goto-next-feed no
