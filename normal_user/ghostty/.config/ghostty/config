@@ -1,7 +1,7 @@
-font-family = Ubuntu Sans Mono
+font-family = Ubuntu Sans
 font-style = Regular
 font-thicken = true
-font-size = 13
+font-size = 14
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
@@ -12,8 +12,8 @@ cursor-style-blink = true
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-window-width = 120
-window-height = 45
+window-width = 9999
+window-height = 9999
 window-padding-x = 4
 
 confirm-close-surface = false
