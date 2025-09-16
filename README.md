@@ -10,6 +10,7 @@
   ```
 
   ```
+  sudo apt install fonts-ubuntu-classic
   pip3 install ueberzug
   ```
 
