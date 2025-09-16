@@ -2,7 +2,7 @@
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_DATA_HOME="$HOME/.local/share" 
 export FZF_DEFAULT_COMMAND='find .'
-export BROWSER="flatpak run io.github.ungoogled_software.ungoogled_chromium"
+export BROWSER="xdg-open"
 export BROWSER_PRIVATE="flatpak run io.github.ungoogled_software.ungoogled_chromium --incognito"
 export EDITOR='vim'
 export BROWSERCLI="w3m" 
@@ -41,7 +41,6 @@ export W3M_HOTKEY_RELOAD='r'
 
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-[ -f "$HOME/.local/share/omakub/defaults/bash/rc" ] && source "$HOME/.local/share/omakub/defaults/bash/rc"
 # }}}
 
 # -------- Perl for YouTube-Viewer {{{    

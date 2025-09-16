@@ -1,7 +1,7 @@
 font-family = Ubuntu Sans Mono
 font-style = Regular
 font-thicken = true
-font-size = 14
+font-size = 13
 
 adjust-underline-position = 40%
 adjust-underline-thickness = -60%
