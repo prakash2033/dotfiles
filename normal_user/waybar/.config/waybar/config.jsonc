@@ -5,14 +5,14 @@
   "modules-left": ["custom/launcher", "clock", "hyprland/workspaces"],
   "modules-center": ["custom/notification", "custom/media"],
   "modules-right": ["custom/systemupdates", "custom/weather", "pulseaudio", "battery", "network", "custom/bluetooth", "power-profiles-daemon"],
+  "height": 40,
   "custom/bluetooth": {
     "format": " {}",
     "tooltip-format": "Bluetooth: {}",
     "on-click": "blueman-manager",
-    "exec": "bluetoothctl info | awk -F: '/Name: /{print $2; exit}' | xargs echo -n"
+    "exec": "bluetoothctl info | awk -F: '/Name: /{print $2; exit}' | xargs echo -n",
+    "interval": 5
   },
-  "height": 40,
-
   "custom/notification": {
     "tooltip": false,
     "format": "{icon}",
