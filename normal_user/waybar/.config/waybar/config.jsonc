@@ -4,7 +4,13 @@
   "margin-top": 13,
   "modules-left": ["custom/launcher", "clock", "hyprland/workspaces"],
   "modules-center": ["custom/notification", "custom/media"],
-  "modules-right": ["custom/systemupdates", "custom/weather", "pulseaudio", "battery", "network", "power-profiles-daemon"],
+  "modules-right": ["custom/systemupdates", "custom/weather", "pulseaudio", "battery", "network", "custom/bluetooth", "power-profiles-daemon"],
+  "custom/bluetooth": {
+    "format": " {}",
+    "tooltip-format": "Bluetooth: {}",
+    "on-click": "blueman-manager",
+    "exec": "bluetoothctl info | awk -F: '/Name: /{print $2; exit}' | xargs echo -n"
+  },
   "height": 40,
 
   "custom/notification": {
