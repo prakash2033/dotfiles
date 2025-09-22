@@ -1,0 +1,6 @@
+width=50%
+height=40%
+location=center
+allow_images=true
+gtk_dark=true  # Optional: Use dark variant of GTK theme
+prompt=Run...
