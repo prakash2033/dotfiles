@@ -289,3 +289,7 @@ fi
 zle -N _sgpt_zsh
 bindkey '^g' _sgpt_zsh
 # }}}
+
+# --------ZSH Autosuggestion Style  {{{
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#949494"
+#}}}
