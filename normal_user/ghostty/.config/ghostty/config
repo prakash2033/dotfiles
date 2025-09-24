@@ -20,7 +20,7 @@ confirm-close-surface = false
 clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
 
-theme = GruvboxDarkHard
+theme = Gruvbox Dark Hard
 
 copy-on-select = clipboard
 scrollback-limit = 134217728
