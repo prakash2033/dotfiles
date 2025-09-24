@@ -6,7 +6,7 @@
   cmus jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
   python3-pip python-is-python3 w3m surfraw feh onedrive ranger imagemagick aptitude lynx \
   libxext-dev gvfs-backends fortunes fortunes git stow vim vim-gtk3 chafa screenkey gnome-weather \
-  btop mpv dnsutils tree fuse -y
+  btop mpv dnsutils tree fuse gnome-shell-extension-manager gnome-tweaks -y
   ```
 
   ```
