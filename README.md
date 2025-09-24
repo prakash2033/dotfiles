@@ -69,6 +69,11 @@
  sudo udevadm control --reload && sudo udevadm trigger
  ```
  
+  ## Install Ghostty
+  ```
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+  ```
+ 
   ## Google Chrome & Brave Browser
   ```
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
