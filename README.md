@@ -24,6 +24,11 @@
   
   # Newsboat
   ```
+  sudo snap install newsboat
+  ln -s -r ~/.newsboat ~/snap/newsboat/8579/.newsboat
+
+  OR
+
   sudo apt install libsqlite3-dev sqlite3 libcurl4-openssl-dev libxml2-dev cargo libjson-c-dev libncursesw5-dev sqlite3 libstfl-dev \
   asciidoctor libjson-c-dev libncursesw5-dev libssl-dev libcrypto++-dev -y
   
