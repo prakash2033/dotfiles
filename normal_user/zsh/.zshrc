@@ -295,4 +295,4 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#949494"
 #}}}
 
 # Generated for envman. Do not edit.
-# [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
