@@ -162,6 +162,7 @@
   gsettings set org.gnome.desktop.input-sources xkb-options "['caps:escape']"
   gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
   gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+  gsettings set org.gnome.shell.window-switcher current-workspace-only false
   ```
   
   # Development setup
