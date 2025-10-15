@@ -163,6 +163,7 @@
   gsettings set org.gnome.Terminal.Legacy.Settings confirm-close false
   gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
   gsettings set org.gnome.shell.window-switcher current-workspace-only false
+  gsettings set org.gnome.desktop.interface clock-show-seconds true
   ```
   
   # Development setup
