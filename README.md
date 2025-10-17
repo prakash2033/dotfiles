@@ -22,7 +22,14 @@
   ```
   bluez blueman
   ```
-  
+
+  # Papirus
+  ```
+  sudo add-apt-repository ppa:papirus/papirus
+  sudo apt install papirus-icon-theme
+  papirus-folders -C black
+  ```
+
   # Antivirus
   `sudo apt-get install clamav` # clamscan filename, sudo freshclam - update virus definitions, clamav-freshclam.service runs automatically
   
