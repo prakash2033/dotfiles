@@ -13,6 +13,10 @@
   sudo apt install fonts-ubuntu-classic
   pip3 install ueberzug
   ```
+  ## For Cisco Secure client - you're missing the required libraries for the authentication method you requested
+  ```
+  sudo apt install libwebkit2gtk-4.1-0
+  ```
 
   # Bluetooth Apps
   ```
