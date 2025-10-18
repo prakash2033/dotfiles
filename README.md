@@ -97,6 +97,12 @@
 
   curl -fsS https://dl.brave.com/install.sh | sh
   ```
+  ## 1Password
+  ```
+  wget https://downloads.1password.com/linux/debian/amd64/stable/1password-latest.deb
+  sudo dpkg -i 1password-latest.deb
+  ```
+
   ## VS Code
   ```
   wget https://update.code.visualstudio.com/latest/linux-deb-x64/stable -O vscode.deb
