@@ -39,6 +39,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin" ] && PATH="$HOME/.local/share/JetBrains/Toolbox/apps/rider/bin:$PATH"
 [ -d "$HOME/.dotnet" ] && PATH="$HOME/.dotnet:$PATH"
 [ -d "$HOME/.dotnet/tools" ] && PATH="$HOME/.dotnet/tools:$PATH"
+[ -d "/home/linuxbrew/.linuxbrew/bin" ] && PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
