@@ -134,6 +134,9 @@ case "$LINK" in
     *redgifs.com/*)
         nohup $VIDEO_CLIP "$LINK" > /dev/null 2>&1 &
         ;;
+    *youtube.com/shorts*|*youtu.be/*)
+        nohup $VIDEO_CLIP "$LINK" > /dev/null 2>&1 &
+        ;;
     *youtube.com/watch*|*youtu.be/*)
         $VIDEO_QUEUE "$LINK"
         ;;
