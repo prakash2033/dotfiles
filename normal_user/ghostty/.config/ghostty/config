@@ -12,10 +12,6 @@ cursor-style-blink = true
 shell-integration = zsh
 shell-integration-features = no-cursor
 
-window-width = 9999
-window-height = 9999
-window-padding-x = 4
-
 confirm-close-surface = false
 clipboard-paste-protection = false
 unfocused-split-opacity = 1.0
