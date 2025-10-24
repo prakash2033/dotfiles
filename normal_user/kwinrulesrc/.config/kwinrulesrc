@@ -1,0 +1,17 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[026f357f-607f-43e6-bf9b-f33a560672b5]
+Description=mpv always on top
+above=true
+aboverule=3
+position=976,601
+positionrule=3
+skiptaskbar=true
+skiptaskbarrule=3
+wmclass=mpv
+wmclassmatch=1
+
+[General]
+count=1
+rules=026f357f-607f-43e6-bf9b-f33a560672b5
