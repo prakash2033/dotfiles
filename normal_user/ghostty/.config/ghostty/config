@@ -32,6 +32,6 @@ keybind = ctrl+f=toggle_fullscreen
 
 # https://ghostty.org/docs/config/reference#quick-terminal-size
 quick-terminal-position="top"
-quick-terminal-autohide="true"
+# quick-terminal-autohide="true"
 quick-terminal-size=500px
 keybind =global:§=toggle_quick_terminal
