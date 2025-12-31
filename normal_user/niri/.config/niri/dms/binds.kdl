@@ -48,7 +48,7 @@ binds {
     Mod+U { focus-workspace-down; }
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
-    Alt+Print { screenshot-window; }
+    Alt+Print { screenshot-window write-to-disk=true; }
     Alt+XF86Launch1 { screenshot-window; }
     Mod+BracketLeft { consume-or-expel-window-left; }
     Mod+BracketRight { consume-or-expel-window-right; }
@@ -112,16 +112,16 @@ binds {
     Mod+WheelScrollLeft { focus-column-left; }
     Mod+WheelScrollRight { focus-column-right; }
     Mod+Shift+P { power-off-monitors; }
-    Ctrl+Print { screenshot-screen; }
+    Ctrl+Print hotkey-overlay-title="Screenshot (Interactive)" { screenshot; }
     Ctrl+XF86Launch1 { screenshot-screen; }
-    Print { screenshot; }
+    Print { screenshot-screen; }
     Super+Shift+S hotkey-overlay-title="Screenshot (Interactive)" { screenshot; }
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
-    Super+B hotkey-overlay-title="Super+B" { spawn "google-chrome-stable"; }
+    Super+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Escape { toggle-keyboard-shortcuts-inhibit; }
-    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+Shift+Comma { show-hotkey-overlay; }
     Mod+Tab repeat=false { toggle-overview; }
 }
