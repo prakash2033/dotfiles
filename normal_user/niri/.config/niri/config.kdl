@@ -184,7 +184,7 @@ window-rule {
     match app-id=r#"^gnome-calculator$"#
     match app-id=r#"^galculator$"#
     match app-id=r#"^blueman-manager$"#
-    match app-id=r#"^org\.gnome\.Nautilus$"#
+    /*match app-id=r#"^org\.gnome\.Nautilus$"#*/
     match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
     match title="^Welcome to JetBrains Rider"
@@ -193,7 +193,6 @@ window-rule {
 window-rule {
     match app-id=r#"^com.cisco.secureclient.gui"#
     match app-id=r#"^Cisco Secure Client"#
-    open-on-workspace "9"
     open-floating true
 }
 window-rule {
@@ -215,6 +214,7 @@ window-rule {
 }
 window-rule {
     match app-id=r#"jetbrains-rider$"#
+    match app-id=r#"code$"#
     open-maximized true
 }
 // Open dms windows as floating by default

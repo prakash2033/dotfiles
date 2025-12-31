@@ -48,7 +48,7 @@ binds {
     Mod+U { focus-workspace-down; }
     Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
     Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
-    Alt+Print { screenshot-window write-to-disk=true; }
+    Alt+Print { screenshot-window; }
     Alt+XF86Launch1 { screenshot-window; }
     Mod+Alt+J { consume-or-expel-window-left; }
     Mod+Alt+K { consume-or-expel-window-right; }
@@ -119,6 +119,7 @@ binds {
     XF86Launch1 { screenshot; }
     Mod+Shift+E { quit; }
     Super+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
+    Super+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Escape { toggle-keyboard-shortcuts-inhibit; }
