@@ -209,8 +209,10 @@ window-rule {
 }
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match title="^Picture in picture$"
     match app-id="zoom"
     open-floating true
+    default-floating-position x=5 y=5 relative-to="bottom-right"
 }
 window-rule {
     match app-id=r#"jetbrains-rider$"#
