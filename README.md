@@ -7,6 +7,7 @@
   python3-pip python-is-python3 w3m imagemagick lynx \
   libxext-dev gvfs-backends fortunes fortunes git stow vim vim-athena chafa screenkey  \
   btop mpv dnsutils tree fuse  -y
+  sudo apt install --install-recommends dolphin
   ```
   ## Extras
   ```
