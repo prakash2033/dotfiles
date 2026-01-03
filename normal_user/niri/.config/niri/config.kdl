@@ -113,6 +113,9 @@ overview {
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 environment {
   XDG_CURRENT_DESKTOP "niri"
+  GTK_IM_MODULE "ibus"
+  QT_IM_MODULE "ibus"
+  XMODIFIERS "@im=ibus"
 }
 hotkey-overlay {
     skip-at-startup
