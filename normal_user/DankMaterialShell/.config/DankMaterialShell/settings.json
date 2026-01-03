@@ -356,12 +356,16 @@
           "showAudioIcon": true,
           "showAudioPercent": true,
           "showVpnIcon": true,
-          "showBrightnessIcon": true,
-          "showBrightnessPercent": true,
+          "showBrightnessIcon": false,
+          "showBrightnessPercent": false,
           "showMicIcon": true,
           "showMicPercent": true,
-          "showBatteryIcon": true,
-          "showPrinterIcon": true
+          "showBatteryIcon": false,
+          "showPrinterIcon": false
+        },
+        {
+          "id": "battery",
+          "enabled": true
         },
         {
           "id": "powerMenuButton",
