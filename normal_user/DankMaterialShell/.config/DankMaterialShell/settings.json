@@ -1,7 +1,7 @@
 {
   "currentThemeName": "dynamic",
-  "currentThemeCategory": "generic",
-  "customThemeFile": "",
+  "currentThemeCategory": "dynamic",
+  "customThemeFile": "/home/user0/.config/DankMaterialShell/themes/gruvboxMaterial/theme.json",
   "registryThemeVariants": {},
   "matugenScheme": "scheme-content",
   "runUserMatugenTemplates": true,
@@ -271,8 +271,8 @@
   "customPowerActionReboot": "",
   "customPowerActionPowerOff": "",
   "updaterHideWidget": false,
-  "updaterUseCustomCommand": true,
-  "updaterCustomCommand": "sudo apt update",
+  "updaterUseCustomCommand": false,
+  "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
   "displayNameMode": "system",
   "screenPreferences": {},
@@ -320,6 +320,10 @@
         },
         {
           "id": "clock",
+          "enabled": true
+        },
+        {
+          "id": "worldClock",
           "enabled": true
         },
         {

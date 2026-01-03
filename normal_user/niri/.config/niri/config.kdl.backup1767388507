@@ -29,6 +29,9 @@ input {
     trackpoint {
     }
 }
+output "eDP-1" {
+    scale 1.2
+}
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
 // The built-in laptop monitor is usually called "eDP-1".
@@ -155,12 +158,6 @@ animations {
 // Command: niri msg pick-window
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Open all windows maximized by default
-window-rule {
-    open-maximized true
-}
-
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
@@ -214,7 +211,6 @@ window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match title="^Picture in picture$"
     match app-id="zoom"
-    match app-id="mpv"
     open-floating true
     default-floating-position x=5 y=5 relative-to="bottom-right"
 }
@@ -247,5 +243,3 @@ include "dms/colors.kdl"
 include "dms/layout.kdl"
 include "dms/alttab.kdl"
 include "dms/binds.kdl"
-
-include "dms/outputs.kdl"
