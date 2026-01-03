@@ -25,5 +25,9 @@
         "label": "🇮🇳"
       }
     ]
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
   }
 }
