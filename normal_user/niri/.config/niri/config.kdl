@@ -229,6 +229,7 @@ window-rule {
 // Open dms windows as floating by default
 window-rule {
     match app-id=r#"org.quickshell$"#
+    match app-id="wev"
     open-floating true
 }
 debug {
