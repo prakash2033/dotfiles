@@ -155,6 +155,12 @@ animations {
 // Command: niri msg pick-window
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
+
+// Open all windows maximized by default
+window-rule {
+    open-maximized true
+}
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
