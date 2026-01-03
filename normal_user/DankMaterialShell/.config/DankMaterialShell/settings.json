@@ -277,7 +277,11 @@
   "displayNameMode": "system",
   "screenPreferences": {},
   "showOnLastDisplay": {},
-  "niriOutputSettings": {},
+  "niriOutputSettings": {
+    "eDP-1": {
+      "hotCorners": null
+    }
+  },
   "hyprlandOutputSettings": {},
   "barConfigs": [
     {
@@ -400,7 +404,9 @@
       "visible": true,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
-      "maximizeDetection": true
+      "maximizeDetection": true,
+      "scrollXBehavior": "column",
+      "scrollYBehavior": "workspace"
     }
   ],
   "desktopClockEnabled": false,
