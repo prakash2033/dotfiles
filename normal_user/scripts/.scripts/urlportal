@@ -589,12 +589,12 @@ case "$LINK" in
         ;;
 # reddit comments
     *reddit.com/r/*/comments/*|*reddit.com/r/*/s/*)
-        tmux new-window -n rtv && tmux send-keys "$RTV -l $LINK && tmux kill-pane" 'Enter'
+        nohup $BROWSER "$LINK" > /dev/null 2>&1 &
         ;;
 # reddit subreddit or user
     *reddit.com/r/*|*reddit.com/u/*|*reddit.com/user/*)
         LINK="$(echo "$LINK" | awk -F '.com' '{print $2}')"
-        tmux new-window -n rtv && tmux send-keys "$RTV -s $LINK && tmux kill-pane" 'Enter'
+        nohup $BROWSER "$LINK" > /dev/null 2>&1 &
         ;;
 # cyberlocker download without captcha code
     *zippyshare.com/*|*mediafire.com/file/*|*sendspace.com/file/*)
