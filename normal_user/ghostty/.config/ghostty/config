@@ -40,8 +40,8 @@ keybind = shift+enter=text:\n
 # Rando stuff
 gtk-single-instance = true
 
-# Dank color generation
-config-file = ./config-dankcolors
+#Theme
+theme = dankcolors
 
 confirm-close-surface = false
 clipboard-paste-protection = false
