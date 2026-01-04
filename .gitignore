@@ -12,5 +12,6 @@ normal_user/newsboat/.newsboat/history.cmdline
 normal_user/cosmic/.config/cosmic/com.system76.CosmicAppList/v1/favorites
 normal_user/cosmic/.config/cosmic/com.system76.CosmicSettings/v1/active-page
 normal_user/cosmic/.config/cosmic/com.system76.CosmicPortal/v1/screenshot
-normal_user/DankMaterialShell/.config/DankMaterialShell/firefox.css
 normal_user/niri/.config/niri/dms/colors.kdl
+normal_user/ghostty/.config/ghostty/config-dankcolors
+normal_user/ghostty/.config/ghostty/themes/dankcolors
