@@ -197,9 +197,13 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match app-id=r#"^com.cisco.secureclient.gui"#
-    match app-id=r#"^Cisco Secure Client"#
+    match app-id=r#"^Cisco Secure Client"# title="Cisco Secure Client - Login"
     open-floating true
+}
+window-rule {
+    match app-id=r#"^com.cisco.secureclient.gui"#
+    open-maximized false
+    open-on-workspace "vpn"
 }
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#

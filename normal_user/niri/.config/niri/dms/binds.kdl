@@ -18,8 +18,8 @@ binds {
     XF86AudioMicMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "micmute"; }
     XF86AudioMute allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "mute"; }
     XF86AudioRaiseVolume allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
-    XF86MonBrightnessDown { spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""; }
-    XF86MonBrightnessUp { spawn "dms" "ipc" "call" "brightness" "increment" "5" ""; }
+    XF86MonBrightnessDown { spawn "dms" "ipc" "call" "brightness" "decrement" "5"; }
+    XF86MonBrightnessUp { spawn "dms" "ipc" "call" "brightness" "increment" "5"; }
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }
@@ -129,6 +129,7 @@ binds {
     Super+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Super+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Super+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
+    Super+Shift+B hotkey-overlay-title="Microsoft Edge" { spawn "microsoft-edge"; }
     Mod+D repeat=false { toggle-overview; }
     Mod+Escape { toggle-keyboard-shortcuts-inhibit; }
     Mod+Shift+Comma { show-hotkey-overlay; }
