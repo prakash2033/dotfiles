@@ -8,7 +8,7 @@ config-notification {
 
 gestures {
     hot-corners {
-        off
+        top-left
     }
 }
 
@@ -28,6 +28,7 @@ input {
     }
     trackpoint {
     }
+    focus-follows-mouse
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -67,9 +68,9 @@ layout {
     // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
     // preset-window-heights { }
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
+    default-column-width {}
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
     // This is because windows using client-side decorations can have an arbitrary shape.
@@ -104,6 +105,7 @@ overview {
     workspace-shadow {
         off
     }
+    zoom 0.25
 }
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
@@ -113,9 +115,12 @@ overview {
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 environment {
   XDG_CURRENT_DESKTOP "niri"
+  XDGCURRENTDESKTOP "niri"
   GTK_IM_MODULE "ibus"
   QT_IM_MODULE "ibus"
   XMODIFIERS "@im=ibus"
+  QT_QPA_PLATFORM "wayland"
+  QT_QPA_PLATFORMTHEME "qt6ct"
 }
 hotkey-overlay {
     skip-at-startup
@@ -160,7 +165,7 @@ animations {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
 // Open all windows maximized by default
-window-rule {
+/-window-rule {
     open-maximized true
 }
 
@@ -247,6 +252,9 @@ recent-windows {
         Alt+Shift+Tab   { previous-window scope="output"; }
         Alt+grave       { next-window filter="app-id"; }
         Alt+Shift+grave { previous-window filter="app-id"; }
+    }
+    previews {
+        max-scale 0.3
     }
 }
 

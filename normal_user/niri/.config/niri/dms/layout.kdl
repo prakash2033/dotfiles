@@ -13,6 +13,8 @@ layout {
   focus-ring {
     width 2
   }
+
+  always-center-single-column
 }
 window-rule {
   geometry-corner-radius 2
