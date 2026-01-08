@@ -185,6 +185,15 @@
   gsettings set org.gnome.shell.window-switcher current-workspace-only false
   gsettings set org.gnome.desktop.interface clock-show-seconds true
   ```
+
+  # Install [slurp](https://github.com/emersion/slurp) for interactive screenshot along with grim and [satty](https://github.com/Satty-org/Satty/tree/main)
+  ```
+  git clone https://github.com/emersion/slurp
+  cd slurp
+  meson setup build
+  ninja -C build
+  build/slurp
+  ```
   
   # Development setup
   ```
