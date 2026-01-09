@@ -1,0 +1,40 @@
+{
+  "dankPomodoroTimer": {
+    "enabled": true
+  },
+  "appShortcut": {
+    "enabled": true
+  },
+  "dankDesktopWeather": {
+    "enabled": true
+  },
+  "displaySettings": {
+    "enabled": true
+  },
+  "kubernetes": {
+    "enabled": true
+  },
+  "emojiLauncher": {
+    "enabled": true
+  },
+  "worldClock": {
+    "enabled": true,
+    "timezones": [
+      {
+        "timezone": "Asia/Kolkata",
+        "label": "🇮🇳"
+      },
+      {
+        "timezone": "Europe/Stockholm",
+        "label": "🇸🇪"
+      }
+    ]
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "alarmClock": {
+    "enabled": true
+  }
+}
