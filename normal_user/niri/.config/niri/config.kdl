@@ -28,7 +28,6 @@ input {
     }
     trackpoint {
     }
-    focus-follows-mouse
 }
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
@@ -198,11 +197,13 @@ window-rule {
     /*match app-id=r#"^org\.gnome\.Nautilus$"#*/
     match app-id=r#"^steam$"#
     match app-id=r#"^xdg-desktop-portal$"#
-    match title="^Welcome to JetBrains Rider"
     open-floating true
 }
 window-rule {
     match app-id=r#"^Cisco Secure Client"# title="Cisco Secure Client - Login"
+    match app-id=r#"^jetbrains-rider"# title="Welcome to JetBrains Rider"
+    match app-id=r#"^jetbrains-rider"# title="Add File to Git"
+    match app-id=r#"^jetbrains-rider"# title="Accept All Changes?"
     open-floating true
 }
 window-rule {
@@ -229,11 +230,6 @@ window-rule {
     match app-id="mpv"
     open-floating true
     default-floating-position x=5 y=5 relative-to="bottom-right"
-}
-window-rule {
-    match app-id=r#"jetbrains-rider$"#
-    match app-id=r#"code$"#
-    open-maximized true
 }
 // Open dms windows as floating by default
 window-rule {
