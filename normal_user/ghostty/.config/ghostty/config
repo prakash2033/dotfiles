@@ -45,7 +45,8 @@ keybind = shift+enter=text:\n
 gtk-single-instance = true
 
 #Theme
-theme = Gruvbox Dark
+# theme = Gruvbox Dark
+theme = Everforest Dark Hard
 
 confirm-close-surface = false
 clipboard-paste-protection = false
