@@ -95,7 +95,7 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-    padding: 0 10px;
+    padding: 0 9px;
     color: #f0f0ff;
     background-color: rgba(30, 30, 46, 0.6);
     border-radius: 99px;
