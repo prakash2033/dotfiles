@@ -10,6 +10,9 @@
   sudo apt install polkit-kde-agent-1
   sudo apt install policykit-1-gnome
   sudo apt install --install-recommends dolphin
+  
+  sudo apt install brightnessctl
+  sudo usermod -aG video pvishwa1
   ```
   ## Extras
   ```
