@@ -1,8 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Cantarell, 'Font Awesome 6 Free';
-    font-size: 14px;
-    font-feature-settings: "tnum";
+    font-family: Jetbrains Mono Medium, Cantarell, 'Font Awesome 6 Free', "otf-font-awesome", sans-serif;
+    font-size: 10pt;
 }
 
 window#waybar {
@@ -117,13 +116,6 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    /* background-color: #64727D; */
-    font-weight: bold;
-    /* background-color: rgba(0, 0, 0, 0.3); */
-    /* border-radius: 99px; */
-}
-
 label:focus {
     background-color: #000000;
 }
@@ -192,10 +184,6 @@ label:focus {
 
 #temperature.critical {
     background-color: #eb4d4b;
-}
-
-#tray {
-    /* background-color: #2980b9; */
 }
 
 #tray > .passive {
