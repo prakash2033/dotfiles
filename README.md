@@ -112,6 +112,12 @@
   sudo dpkg -i vscode.deb
   ```
   
+  ## Discord
+  ```
+  wget -O discord.deb "https://discord.com/api/download?platform=linux&format=deb"
+  sudo apt install ./discord.deb
+  ```
+  
   ## Youtube-dl
   ```
   sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
