@@ -94,8 +94,9 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
+#privacy,
 #mpd {
-    padding: 0 9px;
+    padding: 0 8px;
     color: #f0f0ff;
     background-color: rgba(30, 30, 46, 0.6);
     border-radius: 99px;
@@ -120,6 +121,14 @@ label:focus {
     background-color: #000000;
 }
 
+#privacy,
+#privacy-item
+#privacy-item.screenshare
+#privacy-item.audio-in
+#privacy-item.audio-out {
+    color:#FFCDD2;
+}
+
 #disk {
     background-color: #964B00;
 }
@@ -128,15 +137,10 @@ label:focus {
     margin-left: 4px;
 }
 
-#taskbar {
-    margin-left: 4px;
-}
-
 #taskbar button {
     color: #f0f0ff;
     background-color: rgba(30, 30, 46, 0.6);
 }
-
 
 #taskbar button:hover {
     background-color: rgba(49, 50, 68, 0.6);

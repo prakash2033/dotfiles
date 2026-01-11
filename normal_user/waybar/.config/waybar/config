@@ -9,7 +9,29 @@
     "spacing": 0, 
     "modules-left": ["niri/workspaces", "wlr/taskbar"],
     "modules-center": ["niri/window"],
-    "modules-right": ["pulseaudio", "backlight", "clock", "battery", "tray"],
+    "modules-right": ["privacy", "pulseaudio", "backlight", "clock", "battery", "tray"],
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 14,
+        "transition-duration": 10,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 14
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 14
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 14
+            }
+        ]
+    },
     "custom/logout": {
         "format": "⏻",
         "on-click": "niri msg action quit"
@@ -181,7 +203,7 @@
         "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}%   {format_source}",
         "format-bluetooth-muted": "  {format_source}",
-        "format-muted": "{volume}%  {format_source}",
+        "format-muted": "{volume}%  {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
