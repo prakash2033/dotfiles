@@ -13,7 +13,6 @@
     "privacy": {
         "icon-spacing": 4,
         "icon-size": 14,
-        "transition-duration": 10,
         "modules": [
             {
                 "type": "screenshare",
