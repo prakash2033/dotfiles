@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Jetbrains Mono Medium, Cantarell, 'Font Awesome 6 Free', "otf-font-awesome", sans-serif;
+    font-family: Cantarell, "otf-font-awesome", sans-serif;
     font-size: 10pt;
 }
 
