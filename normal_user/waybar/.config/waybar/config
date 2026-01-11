@@ -38,7 +38,8 @@
     "niri/window": {
         "format": "{title}",
         "icon": true,
-        "icon-size": 14
+        "icon-size": 14,
+        "separate-outputs": true
     },
     "wlr/taskbar": {
         "format": "{icon}",
