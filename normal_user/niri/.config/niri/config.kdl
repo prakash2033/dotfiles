@@ -659,4 +659,5 @@ binds {
     Super+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Super+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Super+Shift+B hotkey-overlay-title="Microsoft Edge" { spawn "microsoft-edge"; }
+    Super+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty -f -"; }
 }
