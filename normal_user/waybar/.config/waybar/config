@@ -85,13 +85,14 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %b %d %I:%M %p %Z}",
-        "format-alt": "{:%a %b %d %H:%M %Z}",
+        "format": "{:%a %b %d %I:%M:%S %p %Z}",
+        "format-alt": "{:%a %b %d %H:%M:%S %Z}",
         "tooltip": true,
+        "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
         "timezones": [
             "",
-            "UTC"
+            "Asia/Kolkata"
             ],
         "actions": {
             "on-scroll-up": "tz_up",
