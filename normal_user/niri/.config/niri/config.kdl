@@ -276,7 +276,8 @@ spawn-at-startup "1password"
 spawn-at-startup "flatpak" "run" "com.slack.Slack"
 //spawn-at-startup "/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1"
 //spawn-at-startup "/usr/libexec/polkit-mate-authentication-agent-1 &"
-spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store &"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store &"
 spawn-at-startup "swaybg" "-i" "/usr/local/share/backgrounds/VolvoCars.jpg" "-m" "fill"
 spawn-at-startup "/usr/bin/swayidle" "-w" "timeout" "601" "niri msg action power-off-monitors" "timeout" "600" "swaylock -feFkl -i /usr/local/share/backgrounds/VolvoCars.jpg" "before-sleep" "swaylock -feFkl -i /usr/local/share/backgrounds/VolvoCars.jpg "
 
@@ -656,8 +657,9 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
-    Super+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
-    Super+E hotkey-overlay-title="Files" { spawn "nautilus"; }
-    Super+Shift+B hotkey-overlay-title="Microsoft Edge" { spawn "microsoft-edge"; }
-    Super+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty -f -"; }
+    Mod+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
+    Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
+    Mod+Shift+B hotkey-overlay-title="Microsoft Edge" { spawn "microsoft-edge"; }
+    Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty -f -"; }
+    Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
 }
