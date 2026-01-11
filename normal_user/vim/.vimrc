@@ -120,6 +120,22 @@ vnoremap <Up> <Nop>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+
+" Delete without yanking to clipboard
+nnoremap d "_d
+vnoremap d "_d
+nnoremap D "_D
+vnoremap D "_D
+
+" Change/Substitute without yanking to clipboard
+nnoremap c "_c
+vnoremap c "_c
+nnoremap s "_s
+vnoremap s "_s
+
+" Optional: Keep 'x' (delete char) from affecting clipboard
+nnoremap x "_x
+vnoremap x "_x
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
