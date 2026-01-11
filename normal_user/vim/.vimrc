@@ -63,6 +63,7 @@ Plug 'https://github.com/tpope/vim-rhubarb'              " Enable GBrowse from f
 Plug 'https://github.com/junegunn/gv.vim'                " TIG like navigation for vim
 Plug 'https://github.com/xuyuanp/nerdtree-git-plugin'    " Show status of files in NerdTree
 Plug 'https://github.com/tveskag/nvim-blame-line'        " Add git blame on line
+Plug 'https://github.com/jasonccox/vim-wayland-clipboard'" To enable yank to clipboard in ubuntu 24.04
 call plug#end()
 "}}}
 
