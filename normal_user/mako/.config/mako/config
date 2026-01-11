@@ -1,0 +1,23 @@
+layer=top
+background-color=#1e1e2eee
+border-size=2
+border-color=#ffffff
+border-radius=2
+default-timeout=5000
+font=Cantarell 12
+history=1
+
+[urgency=high]
+layer=overlay
+border-color=#ffffff
+
+[desktop-entry="org.telegram.desktop"]
+layer=top
+border-color=#ffffff
+
+[desktop-entry="org.gnome.Fractal"]
+layer=top
+border-color=#ffffff
+
+[mode=dnd]
+invisible=1
