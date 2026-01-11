@@ -154,6 +154,14 @@ label:focus {
     background-color: rgba(108, 112, 134, 0.6);
 }
 
+.niri-taskbar button:hover {
+  background: rgba(49, 50, 68, 0.6);
+}
+
+.niri-taskbar button.focused {
+  background: rgba(108, 112, 134, 0.6);
+}
+
 #pulseaudio.muted,
 #pulseaudio.source-muted {
     color: #757575;

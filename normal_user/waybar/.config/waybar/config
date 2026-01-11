@@ -7,7 +7,7 @@
     "margin-left": 4,
     "margin-right": 4,
     "spacing": 0, 
-    "modules-left": ["niri/workspaces", "wlr/taskbar"],
+    "modules-left": ["niri/workspaces", "cffi/niri-taskbar"],
     "modules-center": ["niri/window"],
     "modules-right": ["privacy", "pulseaudio", "backlight", "clock", "battery", "tray"],
     "privacy": {
