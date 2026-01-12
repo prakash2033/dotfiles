@@ -102,6 +102,7 @@
   ```
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome-stable_current_amd64.deb
+  chrome://settings/content/pdfDocuments
 
   curl -fsS https://dl.brave.com/install.sh | sh
   ```
