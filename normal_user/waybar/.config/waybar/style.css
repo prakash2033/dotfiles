@@ -1,7 +1,7 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Cantarell, "otf-font-awesome", sans-serif;
-    font-size: 10pt;
+    font-family:  Cantarell, "otf-font-awesome", sans-serif;
+    font-size: 12pt;
 }
 
 window#waybar {
