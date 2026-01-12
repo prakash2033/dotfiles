@@ -19,10 +19,6 @@ mouse-hide-while-typing = true
 copy-on-select = false
 confirm-close-surface = false
 
-# Key bindings for common actions
-keybind = ctrl+shift+n=new_window
-keybind = ctrl+t=new_tab
-
 # Material 3 UI elements
 unfocused-split-opacity = 0.7
 unfocused-split-fill = #44464f
@@ -57,7 +53,7 @@ scrollback-limit = 134217728
 
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+b=toggle_window_decorations
-keybind = ctrl+f=toggle_fullscreen
+# keybind = ctrl+f=toggle_fullscreen
 
 # https://ghostty.org/docs/config/reference#quick-terminal-size
 quick-terminal-position="top"
