@@ -28,6 +28,11 @@ if &term =~ '^screen'
     " tmux knows the extended mouse mode
     set ttymouse=xterm2
 endif
+" Show invisible characters
+set list
+
+" Define how they look
+set listchars=tab:→\ ,space:·,trail:·
 "}}}
 
 " -------- Install vim plug {{{
