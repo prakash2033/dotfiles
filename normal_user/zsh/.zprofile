@@ -23,8 +23,8 @@ export TERM="xterm-256color"
 export LIBVIRT_DEFAULT_URI='qemu:///system'
 export GSETTINGS_BACKEND=keyfile
 export KUBE_EDITOR="vim"
-export GTK_THEME_PREFER_DARK=1
-export GTK_USE_PORTAL=1
+# export GTK_THEME_PREFER_DARK=1
+# export GTK_USE_PORTAL=1
 
 #commented below line, it breaks kde plasma
 #export XDG_DATA_DIRS=$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share 
