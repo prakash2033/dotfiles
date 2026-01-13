@@ -293,12 +293,15 @@ spawn-at-startup "/usr/bin/swayidle" "-w" "timeout" "500" "niri msg action power
 
 environment {
   XDG_CURRENT_DESKTOP "niri"
-  XDGCURRENTDESKTOP "niri"
+  DISPLAY ":0"
+  XDG_SESSION_TYPE "wayland"
   GTK_IM_MODULE "ibus"
   QT_IM_MODULE "ibus"
   XMODIFIERS "@im=ibus"
   QT_QPA_PLATFORM "wayland"
   QT_QPA_PLATFORMTHEME "qt6ct"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  MOZ_ENABLE_WAYLAND "1"
   OZONE_PLATFORM_HINT "auto"
 }
 
