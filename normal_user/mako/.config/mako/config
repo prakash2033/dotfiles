@@ -6,11 +6,11 @@ border-radius=2
 default-timeout=5000
 font=Cantarell 12
 history=1
-default-timeout=0
 
 [urgency=high]
 layer=overlay
 border-color=#ffffff
+default-timeout=0
 
 [desktop-entry="org.telegram.desktop"]
 layer=top
