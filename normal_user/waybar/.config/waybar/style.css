@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family:  Cantarell, "otf-font-awesome", sans-serif;
+    font-family:  Ubuntu, "otf-font-awesome", sans-serif;
     font-size: 12pt;
     font-feature-settings: "tnum";
 }
