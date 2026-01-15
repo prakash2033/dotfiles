@@ -14,6 +14,12 @@
   sudo apt install brightnessctl
   sudo usermod -aG video pvishwa1
   ```
+  
+  ## Install wiremix tui
+  ```
+  sudo apt install cargo libpipewire-0.3-dev pkg-config clang
+  cargo install wiremix
+  ```
   ## Extras
   ```
   sudo apt install sxiv vim-gtk3 surfraw feh onedrive ranger aptitude 

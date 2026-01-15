@@ -3,9 +3,21 @@
     "reload_style_on_change": true,
     "height": 32, 
     "spacing": 0, 
-    "modules-left": ["niri/workspaces", "cffi/niri-taskbar"],
-    "modules-center": ["niri/window"],
-    "modules-right": ["privacy", "pulseaudio", "backlight", "clock", "battery", "tray"],
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "niri/window"
+    ],
+    "modules-right": [
+        "privacy", 
+        "group/tray-expander", 
+        "pulseaudio", 
+        "backlight", 
+        "clock", 
+        "cpu",
+        "battery"
+    ],
     "privacy": {
         "icon-spacing": 4,
         "icon-size": 14,
@@ -46,6 +58,21 @@
     },
     "cffi/niri-taskbar": {
         "module_path": "/home/pvishwa1/Public/gitrepo/niri-taskbar/target/release/libniri_taskbar.so"
+    },
+    "group/tray-expander": {
+        "orientation": "horizontal",
+        "drawer": {
+            "transition-duration": 300,
+            "children-class": "tray-group-item"
+        },
+        "modules": [
+            "custom/expand-icon",
+            "tray"
+        ]
+    },
+    "custom/expand-icon": {
+        "format": "",
+        "tooltip": false
     },
     "keyboard-state": {
         "numlock": true,
@@ -103,8 +130,8 @@
         "spacing": 10
     },
     "clock": {
-        "format": "{:%a %b %d %I:%M:%S %p %Z}",
-        "format-alt": "{:%a %b %d %H:%M:%S %Z}",
+        "format": "{:%a %b %d W%V %I:%M:%S %p %Z}",
+        "format-alt": "{:%a %b %d W%V %H:%M:%S %Z}",
         "tooltip": true,
         "interval": 1,
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -131,8 +158,9 @@
         }
     },
     "cpu": {
-        "format": "{usage}% ",
-        "on-click": "gnome-system-monitor"
+        "interval": 5,
+        "format": "{usage}% 󰍛",
+        "on-click": "dot-launch-or-focus-tui btop"
     },
     "memory": {
         "format": "{}% ",
@@ -182,9 +210,10 @@
         "tooltip-format-discharging": "{time}T↓ {power:>1.0f}W↓ {capacity}%",
         "tooltip-format-charging": "{time}T↑ {power:>1.0f}W↑ {capacity}%",
         "interval": 5,
+        "on-click": "dot-menu",
         "states": {
-        "warning": 20,
-        "critical": 10
+            "warning": 20,
+            "critical": 10
         }
     },
     "network": {
@@ -211,7 +240,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "dot-launch-or-focus-tui wiremix"
     },
     "custom/media": {
         "format": "{icon} {}",
