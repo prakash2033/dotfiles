@@ -3,8 +3,8 @@ font-family = Adwaita Sans
 
 # Window Configuration
 window-decoration = true
-window-padding-x = 12
-window-padding-y = 12
+# window-padding-x = 12
+# window-padding-y = 12
 background-opacity = 1.0
 
 # Cursor Configuration
