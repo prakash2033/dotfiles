@@ -353,11 +353,17 @@ window-rule {
     // - host Firefox (app-id is "firefox")
     // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="" title="^Picture in picture$"
+    match app-id="zoom"
+    match app-id="mpv"
     open-floating true
+    default-floating-position x=5 y=5 relative-to="bottom-right"
 }
 
 window-rule {
     match app-id="dot.floating.ghostty"
+    match app-id="dot.ghostty.wiremix"
+    match app-id="dot.ghostty.btop"
     open-floating true
 
     default-column-width { proportion 0.8; }
