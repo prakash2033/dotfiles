@@ -660,7 +660,7 @@ binds {
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+Q { quit; }
+    Mod+Shift+Q { spawn "dot-menu"; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
