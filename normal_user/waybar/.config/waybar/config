@@ -39,10 +39,6 @@
             }
         ]
     },
-    "custom/logout": {
-        "format": "⏻",
-        "on-click": "niri msg action quit"
-    },
     "niri/window": {
         "format": "{title}",
         "icon": true,
@@ -164,7 +160,7 @@
     },
     "memory": {
         "format": "{}% ",
-        "on-click": "gnome-system-monitor"
+        "on-click": "dot-launch-or-focus-tui btop"
     },
     "temperature": {
         "critical-threshold": 80,
