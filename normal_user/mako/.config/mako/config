@@ -4,7 +4,7 @@ border-size=2
 border-color=#ffffff
 border-radius=2
 default-timeout=5000
-font=Cantarell 12
+font=Adwaita Sans 11
 history=1
 
 [urgency=high]

@@ -1,3 +1,7 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-feature-settings: "tnum";
+}
 window#waybar {
     background: #1d1f21;
     color: white;

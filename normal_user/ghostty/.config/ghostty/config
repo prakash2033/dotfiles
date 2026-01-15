@@ -1,5 +1,5 @@
 # Font Configuration
-font-size = 12
+font-family = Adwaita Sans
 
 # Window Configuration
 window-decoration = true
@@ -30,7 +30,7 @@ gtk-titlebar = true
 bell-features = "no-title, no-attention, no-border, no-audio, no-system"
 
 # Disable annoying copied to clipboard
-app-notifications = no-clipboard-copy,no-config-reload
+# app-notifications = no-clipboard-copy,no-config-reload
 
 # Shell integration
 shell-integration = detect

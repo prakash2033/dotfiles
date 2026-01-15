@@ -28,8 +28,8 @@
   
   ## Dconf backup and restore
   ```
-  dconf dump / > dconf-backup-2026-01-15.ini
-  dconf load /org/gnome/ < gnome-dconf-backup-2026-01-15.ini
+  dconf dump / > ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup-2026-01-15.ini
+  dconf load /org/gnome/ < ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup-2026-01-15.ini
   ``` 
   
   ## Extras
