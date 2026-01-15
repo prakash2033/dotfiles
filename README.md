@@ -20,6 +20,18 @@
   sudo apt install cargo libpipewire-0.3-dev pkg-config clang
   cargo install wiremix
   ```
+  ##Install gnu-screen-recorder
+  ```
+  sudo bash -c "$(wget -q https://pacstall.dev/q/install -O -)" 
+  pacstall -I gpu-screen-recorder
+  ``` 
+  
+  ## Dconf backup and restore
+  ```
+  dconf dump / > dconf-backup-2026-01-15.ini
+  dconf load /org/gnome/ < gnome-dconf-backup-2026-01-15.ini
+  ``` 
+  
   ## Extras
   ```
   sudo apt install sxiv vim-gtk3 surfraw feh onedrive ranger aptitude 
