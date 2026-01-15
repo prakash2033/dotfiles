@@ -63,7 +63,7 @@
     },
     {
       "type": "os",
-      "key": "\ue900 OS",
+      "key": " OS",
       "keyColor": "blue"
     },
 
@@ -76,6 +76,11 @@
       "type": "wm",
       "key": "│ ├",
       "keyColor": "blue"
+    },
+    {
+        "type": "lm",
+        "key": "│ ├",
+        "keyColor": "blue"
     },
     {
       "type": "de",
@@ -134,7 +139,7 @@
     },
     {
       "type": "command",
-      "key": " Update",
+      "key": " Last Updated On",
       "keyColor": "magenta",
       "text": "if [ -f /var/log/apt/history.log ]; then echo \"$(stat -c %y /var/log/apt/history.log | cut -d' ' -f1)\"; else echo 'Unknown'; fi"
     },
