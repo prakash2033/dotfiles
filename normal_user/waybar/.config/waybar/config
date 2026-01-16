@@ -11,7 +11,7 @@
     ],
     "modules-right": [
         "privacy", 
-        "group/tray-expander", 
+        "group/tray-expander",
         "pulseaudio", 
         "backlight", 
         "clock", 

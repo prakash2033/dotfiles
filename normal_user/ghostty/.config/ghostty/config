@@ -1,5 +1,6 @@
 # Font Configuration
-font-family = Adwaita Sans Mono
+font-family = "Adwaita Mono"
+font-style = Regular
 font-size = 12
 
 # Window Configuration
