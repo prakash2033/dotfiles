@@ -1,5 +1,6 @@
 # Font Configuration
-font-family = Adwaita Sans
+font-family = Adwaita Sans Mono
+font-size = 12
 
 # Window Configuration
 window-decoration = true
