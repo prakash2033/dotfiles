@@ -31,8 +31,8 @@ input {
     touchpad {
         // off
         tap
-        // dwt
-        // dwtp
+        dwt //disable while typing
+        // dwtp // Uncomment if you have a trackpoint
         // drag false
         // drag-lock
         // natural-scroll
@@ -450,10 +450,8 @@ window-rule {
 }
 
 cursor {
-    xcursor-theme "Bibata-Modern-Ice"
-    xcursor-size 24
     hide-when-typing
-    hide-after-inactive-ms 5000
+    hide-after-inactive-ms 10000
 }
 
 binds {
