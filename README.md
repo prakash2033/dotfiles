@@ -26,6 +26,14 @@
   pacstall -I gpu-screen-recorder
   ``` 
   
+  ## Install music daemon and player
+  ```
+  sudo apt install mpd mpc ncmpcpp
+  cargo install rmpc --locked
+  ```
+  cargo install impala
+  cargo install wiremix
+  
   ## Dconf backup and restore
   ```
   dconf dump / > ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup.ini

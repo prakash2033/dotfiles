@@ -411,7 +411,7 @@ window-rule {
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
 window-rule {
-    geometry-corner-radius 2
+    geometry-corner-radius 1
     clip-to-geometry true
     tiled-state true
     draw-border-with-background false
