@@ -391,6 +391,7 @@ window-rule {
     match app-id="dot.floating.ghostty"
     match app-id="dot.ghostty.wiremix"
     match app-id="dot.ghostty.btop"
+    match app-id="dot.ghostty.rmpc"
     open-floating true
 
     default-column-width { proportion 0.8; }
