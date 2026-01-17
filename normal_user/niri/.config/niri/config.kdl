@@ -701,4 +701,5 @@ binds {
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
     Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    Mod+Alt+M hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
 }
