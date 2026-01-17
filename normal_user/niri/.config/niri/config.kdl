@@ -278,6 +278,36 @@ layout {
     }
 }
 
+recent-windows {
+    // off
+    debounce-ms 0
+
+    open-delay-ms 0
+
+    highlight {
+        active-color "#999999ff"
+        urgent-color "#ff9999ff"
+        padding 10
+        corner-radius 0
+    }
+
+    previews {
+        max-scale 0.2
+    }
+
+    binds {
+        Alt+Tab         { next-window; }
+        Alt+Shift+Tab   { previous-window; }
+        Alt+section       { next-window     filter="app-id"; }
+        Alt+Shift+section { previous-window filter="app-id"; }
+
+        Mod+Tab         { next-window; }
+        Mod+Shift+Tab   { previous-window; }
+        Mod+section       { next-window     filter="app-id"; }
+        Mod+Shift+section { previous-window filter="app-id"; }
+    }
+}
+
 // Add lines like this to spawn processes at startup.
 // Note that running niri as a session supports xdg-desktop-autostart,
 // which may be more convenient to use.
