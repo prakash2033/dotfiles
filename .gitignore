@@ -15,3 +15,6 @@ normal_user/cosmic/.config/cosmic/com.system76.CosmicPortal/v1/screenshot
 normal_user/niri/.config/niri/dms/colors.kdl
 normal_user/ghostty/.config/ghostty/config-dankcolors
 normal_user/ghostty/.config/ghostty/themes/dankcolors
+normal_user/mpd/.config/mpd/database
+normal_user/mpd/.config/mpd/state
+normal_user/mpd/.config/mpd/sticker.sql
