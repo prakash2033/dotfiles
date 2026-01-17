@@ -132,12 +132,23 @@
     },
     "modules": [
       "custom/expand-icon",
+      "idle_inhibitor",
       "tray"
     ]
   },
   "custom/expand-icon": {
     "format": "",
     "tooltip": false
+  },
+  "tray": {
+    "spacing": 12
+  },
+  "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+          "activated": "",
+          "deactivated": ""
+      }
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -152,9 +163,6 @@
         ""
       ]
     }
-  },
-  "tray": {
-    "spacing": 12
   },
   "bluetooth": {
     "format": "",
