@@ -5,8 +5,7 @@
   "height": 24,
   "modules-left": [
     "custom/menu",
-    "niri/workspaces",
-    "cffi/niri-taskbar"
+    "niri/workspaces"
   ],
   "modules-center": [
     "niri/window"
@@ -50,9 +49,6 @@
       "icon-size": 14,
       "max-length": 100,
       "separate-outputs": true
-  },
-  "cffi/niri-taskbar": {
-      "module_path": "/home/pvishwa1/Public/gitrepo/niri-taskbar/target/release/libniri_taskbar.so"
   },
   "privacy": {
     "icon-spacing": 4,
