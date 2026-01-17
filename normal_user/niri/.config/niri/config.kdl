@@ -280,9 +280,9 @@ layout {
 
 recent-windows {
     // off
-    debounce-ms 0
+    debounce-ms 750
 
-    open-delay-ms 0
+    open-delay-ms 150
 
     highlight {
         active-color "#999999ff"
