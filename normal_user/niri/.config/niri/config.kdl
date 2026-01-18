@@ -727,7 +727,7 @@ binds {
     Mod+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+Shift+E hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }
-    Mod+Shift+B hotkey-overlay-title="Microsoft Edge" { spawn "microsoft-edge"; }
+    Mod+Shift+B hotkey-overlay-title="Floorp" { spawn "floorp"; }
     Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty -f -"; }
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
