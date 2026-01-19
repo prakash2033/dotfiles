@@ -20,7 +20,7 @@
   sudo apt install cargo libpipewire-0.3-dev pkg-config clang
   cargo install wiremix
   ```
-  ##Install gnu-screen-recorder
+  ## Install gnu-screen-recorder
   ```
   sudo bash -c "$(wget -q https://pacstall.dev/q/install -O -)" 
   pacstall -I gpu-screen-recorder
