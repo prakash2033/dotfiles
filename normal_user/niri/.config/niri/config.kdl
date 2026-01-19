@@ -721,6 +721,7 @@ binds {
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+Q hotkey-overlay-title="Power Menu" { spawn "dot-menu"; }
+    Mod+X hotkey-overlay-title="Power Menu" { spawn "dot-menu"; }
     Ctrl+Alt+Delete { quit; }
 
     // Powers off the monitors. To turn them back on, do any input like
