@@ -187,7 +187,7 @@
     "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}\n\n{ipaddr}",
     "tooltip-format-disconnected": "Disconnected",
     "interval": 10,
-    "on-click": "dot-launch-or-focus-tui impala"
+    "on-click": "dot-launch-or-focus-tui nmtui"
   },
   "cpu": {
     "interval": 5,

@@ -98,10 +98,10 @@ nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 nnoremap k gk
 nnoremap j gj
 
-" noremap <Leader>y "*y
-" noremap <Leader>p "*p
-" noremap <Leader>Y "+y
-" noremap <Leader>P "+p
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
 
 " Remove newbie crutches in Insert Mode
 inoremap <Down> <Nop>
@@ -180,6 +180,16 @@ hi Normal guibg=NONE ctermbg=NONE
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 " Shift + I to show dotfiles
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+"}}}
+
+"-------- Auto Open at last position{{{
+augroup restore_cursor
+  autocmd!
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   execute "normal! g`\"" |
+        \ endif
+augroup END
 "}}}
 
 "-------- Auto source vimrc {{{
