@@ -251,11 +251,6 @@ gch() {
 }
 # }}}
 
-# -------- Functions {{{
-stop-umbrella() { sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
-start-umbrella() { sudo launchctl load /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist ;}
-# }}}
-
 # -------- Node version manager{{{
 export NVM_DIR="$HOME/.config/nvm"
 
@@ -273,7 +268,7 @@ export SPOOL=$(find_spool ts tsp)
 # -------- Autostart Tmux Session or Attach {{{
 
 # Check if tmux is available and you're not already inside a tmux session
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then tmux ls &>/dev/null || tmux new-session -d -s 0; tmux attach-session -t 0; fi
+# if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then tmux ls &>/dev/null || tmux new-session -d -s 0; tmux attach-session -t 0; fi
 
 # }}}
 
