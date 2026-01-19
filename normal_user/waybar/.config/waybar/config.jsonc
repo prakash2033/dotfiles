@@ -154,7 +154,7 @@
     "format": "{icon}",
     "on-click": "dot-launch-or-focus-tui wiremix",
     "tooltip-format": "{desc} {volume}%",
-    "scroll-step": 5,
+    "scroll-step": 1,
     "format-muted": "󰝟",
     "format-icons": {
       "default": [
