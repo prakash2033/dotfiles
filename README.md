@@ -40,6 +40,12 @@
   dconf load /org/gnome/ < ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup.ini
   ``` 
   
+  ## Install Fonts: sans-serif and ms fonts
+  ```
+  sudo apt install fonts-dejavu fonts-liberation fonts-noto
+  sudo apt install ttf-mscorefonts-installer
+  ```
+  
   ## Extras
   ```
   sudo apt install sxiv vim-gtk3 surfraw feh onedrive ranger aptitude 
