@@ -269,6 +269,7 @@ export SPOOL=$(find_spool ts tsp)
 
 # Check if tmux is available and you're not already inside a tmux session
 # if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then tmux ls &>/dev/null || tmux new-session -d -s 0; tmux attach-session -t 0; fi
+if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [ -z "$NOTMUX" ]; then tmux ls &>/dev/null || tmux new-session -d -s 0; tmux attach-session -t 0; fi
 
 # }}}
 
