@@ -36,8 +36,8 @@
   
   ## Dconf backup and restore
   ```
-  dconf dump / > ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup.ini
-  dconf load /org/gnome/ < ~/Public/gitrepo/dotfiles/normal_user/dconf/dconf-backup.ini
+  dconf dump / > ~/Public/gitrepo/dotfiles/normal_user/dconf/.config/dconf-backup.ini
+  dconf load /org/gnome/ < ~/Public/gitrepo/dotfiles/normal_user/dconf/.config/dconf-backup.ini
   ``` 
   
   ## Install Fonts: sans-serif and ms fonts
