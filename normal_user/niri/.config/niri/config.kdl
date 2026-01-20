@@ -734,10 +734,10 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
 
-    Mod+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
+    Mod+B hotkey-overlay-title="Firefox" { spawn "firefox"; } 
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+Shift+E hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }
-    Mod+Shift+B hotkey-overlay-title="Floorp" { spawn "floorp"; }
+    Mod+Shift+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty -f -"; }
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
