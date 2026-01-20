@@ -2,8 +2,8 @@
 # https://dev.to/cassidoo/customizing-my-zsh-prompt-3417
 # https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html 
 alias ls='ls --color'
-alias l='ls -l --color'
-alias la='ls -la --color'
+alias ll='ls -la --color'
+alias la='ls -a --color'
 autoload -U colors && colors
 setopt autocd   # Automatically cd into typed directory.
 
