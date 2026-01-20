@@ -14,6 +14,11 @@
   sudo apt install brightnessctl
   sudo usermod -aG video pvishwa1
   ```
+
+  ## Installing niri
+  ```
+  sudo apt install xdg-desktop-portal-wlr
+  ```
   
   ## Install wiremix tui
   ```
