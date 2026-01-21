@@ -1,4 +1,4 @@
-image=/usr/local/share/backgrounds/VolvoCars.jpg
+image=$HOME/.local/share/bg
 daemonize
 show-failed-attempts
 clock

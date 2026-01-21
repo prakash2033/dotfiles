@@ -322,7 +322,7 @@ spawn-at-startup "flatpak" "run" "com.slack.Slack"
 spawn-at-startup "flatpak" "run" "org.telegram.desktop"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store &"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store &"
-spawn-at-startup "swaybg" "-i" "/usr/local/share/backgrounds/VolvoCars.jpg" "-m" "fill"
+spawn-at-startup "setbg" "$HOME/.local/share/bg"
 spawn-at-startup "/usr/bin/swayidle" "-w" "timeout" "500" "niri msg action power-off-monitors" "timeout" "300" "swaylock" "before-sleep" "swaylock"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:

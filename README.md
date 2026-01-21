@@ -17,13 +17,13 @@
 
   ## Installing niri
   ```
-  sudo apt install xdg-desktop-portal-wlr
+  sudo apt install xdg-desktop-portal-wlr swaybg sxiv
   ```
   
-  ## Install wiremix tui
+  ## Install wiremix, bluetui
   ```
   sudo apt install cargo libpipewire-0.3-dev pkg-config clang
-  cargo install wiremix
+  cargo install wiremix bluetui
   ```
   ## Install gnu-screen-recorder
   ```
@@ -36,8 +36,6 @@
   sudo apt install mpd mpc ncmpcpp
   cargo install rmpc --locked
   ```
-  cargo install impala
-  cargo install wiremix
   
   ## Dconf backup and restore
   ```
