@@ -18,3 +18,5 @@ normal_user/ghostty/.config/ghostty/themes/dankcolors
 normal_user/mpd/.config/mpd/database
 normal_user/mpd/.config/mpd/state
 normal_user/mpd/.config/mpd/sticker.sql
+normal_user/gtk-3.0/.config/gtk-3.0/bookmarks
+normal_user/gtk-4.0/.config/gtk-4.0/servers
