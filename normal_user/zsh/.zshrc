@@ -74,7 +74,7 @@ KEYTIMEOUT=1
 # show vim status with date
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
-    # INSERT="%F{yellow}$(date +'%Y-%m-%d %r')%f"
+    # INSERT="%F{green}$(date +'%Y-%m-%d %r')%f"
     # NORMAL="%F{blue}$(date +'%Y-%m-%d %r')%f"
 
     INSERT="%F{green}-- INSERT --%f"
@@ -224,7 +224,7 @@ alias gps='git push'
 alias gf='git fetch --all'
 alias glNoGraph='git log --color=always \
 --format="%C(cyan)%h%Creset %C(blue)%ar%Creset%C(auto)%d%Creset \
-%C(yellow)%s%+b %C(black)%ae%Creset" "$@"'
+%C(green)%s%+b %C(black)%ae%Creset" "$@"'
 
 _gitLogLineToHash="echo {} |
 grep -o '[a-f0-9]\{7\}' |
