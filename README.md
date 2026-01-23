@@ -6,7 +6,7 @@
   cmus jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
   python3-pip python-is-python3 w3m imagemagick lynx \
   libxext-dev gvfs-backends fortunes fortunes git stow vim vim-athena chafa screenkey cliphist fonts-cantarell \
-  btop mpv dnsutils tree fuse fastfetch tty-clock cowsay -y
+  btop mpv dnsutils tree fuse fastfetch tty-clock cowsay lolcat -y
   sudo apt install polkit-kde-agent-1
   sudo apt install policykit-1-gnome
   sudo apt install --install-recommends dolphin
