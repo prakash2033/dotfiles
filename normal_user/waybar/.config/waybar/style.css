@@ -1,11 +1,8 @@
 * {
-
-  font-family: monospace;
-  font-feature-settings: "tnum";
-  
   border: none;
   border-radius: 0;
-
+  font-family: monospace;
+  font-feature-settings: "tnum";
   min-height: 0;
 }
 
@@ -19,9 +16,9 @@
 
 #workspaces button {
   all: initial;
-  padding: 0 6px;
-  margin: 0 1.5px;
-  min-width: 8px;
+  margin: 0 0.125rem;
+  min-width: 0.5rem;
+  padding: 0 0.375rem;
 }
 
 #workspaces button.empty {
@@ -40,13 +37,18 @@
 #idle_inhibitor,
 #custom-menu,
 #custom-expand-icon {
-  padding: 0 8px;
+  min-width: 0.75rem;
+  margin: 0 0.45rem;
+}
+
+#bluetooth {
+  margin-right: 0.2rem;
 }
 
 #privacy {
-    color:#FFCDD2;
+  color: #ffcdd2;
 }
 
 tooltip * {
-  padding: 2px;
+  padding: 0.125rem;
 }

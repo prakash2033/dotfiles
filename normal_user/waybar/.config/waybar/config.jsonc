@@ -34,23 +34,6 @@
       "default": ""
     }
   },
-  // "niri/workspaces": {
-  //   "on-click": "activate",
-  //   "format": "{icon}",
-  //   "format-icons": {
-  //     "default": "",
-  //     "1": "1",
-  //     "2": "2",
-  //     "3": "3",
-  //     "4": "4",
-  //     "5": "5",
-  //     "6": "6",
-  //     "7": "7",
-  //     "8": "8",
-  //     "9": "9",
-  //     "active": "󱓻"
-  //   }
-  // },
   "niri/window": {
       "format": "{title}",
       "icon": true,
@@ -58,7 +41,7 @@
       "max-length": 100,
       "separate-outputs": true,
       "on-scroll-up": "niri msg action focus-column-left-or-last",
-      "on-scroll-down": "niri msg action focus-column-right-or-first",
+      "on-scroll-down": "niri msg action focus-column-right-or-first"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -176,6 +159,7 @@
   },
   "bluetooth": {
     "format": "",
+    "format-off": "󰂲",
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
