@@ -12,7 +12,7 @@
   sudo apt install --install-recommends dolphin
   
   sudo apt install brightnessctl
-  sudo usermod -aG video pvishwa1
+  sudo usermod -aG netdev,video,input $USER
   ```
 
   ## Installing niri
