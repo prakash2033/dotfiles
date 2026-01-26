@@ -66,8 +66,8 @@
     ]
   },
   "clock": {
-      "format": "{:%b %d %I:%M:%S %p %Z}",
-      "format-alt": "{:%b %d %H:%M:%S %Z}",
+      "format": "  {:%b %d %I:%M:%S %p %Z}",
+      "format-alt": "  {:%b %d %H:%M:%S %Z}",
       "tooltip": true,
       "interval": 1,
       "tooltip-format": "<tt>{calendar}</tt>",
@@ -180,8 +180,11 @@
     "format": "",
     "format-off": "󰂲",
     "format-disabled": "󰂲",
-    "format-connected": "",
+    "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias} ({device_battery_percentage}%)",
     "on-click": "dot-launch-or-focus-tui bluetui"
   },
   "network": {
