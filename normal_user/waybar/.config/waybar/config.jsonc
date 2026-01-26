@@ -170,7 +170,7 @@
     "format": "{format_source}",
     "format-source": "",
     "format-source-muted": "",
-    "tooltip-format": "{desc} {volume}%",
+    "tooltip-format": "{desc} {source_volume}%",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
     "on-click": "dot-launch-or-focus-tui wiremix --tab input",
