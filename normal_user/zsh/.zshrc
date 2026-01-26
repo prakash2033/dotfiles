@@ -244,6 +244,7 @@ glog() {  # search for commit with preview and copy hash
           less -R" \
           --bind "ctrl-y:execute:$_gitLogLineToHash |
           wl-copy"
+  return 0
 }
 
 gch() {
