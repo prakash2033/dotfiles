@@ -37,12 +37,12 @@
 #idle_inhibitor,
 #custom-menu,
 #custom-expand-icon {
-  min-width: 0.75rem;
-  margin: 0 0.45rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
 }
 
 #bluetooth {
-  margin-right: 0.2rem;
+  padding-left: 1rem;
 }
 
 #privacy {

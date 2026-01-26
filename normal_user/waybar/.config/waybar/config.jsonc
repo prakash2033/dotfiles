@@ -14,6 +14,7 @@
     "privacy",
     "group/tray-expander",
     "mpd",
+    "pulseaudio#mic",
     "pulseaudio",
     "bluetooth",
     "network",
@@ -145,7 +146,8 @@
   },
   "pulseaudio": {
     "format": "{icon}",
-    "on-click": "dot-launch-or-focus-tui wiremix",
+    "on-click": "dot-launch-or-focus-tui wiremix --tab output",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "tooltip-format": "{desc} {volume}%",
     "scroll-step": 1,
     "format-muted": "󰝟",
@@ -154,8 +156,25 @@
         "",
         "",
         ""
-      ]
+      ],
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": ""
     }
+  },
+  "pulseaudio#mic": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": "",
+    "tooltip-format": "{desc} {volume}%",
+    "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+    "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+    "on-click": "dot-launch-or-focus-tui wiremix --tab input",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
   },
   "bluetooth": {
     "format": "",
