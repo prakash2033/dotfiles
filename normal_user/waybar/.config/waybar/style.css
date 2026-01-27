@@ -33,16 +33,17 @@
 #network,
 #bluetooth,
 #pulseaudio,
+#pulseaudio.mic,
 #clock,
 #idle_inhibitor,
 #custom-menu,
 #custom-expand-icon {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
+  padding: 0 0.6rem;
 }
 
-#bluetooth {
-  padding-left: 1rem;
+#bluetooth,
+#pulseaudio.mic {
+  padding-right: 0.3rem;
 }
 
 #privacy {
