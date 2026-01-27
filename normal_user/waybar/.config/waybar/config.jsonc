@@ -168,7 +168,7 @@
   },
   "pulseaudio#mic": {
     "format": "{format_source}",
-    "format-source": "",
+    "format-source": "",
     "format-source-muted": "󰍭",
     "tooltip-format": "{desc} {source_volume}%",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
