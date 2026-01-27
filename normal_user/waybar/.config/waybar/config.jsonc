@@ -98,8 +98,8 @@
     "format-stopped": "",
     "tooltip-format": "{title} by {artist} (Album: {album})",
     "state-icons": {
-      "playing": "▶",
-      "paused": "⏸"
+      "playing": "",
+      "paused": ""
     },
     "on-click": "playerctl play-pause",
     "on-click-middle": "dot-launch-or-focus-tui rmpc",
