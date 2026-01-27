@@ -154,8 +154,8 @@
     "format-icons": {
       "default": [
         "",
-        "",
-        ""
+        "󰖀",
+        "󰕾"
       ],
       "headphone": "",
       "hands-free": "",
@@ -169,7 +169,7 @@
   "pulseaudio#mic": {
     "format": "{format_source}",
     "format-source": "",
-    "format-source-muted": "",
+    "format-source-muted": "󰍭",
     "tooltip-format": "{desc} {source_volume}%",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
     "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
