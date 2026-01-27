@@ -38,15 +38,8 @@
 #idle_inhibitor,
 #custom-menu,
 #custom-expand-icon {
-  padding: 0 0.6rem;
-}
-
-#bluetooth {
-  padding-right: 0.3rem;
-}
-
-#pulseaudio.mic {
-  padding-right: 0.2rem;
+  min-width: 0.6rem;
+  margin: 0 0.6rem;
 }
 
 #privacy {
