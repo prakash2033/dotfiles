@@ -41,9 +41,12 @@
   padding: 0 0.6rem;
 }
 
-#bluetooth,
-#pulseaudio.mic {
+#bluetooth {
   padding-right: 0.3rem;
+}
+
+#pulseaudio.mic {
+  padding-right: 0.2rem;
 }
 
 #privacy {
