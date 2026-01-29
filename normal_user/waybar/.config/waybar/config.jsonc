@@ -36,13 +36,13 @@
     }
   },
   "niri/window": {
-      "format": "{title}",
-      "icon": true,
-      "icon-size": 14,
-      "max-length": 100,
-      "separate-outputs": true,
-      "on-scroll-up": "niri msg action focus-column-left-or-last",
-      "on-scroll-down": "niri msg action focus-column-right-or-first"
+    "format": "{title}",
+    "icon": true,
+    "icon-size": 14,
+    "max-length": 100,
+    "separate-outputs": true,
+    "on-scroll-up": "niri msg action focus-column-left-or-last",
+    "on-scroll-down": "niri msg action focus-column-right-or-first"
   },
   "privacy": {
     "icon-spacing": 4,
@@ -66,32 +66,32 @@
     ]
   },
   "clock": {
-      "format": "󰥔  {:%b %d %I:%M:%S %p %Z}",
-      "format-alt": "󰥔  {:%b %d %H:%M:%S %Z}",
-      "tooltip": true,
-      "interval": 1,
-      "tooltip-format": "<tt>{calendar}</tt>",
-      "timezones": [
-          "",
-          "Asia/Kolkata"
+    "format": "󰥔  {:%b %d %I:%M:%S %p %Z}",
+    "format-alt": "󰥔  {:%b %d %H:%M:%S %Z}",
+    "tooltip": true,
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "timezones": [
+      "",
+      "Asia/Kolkata"
           ],
-    "actions": {
-      "on-scroll-up": "tz_up",
-      "on-scroll-down": "tz_down"
-    },
-    "calendar": {
-      "mode": "year",
-      "mode-mon-col": 3,
-      "weeks-pos": "right",
-      "on-scroll": 1,
-      "format": {
-        "months": "<span color='#ffead3'><b>{}</b></span>",
-        "days": "<span color='#ecc6d9'><b>{}</b></span>",
-        "weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
-        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
-        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-      }
-    }
+          "actions": {
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down"
+          },
+          "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+              "months": "<span color='#ffead3'><b>{}</b></span>",
+              "days": "<span color='#ecc6d9'><b>{}</b></span>",
+              "weeks": "<span color='#99ffdd'><b>W{:%V}</b></span>",
+              "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+              "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+          }
   },
   "mpd": {
     "format": "{stateIcon}",
@@ -138,11 +138,11 @@
     "spacing": 12
   },
   "idle_inhibitor": {
-      "format": "{icon}",
-      "format-icons": {
-          "activated": "",
-          "deactivated": ""
-      }
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
   },
   "pulseaudio": {
     "format": "{icon}",
@@ -150,20 +150,13 @@
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "tooltip-format": "{desc} {volume}%",
     "scroll-step": 1,
-    "format-muted": "󰝟",
     "format-icons": {
-      "default": [
-        "",
-        "󰖀",
-        "󰕾"
-      ],
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "phone-muted": "",
-      "portable": "",
-      "car": ""
+      "default": [ "󰕿", "󰖀", "󰕾" ],
+      "default-muted": "󰝟",
+      "headphone": "󰋋",
+      "headphone-muted": "󰟎",
+      "headset": "󰋎",
+      "headset-muted": "󰋐"
     }
   },
   "pulseaudio#mic": {
@@ -188,13 +181,7 @@
     "on-click": "dot-launch-or-focus-tui bluetui"
   },
   "network": {
-    "format-icons": [
-      "󰤯",
-      "󰤟",
-      "󰤢",
-      "󰤥",
-      "󰤨"
-    ],
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
     "format": "{icon}",
     "format-wifi": "{icon}",
     "format-ethernet": "󰀂",
@@ -216,30 +203,8 @@
     "format-charging": "{icon}",
     "format-plugged": "",
     "format-icons": {
-      "charging": [
-        "󰢜",
-        "󰂆",
-        "󰂇",
-        "󰂈",
-        "󰢝",
-        "󰂉",
-        "󰢞",
-        "󰂊",
-        "󰂋",
-        "󰂅"
-      ],
-      "default": [
-        "󰁺",
-        "󰁻",
-        "󰁼",
-        "󰁽",
-        "󰁾",
-        "󰁿",
-        "󰂀",
-        "󰂁",
-        "󰂂",
-        "󰁹"
-      ]
+      "charging": ["󰢜","󰂆","󰂇","󰂈","󰢝","󰂉","󰢞","󰂊","󰂋","󰂅"],
+      "default": ["󰁺","󰁻","󰁼","󰁽", "󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
     },
     "format-full": "󰂅",
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
