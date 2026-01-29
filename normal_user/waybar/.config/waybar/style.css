@@ -38,8 +38,8 @@
 #idle_inhibitor,
 #custom-menu,
 #custom-expand-icon {
-  min-width: 0.6rem;
-  margin: 0 0.6rem;
+  margin: 0 0.3125rem;
+  padding: 0 0.3125rem;
 }
 
 #privacy {
