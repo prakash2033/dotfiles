@@ -291,6 +291,9 @@ layout {
     }
 }
 
+// }}}
+
+// -------- Recent Windows {{{
 recent-windows {
     // off
     debounce-ms 750
@@ -319,7 +322,15 @@ recent-windows {
         Mod+section       { next-window     filter="app-id"; }
         Mod+Shift+section { previous-window filter="app-id"; }
     }
-}// }}}
+}
+// }}}
+
+// -------- Overview {{{
+// Make workspaces four times smaller than normal in the overview.
+overview {
+    zoom 0.25
+}
+// }}}
 
 // -------- Autostart {{{
 // Add lines like this to spawn processes at startup.
