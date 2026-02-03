@@ -468,6 +468,7 @@ window-rule {
     match app-id="jetbrains-rider"
     match app-id="jetbrains-datagrip"
     match app-id="firefox"
+    match app-id="vivaldi-stable"
     open-maximized true
 }
 
