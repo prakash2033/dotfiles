@@ -46,7 +46,7 @@
   },
   "privacy": {
     "icon-spacing": 4,
-    "icon-size": 14,
+    "icon-size": 12,
     "modules": [
       {
         "type": "screenshare",

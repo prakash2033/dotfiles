@@ -1,4 +1,5 @@
 #To ignore
+*.local
 cache.db
 cache.db.lock
 .DS_Store
