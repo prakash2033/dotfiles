@@ -1,9 +1,9 @@
 [Default Applications]
-text/html=vivaldi-stable.desktop
-x-scheme-handler/http=vivaldi-stable.desktop
-x-scheme-handler/https=vivaldi-stable.desktop
-x-scheme-handler/about=vivaldi-stable.desktop
-x-scheme-handler/unknown=vivaldi-stable.desktop
+text/html=org.chromium.Chromium.desktop
+x-scheme-handler/http=org.chromium.Chromium.desktop
+x-scheme-handler/https=org.chromium.Chromium.desktop
+x-scheme-handler/about=org.chromium.Chromium.desktop
+x-scheme-handler/unknown=org.chromium.Chromium.desktop
 x-scheme-handler/terminal=com.mitchellh.ghostty.desktop
 application/x-shellscript=org.gnome.TextEditor.desktop
 image/png=sxiv.desktop

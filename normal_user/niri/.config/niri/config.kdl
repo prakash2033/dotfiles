@@ -767,7 +767,7 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P hotkey-overlay-title="Power off Monitors" { power-off-monitors; }
 
-    Mod+B hotkey-overlay-title="Vivaldi" { spawn "vivaldi-stable"; } 
+    Mod+B hotkey-overlay-title="Chromium" { spawn "flatpak run org.chromium.Chromium"; } 
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+Shift+E hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }
     Mod+Shift+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
