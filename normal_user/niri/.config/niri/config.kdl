@@ -465,6 +465,7 @@ window-rule {
     match app-id="jetbrains-datagrip"
     match app-id="firefox"
     match app-id="vivaldi-stable"
+    match app-id="org.chromium.Chromium"
     open-maximized true
 }
 
