@@ -452,6 +452,7 @@ window-rule {
     match app-id="dot.ghostty.rmpc"
     match app-id="dot.ghostty.nmtui"
     match app-id="org.gnome.Calculator"
+    match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     open-floating true
 
