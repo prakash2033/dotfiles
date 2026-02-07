@@ -28,6 +28,12 @@ c.content.blocking.adblock.lists = [
     'https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt',
 ]
 
+# breadonpenguins darkmode config
+c.colors.webpage.darkmode.enabled = True
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+c.colors.webpage.darkmode.policy.images = 'never'
+config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+
 # c.content.pdfjs = True
 c.input.mode_override = 'normal'
 c.keyhint.delay = 0
