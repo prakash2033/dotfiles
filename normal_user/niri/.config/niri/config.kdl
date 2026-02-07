@@ -771,6 +771,7 @@ binds {
 
     Mod+B hotkey-overlay-title="Chromium" { spawn "sh" "-c" "flatpak run org.chromium.Chromium"; } 
     Mod+E hotkey-overlay-title="Files" { spawn "nautilus"; }
+    Mod+Y hotkey-overlay-title="Yazi" { spawn "ghostty" "--class=dot.floating.ghostty" "-e" "yazi"; }
     Mod+Shift+E hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }
     Mod+Shift+B hotkey-overlay-title="Google Chrome" { spawn "google-chrome-stable"; }
     Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp -d)\" - | satty -f -"; }
