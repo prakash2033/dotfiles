@@ -466,6 +466,7 @@ window-rule {
     match app-id="firefox"
     match app-id="vivaldi-stable"
     match app-id="org.chromium.Chromium"
+    match app-id="org.qutebrowser.qutebrowser"
     open-maximized true
 }
 
