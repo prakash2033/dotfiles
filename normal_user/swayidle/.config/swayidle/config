@@ -1,0 +1,5 @@
+# Intervals are counted from the same reference point
+timeout 300 'swaylock -f'
+timeout 500 'niri msg action power-off-monitors'
+before-sleep 'swaylock -f'
+after-resume 'niri msg action power-on-monitors'
