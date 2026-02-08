@@ -453,6 +453,7 @@ window-rule {
     match app-id="org.gnome.Calculator"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
+    match app-id="1password"
     open-floating true
 
     default-column-width { proportion 0.5; }
@@ -778,6 +779,7 @@ binds {
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
     Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    Mod+Alt+P hotkey-overlay-title="1Password" { spawn "dot-launch-or-focus" "1password"; }
     Mod+Alt+M hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
     Mod+Alt+W hotkey-overlay-title="Wallpapers" { spawn "sh" "-c" "sxiv -t $(find ~/Public/gitrepo/wallpapers/sway ~/Public/gitrepo/wallpapers/wallhaven ~/Public/gitrepo/wallpapers/nickjj -type f)"; }
 }// }}}
