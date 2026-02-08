@@ -34,6 +34,15 @@ c.keyhint.delay = 0
 # c.content.javascript.clipboard = 'access-paste'
 c.downloads.location.prompt = False
 
+# Bindings for normal mode
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('Z', 'hint links spawn st -e youtube-dl {hint-url}')
+config.bind('t', 'set-cmd-text -s :open -t')
+config.bind('xb', 'config-cycle statusbar.show always never')
+config.bind('xt', 'config-cycle tabs.show always never')
+config.bind('xx', 'config-cycle statusbar.show always never;; config-cycle tabs.show always never')
+
+
 # TODO:
 # rewrite pywalQute and speedcrunch template to only account for qutebrowser
 # and to remove cursed variable names
