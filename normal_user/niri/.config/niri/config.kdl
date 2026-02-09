@@ -342,6 +342,7 @@ spawn-at-startup "flatpak" "run" "org.telegram.desktop"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store &"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store &"
 spawn-at-startup "setbg" "$HOME/.local/share/bg"
+spawn-at-startup "mon-vol"
 spawn-at-startup "/usr/bin/swayidle"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
