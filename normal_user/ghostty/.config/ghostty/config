@@ -1,5 +1,6 @@
 # Font Configuration
 font-family = monospace
+font-size = 14
 font-feature = -calt, -liga, -dlig
 
 # Window Configuration
