@@ -17,7 +17,19 @@
 
   ## Installing niri
   ```
-  sudo apt install xdg-desktop-portal-wlr swaybg sxiv
+  sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
+  ```
+  
+  ### Building from source
+  ```
+  cargo build --release
+  sudo install -m 755 target/release/niri /usr/local/bin/niri
+
+  ```
+  
+  ## Install thunar
+  ```
+  sudo apt install thunar gvfs gvfs-backends udisks2 tumbler thunar-archive-plugin file-roller
   ```
   
   ## Install wiremix, bluetui
