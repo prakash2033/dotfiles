@@ -1,6 +1,5 @@
 # Font Configuration
 font-family = monospace
-font-size = 14
 font-feature = -calt, -liga, -dlig
 
 # Window Configuration
@@ -64,3 +63,6 @@ quick-terminal-position="top"
 # quick-terminal-autohide="true"
 quick-terminal-size=500px
 # keybind =global:§=toggle_quick_terminal
+
+# Load a custom config for overrides, ? silently fails if the file is missing.
+config-file = ?config.local
