@@ -456,6 +456,7 @@ window-rule {
     match app-id="org.gnome.Nautilus"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
+    match app-id="Thunar"
     match app-id="1password"
     open-floating true
 
@@ -774,7 +775,7 @@ binds {
     Mod+Shift+P hotkey-overlay-title="Power off Monitors" { power-off-monitors; }
 
     Mod+B hotkey-overlay-title="Chromium" { spawn "sh" "-c" "flatpak run org.chromium.Chromium"; } 
-    Mod+E hotkey-overlay-title="Files (floating)" { spawn "thunar" "--name=dot.floating"; }
+    Mod+E hotkey-overlay-title="Files (floating)" { spawn "thunar"; }
     Mod+Alt+E hotkey-overlay-title="Files" { spawn "nautilus"; }
     Mod+Y hotkey-overlay-title="Yazi" { spawn "ghostty" "--class=dot.floating" "-e" "yazi"; }
     Mod+Shift+E hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }
