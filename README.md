@@ -178,6 +178,7 @@
   ## Dev Cli
   ```
   curl -sS https://webinstall.dev/k9s | bash
+  sudo apt install kubectx
   ```
   
   ## Chatgpt, Shell Gpt Cli & Ollama
