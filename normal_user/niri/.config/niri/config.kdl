@@ -294,7 +294,7 @@ recent-windows {
     }
 
     previews {
-        max-scale 0.2
+        max-scale 0.75
     }
 
     binds {
