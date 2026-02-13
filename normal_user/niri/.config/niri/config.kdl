@@ -446,6 +446,7 @@ window-rule {
 
 window-rule {
  match app-id=r#"^thunar$"# title=r#"^Rename "#
+ match app-id=r#"^thunar$"# title=r#"^File Operation Progress"#
 
  open-floating true
 }
@@ -463,6 +464,7 @@ window-rule {
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     match app-id="1password"
+
     open-floating true
 
     default-column-width { proportion 0.6; }
