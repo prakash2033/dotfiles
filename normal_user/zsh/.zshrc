@@ -56,7 +56,9 @@ setopt PROMPT_SUBST
 # Live Ticking Clock that updates every second
 TMOUT=1
 TRAPALRM() {
-  zle reset-prompt
+    if [[ "$WIDGET" =~ ^(complete-word|fzf-completion)$  ]]; then
+        zle reset-prompt
+    fi
 }
 
 # }}}
