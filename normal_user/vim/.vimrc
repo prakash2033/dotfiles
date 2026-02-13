@@ -145,6 +145,7 @@ nnoremap x "_x
 vnoremap x "_x
 
 nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Git<Cr>
 
 "}}}
 
