@@ -60,6 +60,8 @@ Plug 'https://github.com/sirver/UltiSnips'               " snippet program only,
 Plug 'https://github.com/honza/vim-snippets'             " code snippet of many programming language
 Plug 'https://github.com/tpope/vim-surround'             " Help surround with :h
 Plug 'https://github.com/scrooloose/nerdtree'            " File explorer
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 "Git
 Plug 'https://github.com/airblade/vim-gitgutter'         " Git gutter
@@ -141,6 +143,14 @@ vnoremap s "_s
 " Optional: Keep 'x' (delete char) from affecting clipboard
 nnoremap x "_x
 vnoremap x "_x
+
+nnoremap <C-f> :Files<Cr>
+
+"}}}
+
+"-------- Vim Fzf{{{
+let g:fzf_layout = { 'down': '20%' }
+
 "}}}
 
 "-------- vimwiki - Personal Wiki for Vim (Markdown Supported) {{{
