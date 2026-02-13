@@ -5,6 +5,7 @@ border-color=#ffffff
 border-radius=2
 default-timeout=5000
 history=1
+icons=1
 
 [urgency=high]
 layer=overlay
