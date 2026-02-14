@@ -54,12 +54,11 @@ setopt PROMPT_SUBST
 #RPROMPT=\$vcs_info_msg_0_
 
 # Live Ticking Clock that updates every second
+# Source - https://stackoverflow.com/a/30456173
+# Posted by Drasill, modified by community. See post 'Timeline' for change history
+# Retrieved 2026-02-14, License - CC BY-SA 3.0
 TMOUT=1
-TRAPALRM() {
-    if [[ "$WIDGET" =~ ^(complete-word|fzf-completion)$  ]]; then
-        zle reset-prompt
-    fi
-}
+TRAPALRM() { ! [[ "$WIDGET" =~ ^(complete-word|fzf-completion|fzf-.*-widget)$ ]] && zle reset-prompt }
 
 # }}}
 
