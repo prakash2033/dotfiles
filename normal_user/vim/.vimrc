@@ -106,40 +106,40 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-" Remove newbie crutches in Insert Mode
-inoremap <Down> <Nop>
-inoremap <Left> <Nop>
-inoremap <Right> <Nop>
-inoremap <Up> <Nop>
-
-" Remove newbie crutches in Normal Mode
-nnoremap <Down> <Nop>
-nnoremap <Left> <Nop>
-nnoremap <Right> <Nop>
-nnoremap <Up> <Nop>
-
-" Remove newbie crutches in Visual Mode
-vnoremap <Down> <Nop>
-vnoremap <Left> <Nop>
-vnoremap <Right> <Nop>
-vnoremap <Up> <Nop>
+" " Remove newbie crutches in Insert Mode
+" inoremap <Down> <Nop>
+" inoremap <Left> <Nop>
+" inoremap <Right> <Nop>
+" inoremap <Up> <Nop>
+"
+" " Remove newbie crutches in Normal Mode
+" nnoremap <Down> <Nop>
+" nnoremap <Left> <Nop>
+" nnoremap <Right> <Nop>
+" nnoremap <Up> <Nop>
+"
+" " Remove newbie crutches in Visual Mode
+" vnoremap <Down> <Nop>
+" vnoremap <Left> <Nop>
+" vnoremap <Right> <Nop>
+" vnoremap <Up> <Nop>
 
 " NerdTree keybinding - I for showing dotfiles in nerd tree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
-" Delete without yanking to clipboard
-nnoremap d "_d
-vnoremap d "_d
-nnoremap D "_D
-vnoremap D "_D
-
-" Change/Substitute without yanking to clipboard
-nnoremap c "_c
-vnoremap c "_c
-nnoremap s "_s
-vnoremap s "_s
+" " Delete without yanking to clipboard
+" nnoremap d "_d
+" vnoremap d "_d
+" nnoremap D "_D
+" vnoremap D "_D
+"
+" " Change/Substitute without yanking to clipboard
+" nnoremap c "_c
+" vnoremap c "_c
+" nnoremap s "_s
+" vnoremap s "_s
 
 " Optional: Keep 'x' (delete char) from affecting clipboard
 nnoremap x "_x
