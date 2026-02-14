@@ -288,9 +288,9 @@ recent-windows {
     open-delay-ms 150
 
     highlight {
-        active-color "#999999ff"
+        active-color "#1ae6ccee"
         urgent-color "#ff9999ff"
-        padding 10
+        padding 0
         corner-radius 0
     }
 
@@ -326,6 +326,7 @@ gestures {
 // Make workspaces four times smaller than normal in the overview.
 overview {
     zoom 0.25
+    backdrop-color "#14151fff"
 }
 // }}}
 
@@ -420,6 +421,13 @@ animations {
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
+window-rule {
+    match is-window-cast-target=true
+
+    focus-ring {
+        active-gradient from="#f38ba8ee" to="#cc241dee" angle=45
+    }
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
