@@ -54,6 +54,7 @@ Plug 'https://github.com/tomtom/tcomment_vim.git'
 Plug 'https://github.com/suan/vim-instant-markdown', {'for': 'markdown'} " Install nodejs mini server by running  npm -g install instant-markdown-d
 Plug 'https://github.com/altercation/vim-colors-solarized.git'
 Plug 'https://github.com/morhetz/gruvbox.git'
+Plug 'ghifarit53/tokyonight-vim'
 Plug 'https://github.com/tomasiser/vim-code-dark.git'
 Plug 'https://github.com/arcticicestudio/nord-vim.git'
 Plug 'https://github.com/sirver/UltiSnips'               " snippet program only, no code snippet provided
@@ -178,13 +179,22 @@ map <leader>md :InstantMarkdownPreview<CR>
 
 "}}}
 
-"-------- Colorscheme and theme {{{
+" -------- Gruvbox Theme {{{
+
 syntax enable
 set background=dark
 let g:gruvbox_contrast_dark = 'medium'
-
-colorscheme gruvbox
+" colorscheme gruvbox
 hi Normal guibg=NONE ctermbg=NONE
+"}}}
+
+"-------- TokyoNight Theme {{{
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 "}}}
 
