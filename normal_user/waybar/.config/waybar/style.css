@@ -2,6 +2,7 @@
   border: none;
   border-radius: 0;
   font-family: monospace;
+  font-size: 16px;
   font-feature-settings: "tnum";
   min-height: 0;
 }
