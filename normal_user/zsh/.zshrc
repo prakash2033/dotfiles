@@ -57,6 +57,7 @@ setopt PROMPT_SUBST
 # Source - https://stackoverflow.com/a/30456173
 # Posted by Drasill, modified by community. See post 'Timeline' for change history
 # Retrieved 2026-02-14, License - CC BY-SA 3.0
+# Note that Zsh functions and widgets can be listed, e.g.: functions + | grep -i fzf
 TMOUT=1
 TRAPALRM() { ! [[ "$WIDGET" =~ ^(complete-word|fzf-completion|fzf-.*-widget)$ ]] && zle reset-prompt }
 
