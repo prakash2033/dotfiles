@@ -454,10 +454,11 @@ window-rule {
 }
 
 window-rule {
- match app-id=r#"^thunar$"# title=r#"^Rename "#
- match app-id=r#"^thunar$"# title=r#"^File Operation Progress"#
+    match app-id=r#"^thunar$"# title=r#"^Rename "#
+    match app-id=r#"^thunar$"# title=r#"^File Operation Progress"#
 
- open-floating true
+    open-floating true
+    default-floating-position x=5 y=5 relative-to="bottom-right"
 }
 
 window-rule {
@@ -747,7 +748,7 @@ binds {
     // Display scaling / zoom.
     Mod+Ctrl+Shift+Plus hotkey-overlay-title="Increase primary monitor scale" { spawn "output-scale" "+0.05"; }
     Mod+Ctrl+Shift+Minus hotkey-overlay-title="Decrease primary monitor scale" { spawn "output-scale" "-0.05"; }
-    Mod+Ctrl+0     hotkey-overlay-title="Reset primary monitor scale" { spawn "output-scale" "1.0"; }
+    Mod+Ctrl+Shift+0     hotkey-overlay-title="Reset primary monitor scale" { spawn "output-scale" "1.0"; }
 
     // Move the focused window between the floating and the tiling layout.
     Mod+T       { toggle-window-floating; }
