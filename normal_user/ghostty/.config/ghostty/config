@@ -57,7 +57,7 @@ scrollback-limit = 134217728
 
 keybind = ctrl+shift+r=reload_config
 keybind = ctrl+b=toggle_window_decorations
-# keybind = ctrl+f=toggle_fullscreen
+keybind = ctrl+f=toggle_fullscreen
 
 # https://ghostty.org/docs/config/reference#quick-terminal-size
 quick-terminal-position="top"
