@@ -1,8 +1,0 @@
-#!/bin/sh
-
-xinput set-prop 9 "libinput Tapping Enabled" 1 &
-nm-applet &		# Network Manager applet
-blueman-applet & 	# Bluetooth applet
-picom --config ~/.config/picom/picom.conf &
-
-
