@@ -17,14 +17,14 @@
 
   ## Installing niri
   ```
+  git clone https://github.com/niri-wm/niri.git
   sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
   ```
   
-  ### Building from source
+  ### Building from [source](https://niri-wm.github.io/niri/Getting-Started.html#manual-installation)
   ```
   cargo build --release
   sudo install -m 755 target/release/niri /usr/local/bin/niri
-
   ```
   
   ## Install thunar
