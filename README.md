@@ -15,14 +15,15 @@
   sudo usermod -aG netdev,video,input $USER
   ```
 
-  ## Installing niri
+  ## Installing niri dependencies
   ```
-  git clone https://github.com/niri-wm/niri.git
   sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
+  sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
   ```
   
   ### Building from [source](https://niri-wm.github.io/niri/Getting-Started.html#manual-installation)
   ```
+  git clone https://github.com/niri-wm/niri.git
   cargo build --release
   sudo install -m 755 target/release/niri /usr/local/bin/niri
   ```
