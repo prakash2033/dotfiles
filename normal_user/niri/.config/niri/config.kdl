@@ -481,17 +481,6 @@ window-rule {
     default-window-height { proportion 0.75; }
 }
 
-window-rule {
-    match app-id="google-chrome"
-    match app-id="jetbrains-rider"
-    match app-id="jetbrains-datagrip"
-    match app-id="firefox"
-    match app-id="vivaldi-stable"
-    match app-id="org.chromium.Chromium"
-    match app-id="org.qutebrowser.qutebrowser"
-    open-maximized true
-}
-
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
