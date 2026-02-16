@@ -19,6 +19,12 @@
   ```
   sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
   sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
+
+  ###Add to .zshenv
+  export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
+  export SSL_CERT_DIR=/etc/ssl/certs
+
+  curl https://sh.rustup.rs -sSf | sh
   ```
   
   ### Building from [source](https://niri-wm.github.io/niri/Getting-Started.html#manual-installation)
