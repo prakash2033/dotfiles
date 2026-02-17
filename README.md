@@ -46,6 +46,8 @@
   # if dinit system
   sudo cp resources/dinit/niri /etc/dinit.d/user/
   sudo cp resources/dinit/niri.target /etc/dinit.d/user/
+
+  touch ~/.config/niri/outputs.kdl.local
   
 
   sudo install -m 755 target/release/niri /usr/local/bin/niri
