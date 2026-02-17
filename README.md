@@ -291,6 +291,17 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   ninja -C build
   build/slurp
   ```
+
+  # Install satty
+  ```
+  sudo apt install libgtk-4-dev libadwaita-1-dev pkg-config
+  git clone https://github.com/Satty-org/Satty
+  # build release binary, located in ./target/release/satty
+  make build-release
+
+  # optional: install to /usr/local
+  PREFIX=/usr/local make install
+  ```
   
   # Development setup
   ```
