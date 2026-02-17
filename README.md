@@ -32,6 +32,22 @@
   ```
   git clone https://github.com/niri-wm/niri.git
   cargo build --release
+
+  sudo cp target/release/niri /usr/local/bin/
+  
+  #
+  sudo cp resources/niri-session /usr/local/bin/
+  sudo cp resources/niri.desktop /usr/local/share/wayland-sessions/
+  sudo cp resources/niri-portals.conf /usr/local/share/xdg-desktop-portal/
+  sudo cp resources/niri.service /etc/systemd/user/
+  sudo cp resources/niri-shutdown.target /etc/systemd/user/
+  
+  
+  # if dinit system
+  sudo cp resources/dinit/niri /etc/dinit.d/user/
+  sudo cp resources/dinit/niri.target /etc/dinit.d/user/
+  
+
   sudo install -m 755 target/release/niri /usr/local/bin/niri
   ```
   
