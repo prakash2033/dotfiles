@@ -48,8 +48,8 @@
   sudo cp resources/dinit/niri.target /etc/dinit.d/user/
 
   touch ~/.config/niri/outputs.kdl.local
+  touch ~/.local/ghostty/config.local
   
-
   sudo install -m 755 target/release/niri /usr/local/bin/niri
   ```
   
