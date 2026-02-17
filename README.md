@@ -64,6 +64,15 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   sudo apt install cargo libpipewire-0.3-dev pkg-config clang
   cargo install wiremix bluetui
   ```
+
+  ## swaylock-effects
+  ```
+  git clone https://github.com/mortie/swaylock-effects.git
+  cd swaylock-effects
+  meson build
+  ninja -C build
+  sudo ninja -C build install
+  ```
   ## Install gnu-screen-recorder
   ```
   sudo bash -c "$(wget -q https://pacstall.dev/q/install -O -)" 
