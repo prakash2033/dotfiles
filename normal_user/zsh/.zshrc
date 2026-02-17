@@ -85,10 +85,10 @@ KEYTIMEOUT=1
 function zle-line-init zle-keymap-select {
   # Set cursor shape: bar in insert, block in normal
   if [[ $KEYMAP == vicmd ]] ; then
-    echo -ne '\e[2 q'   # block cursor
+    echo -ne '\e[1 q'   # blinking block cursor
     MODE="%F{blue}-- NORMAL --%f"
   else
-    echo -ne '\e[6 q'   # bar cursor
+    echo -ne '\e[5 q'   # blinking bar cursor
     MODE="%F{green}-- INSERT --%f"
   fi
   RPS1="$MODE"

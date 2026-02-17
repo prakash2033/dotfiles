@@ -95,7 +95,7 @@ nnoremap ,z zMzvzz
 let mapleader=" "
 let maplocalleader=" "
 
-" Use a line cursor within insert mode and a block cursor everywhere else.
+" Use a blinking bar cursor in insert mode and a blinking block cursor everywhere else.
 "
 " Reference chart of values:
 "   Ps = 0  -> blinking block.
@@ -105,8 +105,8 @@ let maplocalleader=" "
 "   Ps = 4  -> steady underline.
 "   Ps = 5  -> blinking bar (xterm).
 "   Ps = 6  -> steady bar (xterm).
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
+let &t_SI = "\e[5 q"  " blinking bar in insert mode
+let &t_EI = "\e[1 q"  " blinking block in normal/other modes
 
 " toggle relative numbering
 nnoremap <C-n> :set rnu! <bar> set nu!<CR>
