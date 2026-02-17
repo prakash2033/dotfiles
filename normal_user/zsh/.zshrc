@@ -98,6 +98,11 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+# Set mode indicator for first prompt (insert mode by default)
+MODE="%F{green}-- INSERT --%f"
+RPS1="$MODE"
+RPS2="$MODE"
+
 # add missing vim hotkeys
 # fixes backspace deletion issues
 # http://zshwiki.org/home/zle/vi-mode
