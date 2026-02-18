@@ -299,7 +299,7 @@ recent-windows {
     }
 
     binds {
-        Alt+Tab         { next-window; }
+        /* Alt+Tab         { next-window; } */
         Alt+Shift+Tab   { previous-window; }
         Alt+section       { next-window     filter="app-id"; }
         Alt+Shift+section { previous-window filter="app-id"; }
@@ -344,6 +344,7 @@ spawn-at-startup "flatpak" "run" "org.telegram.desktop"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store &"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store &"
 spawn-at-startup "setbg" "$HOME/.local/share/bg"
+spawn-at-startup "walker" "--gapplication-service"
 spawn-at-startup "mon-vol"
 spawn-at-startup "/usr/bin/swayidle"
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
@@ -557,7 +558,6 @@ binds {
     // You can also move the mouse into the top-left hot corner,
     // or do a four-finger swipe up on a touchpad.
     Mod+O repeat=false { toggle-overview; }
-    Mod+Space repeat=false { toggle-overview; }
 
     Mod+Q repeat=false { close-window; }
 
@@ -780,6 +780,15 @@ binds {
     // moving the mouse or pressing any other key.
     Mod+Shift+P hotkey-overlay-title="Power off Monitors" { power-off-monitors; }
 
+    Mod+Alt+C repeat=false hotkey-overlay-title="Launcher (calculator)" { spawn "walker" "--provider" "calc"; }
+    XF86Calculator repeat=false hotkey-overlay-title="Launcher (calculator)" { spawn "walker" "--provider" "calc"; }
+
+    // Launcher.
+    Mod+Space  hotkey-overlay-title="Launcher" { spawn "walker"; }
+    Alt+Tab    repeat=false hotkey-overlay-title="Launcher (windows)" { spawn "walker" "--provider" "windows"; }
+    Mod+V      repeat=false hotkey-overlay-title="Launcher (clipboard)" { spawn "walker" "--provider" "clipboard"; }
+
+
     Mod+B hotkey-overlay-title="Chromium" { spawn "sh" "-c" "flatpak run org.chromium.Chromium"; } 
     Mod+E hotkey-overlay-title="Files (thunar)" { spawn "dot-launch-or-focus" "thunar"; }
     Mod+Alt+E hotkey-overlay-title="Files (thunar floating)" { spawn "thunar" "--name=dot.floating"; }
@@ -790,7 +799,7 @@ binds {
     Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp -d)\" - | satty -f -"; }
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
-    Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
+    /* Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; } */
     Mod+Alt+B hotkey-overlay-title="qutebrowser" { spawn "qutebrowser"; } 
     Mod+Alt+P hotkey-overlay-title="1Password" { spawn "dot-launch-or-focus" "1password"; }
     Mod+Alt+M hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
