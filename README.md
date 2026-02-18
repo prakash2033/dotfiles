@@ -18,7 +18,9 @@
   ## Installing niri dependencies
   ```
   sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
-  sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
+  sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev \
+libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
+  sudo apt install waybar fuzzel mako-notifier swaybg swayidle swaylock slurp grim meson scdoc
 
   ###Add to .zshenv
   export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
@@ -31,6 +33,24 @@
   ```
   git clone https://github.com/niri-wm/niri.git
   cargo build --release
+
+  sudo cp target/release/niri /usr/local/bin/
+  
+  #
+  sudo cp resources/niri-session /usr/local/bin/
+  sudo cp resources/niri.desktop /usr/local/share/wayland-sessions/
+  sudo cp resources/niri-portals.conf /usr/local/share/xdg-desktop-portal/
+  sudo cp resources/niri.service /etc/systemd/user/
+  sudo cp resources/niri-shutdown.target /etc/systemd/user/
+  
+  
+  # if dinit system
+  sudo cp resources/dinit/niri /etc/dinit.d/user/
+  sudo cp resources/dinit/niri.target /etc/dinit.d/user/
+
+  touch ~/.config/niri/outputs.kdl.local
+  touch ~/.local/ghostty/config.local
+  
   sudo install -m 755 target/release/niri /usr/local/bin/niri
   ```
   
@@ -43,6 +63,15 @@
   ```
   sudo apt install cargo libpipewire-0.3-dev pkg-config clang
   cargo install wiremix bluetui
+  ```
+
+  ## swaylock-effects
+  ```
+  git clone https://github.com/mortie/swaylock-effects.git
+  cd swaylock-effects
+  meson build
+  ninja -C build
+  sudo ninja -C build install
   ```
   ## Install gnu-screen-recorder
   ```
@@ -261,6 +290,17 @@
   meson setup build
   ninja -C build
   build/slurp
+  ```
+
+  # Install satty
+  ```
+  sudo apt install libgtk-4-dev libadwaita-1-dev pkg-config
+  git clone https://github.com/Satty-org/Satty
+  # build release binary, located in ./target/release/satty
+  make build-release
+
+  # optional: install to /usr/local
+  PREFIX=/usr/local make install
   ```
   
   # Development setup

@@ -10,7 +10,7 @@ window-padding-balance = true
 background-opacity = 1.0
 
 # Cursor Configuration
-cursor-style = block
+cursor-style = bar
 cursor-style-blink = true
 
 # Scrollback

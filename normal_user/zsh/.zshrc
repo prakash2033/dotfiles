@@ -80,20 +80,28 @@ bindkey -M vicmd v edit-command-line
 # 10ms for key sequences
 KEYTIMEOUT=1
 
-# show vim status with date
+# show vim status with date and set cursor shape
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
-    # INSERT="%F{green}$(date +'%Y-%m-%d %r')%f"
-    # NORMAL="%F{blue}$(date +'%Y-%m-%d %r')%f"
-
-    INSERT="%F{green}-- INSERT --%f"
-    NORMAL="%F{blue}-- NORMAL --%f"
-    RPS1="${${KEYMAP/vicmd/${NORMAL}}/(main|viins)/${INSERT}}"
-    RPS2=$RPS1
-    zle reset-prompt
+  # Set cursor shape: bar in insert, block in normal
+  if [[ $KEYMAP == vicmd ]] ; then
+    echo -ne '\e[1 q'   # blinking block cursor
+    MODE="%F{blue}-- NORMAL --%f"
+  else
+    echo -ne '\e[5 q'   # blinking bar cursor
+    MODE="%F{green}-- INSERT --%f"
+  fi
+  RPS1="$MODE"
+  RPS2="$MODE"
+  zle reset-prompt
 }
 zle -N zle-line-init
 zle -N zle-keymap-select
+
+# Set mode indicator for first prompt (insert mode by default)
+MODE="%F{green}-- INSERT --%f"
+RPS1="$MODE"
+RPS2="$MODE"
 
 # add missing vim hotkeys
 # fixes backspace deletion issues
