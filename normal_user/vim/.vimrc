@@ -49,17 +49,6 @@ let &t_EI = "\e[1 q"  " blinking block in normal/other modes
 
 "}}}
 
-" -------- Install vim plug {{{
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-" Run PlugInstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif"}}}
-
 "-------- Plugins {{{
 call plug#begin('~/.vim/plugged')
 
@@ -130,13 +119,17 @@ nnoremap <C-f> :NERDTreeFind<CR>
 nnoremap x "_x
 vnoremap x "_x
 
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <C-b> :Buffers<CR>
 nnoremap <C-g> :Git<Cr>
+
+nnoremap <leader>q :tabclose<CR>
 
 "}}}
 
 "-------- Vim Fzf{{{
-let g:fzf_action = { 'enter': 'tab split' }
+let g:fzf_action = { 'enter': 'tab drop' }
 let g:fzf_layout = { 'down': '20%' }
 
 "}}}
@@ -189,7 +182,18 @@ colorscheme tokyonight
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 "}}}
 
-"-------- Auto Open at last position{{{
+" -------- Auto Install Plugins {{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+endif
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif"}}}
+
+"-------- Auto Open at last line{{{
 augroup restore_cursor
   autocmd!
   autocmd BufReadPost *
