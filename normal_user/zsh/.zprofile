@@ -1,6 +1,7 @@
 # -------- Exports {{{
 export XDG_CONFIG_HOME="$HOME/.config" 
 export XDG_CONFIG_DIR="$HOME/.config" 
+export DOTFILES="$HOME/Public/gitrepo/dotfiles"
 export XDG_DATA_HOME="$HOME/.local/share" 
 export FZF_DEFAULT_COMMAND='find .'
 export BROWSER="xdg-open"
