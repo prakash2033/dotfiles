@@ -1,9 +1,9 @@
 [Default Applications]
-text/html=org.chromium.Chromium.desktop
-x-scheme-handler/http=org.chromium.Chromium.desktop
-x-scheme-handler/https=org.chromium.Chromium.desktop
-x-scheme-handler/about=org.chromium.Chromium.desktop
-x-scheme-handler/unknown=org.chromium.Chromium.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=firefox.desktop
+x-scheme-handler/unknown=firefox.desktop
 x-scheme-handler/terminal=com.mitchellh.ghostty.desktop
 application/x-shellscript=org.gnome.TextEditor.desktop
 image/png=sxiv.desktop
