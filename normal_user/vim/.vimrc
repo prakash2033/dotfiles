@@ -33,6 +33,20 @@ set list
 
 " Define how they look
 set listchars=tab:→\ ,space:·,trail:·
+
+" Use a blinking bar cursor in insert mode and a blinking block cursor everywhere else.
+"
+" Reference chart of values:
+"   Ps = 0  -> blinking block.
+"   Ps = 1  -> blinking block (default).
+"   Ps = 2  -> steady block.
+"   Ps = 3  -> blinking underline.
+"   Ps = 4  -> steady underline.
+"   Ps = 5  -> blinking bar (xterm).
+"   Ps = 6  -> steady bar (xterm).
+let &t_SI = "\e[5 q"  " blinking bar in insert mode
+let &t_EI = "\e[1 q"  " blinking block in normal/other modes
+
 "}}}
 
 " -------- Install vim plug {{{
@@ -95,19 +109,6 @@ nnoremap ,z zMzvzz
 let mapleader=" "
 let maplocalleader=" "
 
-" Use a blinking bar cursor in insert mode and a blinking block cursor everywhere else.
-"
-" Reference chart of values:
-"   Ps = 0  -> blinking block.
-"   Ps = 1  -> blinking block (default).
-"   Ps = 2  -> steady block.
-"   Ps = 3  -> blinking underline.
-"   Ps = 4  -> steady underline.
-"   Ps = 5  -> blinking bar (xterm).
-"   Ps = 6  -> steady bar (xterm).
-let &t_SI = "\e[5 q"  " blinking bar in insert mode
-let &t_EI = "\e[1 q"  " blinking block in normal/other modes
-
 " toggle relative numbering
 nnoremap <C-n> :set rnu! <bar> set nu!<CR>
 
@@ -120,40 +121,10 @@ noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
 
-" " Remove newbie crutches in Insert Mode
-" inoremap <Down> <Nop>
-" inoremap <Left> <Nop>
-" inoremap <Right> <Nop>
-" inoremap <Up> <Nop>
-"
-" " Remove newbie crutches in Normal Mode
-" nnoremap <Down> <Nop>
-" nnoremap <Left> <Nop>
-" nnoremap <Right> <Nop>
-" nnoremap <Up> <Nop>
-"
-" " Remove newbie crutches in Visual Mode
-" vnoremap <Down> <Nop>
-" vnoremap <Left> <Nop>
-" vnoremap <Right> <Nop>
-" vnoremap <Up> <Nop>
-
 " NerdTree keybinding - I for showing dotfiles in nerd tree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-
-" " Delete without yanking to clipboard
-" nnoremap d "_d
-" vnoremap d "_d
-" nnoremap D "_D
-" vnoremap D "_D
-"
-" " Change/Substitute without yanking to clipboard
-" nnoremap c "_c
-" vnoremap c "_c
-" nnoremap s "_s
-" vnoremap s "_s
 
 " Optional: Keep 'x' (delete char) from affecting clipboard
 nnoremap x "_x
