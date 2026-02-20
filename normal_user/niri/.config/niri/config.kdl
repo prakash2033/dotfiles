@@ -299,7 +299,7 @@ recent-windows {
     }
 
     binds {
-        /* Alt+Tab         { next-window; } */
+        Alt+Tab         { next-window; }
         Alt+Shift+Tab   { previous-window; }
         Alt+section       { next-window     filter="app-id"; }
         Alt+Shift+section { previous-window filter="app-id"; }
@@ -742,13 +742,13 @@ binds {
     Mod+Ctrl+Shift+0     hotkey-overlay-title="Reset primary monitor scale" { spawn "output-scale" "1.0"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+T       { toggle-window-floating; }
-    Mod+Shift+T { switch-focus-between-floating-and-tiling; }
+    Mod+Z       { toggle-window-floating; }
+    Mod+Shift+Z { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    Mod+T { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have
@@ -787,7 +787,7 @@ binds {
 
     // Launcher.
     Mod+Space  hotkey-overlay-title="Launcher" { spawn "walker"; }
-    Alt+Tab    repeat=false hotkey-overlay-title="Launcher (windows)" { spawn "walker" "--provider" "windows"; }
+    Mod+W      repeat=false hotkey-overlay-title="Launcher (windows)" { spawn "walker" "--provider" "windows"; }
     Mod+V      repeat=false hotkey-overlay-title="Launcher (clipboard)" { spawn "walker" "--provider" "clipboard"; }
 
 
@@ -801,7 +801,7 @@ binds {
     Mod+Shift+A hotkey-overlay-title="Screenshot with annotation" { spawn "sh" "-c" "grim -g \"$(slurp -d)\" - | satty -f -"; }
     Mod+N hotkey-overlay-title="Notification Restore" { spawn "sh" "-c" "makoctl restore"; }
     Mod+Shift+N hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
-    /* Mod+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; } */
+    Mod+Shift+V hotkey-overlay-title="Clipboard History" { spawn "sh" "-c" "cliphist list | fuzzel --dmenu | cliphist decode | wl-copy"; }
     Mod+Alt+B hotkey-overlay-title="qutebrowser" { spawn "qutebrowser"; } 
     Mod+Alt+P hotkey-overlay-title="1Password" { spawn "dot-launch-or-focus" "1password"; }
     Mod+Alt+M hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
