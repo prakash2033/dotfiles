@@ -436,7 +436,7 @@ while true; do
             TEXT="00:00"
             CLASS="idle"
             if [ "$POMO_ENABLED" = true ]; then
-                TOOLTIP="Timer Idle\nScroll Up: Pomodoro Mode\nScroll Down: Standard Timer\nLeft Click: Set Timer\nRight Click: Disable"
+                TOOLTIP="Timer Idle\nScroll Up: Standard Timer\nScroll Down: Pomodoro Mode\nLeft Click: Set Timer\nRight Click: Disable"
             else
                 TOOLTIP="Timer Idle\nScroll: Standard Timer\nLeft Click: Set Timer\nRight Click: Disable"
             fi
