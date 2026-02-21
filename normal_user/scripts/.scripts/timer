@@ -20,10 +20,10 @@ POMO_AUTO_WORK=true
 
 # --- SOUND EFFECTS ---
 SOUND_TIMER_DONE="~/.scripts/timer.mp3"
-SOUND_WORK_START="~/.scripts/timer.mp3"
-SOUND_BREAK_START="~/.scripts/timer.mp3"
-SOUND_BREAK_END="~/.scripts/timer.mp3"
-SOUND_COMPLETE="~/.scripts/timer.mp3"
+SOUND_WORK_START="~/.scripts/netflix-tudum-sfx-n-c.mp3"
+SOUND_BREAK_START="~/.scripts/hotel-bell-ding-2.mp3"
+SOUND_BREAK_END="~/.scripts/hotel-bell-ding-3.mp3"
+SOUND_COMPLETE="~/.scripts/netflix-tudum-sfx-n-c.mp3"
 
 # --- ICONS ---
 ICON_DISABLED="󰔞 "
