@@ -20,7 +20,7 @@
   sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
   sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev \
 libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
-  sudo apt install waybar fuzzel mako-notifier swaybg swayidle swaylock slurp grim meson scdoc
+  sudo apt install waybar pulseaudio-utils fuzzel mako-notifier swaybg swayidle swaylock slurp grim meson scdoc
 
   ###Add to .zshenv
   export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
