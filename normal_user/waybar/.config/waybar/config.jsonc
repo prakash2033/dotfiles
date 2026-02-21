@@ -12,6 +12,7 @@
   ],
   "modules-right": [
     "privacy",
+    "custom/timer",
     "group/tray-expander",
     "mpd",
     "pulseaudio#mic",
@@ -63,6 +64,18 @@
         "tooltip-icon-size": 14
       }
     ]
+  },
+  "custom/timer": {
+    "exec": "timer",
+    "return-type": "json",
+    "format": "{}",
+    "on-click": "timer click",
+    "on-click-right": "timer right",
+    "on-click-middle": "timer middle",
+    "on-scroll-up": "timer up",
+    "on-scroll-down": "timer down",
+    "tooltip": true,
+    "escape": true
   },
   "clock": {
     "format": "󰥔  {:%a, %b %d %I:%M:%S %p %Z}",
