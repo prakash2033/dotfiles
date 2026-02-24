@@ -813,6 +813,3 @@ binds {
 include "outputs.kdl.local"
 
 // }}}
-
-// Monique monitor configuration
-include "monitors.kdl"
