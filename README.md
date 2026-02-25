@@ -48,7 +48,6 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   sudo cp resources/dinit/niri /etc/dinit.d/user/
   sudo cp resources/dinit/niri.target /etc/dinit.d/user/
 
-  touch ~/.config/niri/outputs.kdl.local
   touch ~/.local/ghostty/config.local
   
   sudo install -m 755 target/release/niri /usr/local/bin/niri
