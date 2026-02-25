@@ -12,8 +12,11 @@ output "HP Inc. HP 724pn CN442519ND" {
     position x=4976 y=0
 }
 
-output "Unknown Unknown" {
-    mode "1920x1200@60.000"
-    scale 1.25
-    position x=0 y=240
+output "eDP-1" {
+  mode "1920x1200@60.000"
+  scale 1.25
+  position x=0 y=240
+  hot-corners {
+    top-left
+  }
 }

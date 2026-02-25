@@ -810,9 +810,8 @@ binds {
 
 //-------- Imports {{{
 
-include "outputs.kdl.local"
+// Monique monitor configuration
+include "monitors.kdl"
 
 // }}}
 
-// Monique monitor configuration
-include "monitors.kdl"
