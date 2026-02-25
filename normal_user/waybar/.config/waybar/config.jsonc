@@ -167,18 +167,24 @@
   },
   "pulseaudio": {
     "format": "{icon}",
+    "format-bluetooth": "󰋋",
+    "format-bluetooth-muted": "󰟎",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "",
+      "headset": "󰋎",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": [ "󰕿", "󰖀", "󰕾" ],
+      "default-muted": "󰝟"
+    },
+    "scroll-step": 1,
     "on-click": "dot-launch-or-focus-tui wiremix --tab output",
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "tooltip-format": "{desc} {volume}%",
-    "scroll-step": 1,
-    "format-icons": {
-      "default": [ "󰕿", "󰖀", "󰕾" ],
-      "default-muted": "󰝟",
-      "headphone": "󰋋",
-      "headphone-muted": "󰟎",
-      "headset": "󰋎",
-      "headset-muted": "󰋐"
-    }
+    "ignored-sinks": ["Easy Effects Sink"]
   },
   "pulseaudio#mic": {
     "format": "{format_source}",
