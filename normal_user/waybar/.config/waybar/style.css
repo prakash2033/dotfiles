@@ -1,5 +1,3 @@
-@import "timer.css";
-
 * {
   background-color: #1a1b26;
 
@@ -50,6 +48,11 @@
 
 #privacy {
   color: #ffcdd2;
+}
+
+#custom-timer.disabled {
+  color: #bfbfbf;
+  opacity: 0.6;
 }
 
 tooltip * {
