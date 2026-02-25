@@ -10,7 +10,7 @@ INACTIVITY_LIMIT=30
 
 # --- POMODORO INITIAL PRESET ---
 POMO_PRESETS=(
-    "25 5 4"
+    "25 5 8"
 )
 
 # Pomodoro Settings
@@ -46,7 +46,7 @@ ICON_POMO_BREAK=""
 
 # Files (Stored in RAM)
 STATE_FILE="/dev/shm/waybar_timer.json"
-PIPE_FILE="/tmp/waybar_timer.fifo"
+PIPE_GLOB="/tmp/waybar_timer.*.fifo"
 
 # --- HELPER FUNCTION FOR SOUND ---
 play_sound() {
@@ -87,9 +87,10 @@ format_time() {
 }
 
 trigger_update() {
-    if [ -p "$PIPE_FILE" ]; then
-        echo "1" > "$PIPE_FILE" &
-    fi
+    for fifo in $PIPE_GLOB; do
+        [ -p "$fifo" ] || continue
+        echo "1" > "$fifo" &
+    done
 }
 
 # CONTROLLER
@@ -204,7 +205,7 @@ if [ -n "$1" ]; then
             ARGS="$*"
 
             # Defaults
-            W=25; B=5; S=4
+            W=25; B=5; S=8
 
             if [[ "$ARGS" =~ [0-9]+[mbs] ]]; then
                 [[ "$ARGS" =~ ([0-9]+)m ]] && W="${BASH_REMATCH[1]}"
@@ -366,25 +367,17 @@ if [ -n "$1" ]; then
     trigger_update; exit 0
 fi
 
-# SINGLETON LOCK & CLEANUP
-PID_FILE="/tmp/waybar_timer.pid"
+# INSTANCE FIFO & CLEANUP
+PIPE_FILE="/tmp/waybar_timer.$$.fifo"
 
 cleanup() {
     # Close FD 3 if open
     exec 3>&-
-    rm -f "$PIPE_FILE" "$PID_FILE"
+    rm -f "$PIPE_FILE"
     exit 0
 }
 
 trap cleanup SIGTERM SIGINT EXIT
-
-if [ -f "$PID_FILE" ]; then
-    OLD_PID=$(cat "$PID_FILE")
-    if [ -n "$OLD_PID" ] && [ "$OLD_PID" != "$$" ] && kill -0 "$OLD_PID" 2>/dev/null; then
-        kill "$OLD_PID" 2>/dev/null
-    fi
-fi
-echo $$ > "$PID_FILE"
 
 if [ ! -f "$STATE_FILE" ]; then init_state; fi
 
