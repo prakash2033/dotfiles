@@ -17,7 +17,7 @@
 
   ## Installing niri dependencies
   ```
-  sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg sxiv
+  sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg qimgv
   sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev \
 libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
   sudo apt install waybar pulseaudio-utils fuzzel mako-notifier swaybg swayidle swaylock slurp grim meson scdoc
@@ -98,7 +98,7 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   
   ## Extras
   ```
-  sudo apt install sxiv vim-gtk3 surfraw feh onedrive ranger aptitude 
+  sudo apt install qimgv vim-gtk3 surfraw feh onedrive ranger aptitude 
   sudo apt install gnome-weather gnome-shell-extension-manager gnome-tweaks gnome-boxes
   sudo apt install fonts-ubuntu-classic
   pip3 install ueberzug
