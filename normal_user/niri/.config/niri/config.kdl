@@ -472,6 +472,7 @@ window-rule {
     match app-id="dot.ghostty.nmtui"
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.Nautilus"
+    match app-id="com.github.monique"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     match app-id="1password"
@@ -811,6 +812,7 @@ binds {
     Mod+Alt+B         hotkey-overlay-title="qutebrowser" { spawn "qutebrowser"; } 
     Mod+Alt+P         hotkey-overlay-title="1Password" { spawn "dot-launch-or-focus" "1password"; }
     Mod+Alt+M         hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
+    Mod+P             hotkey-overlay-title="Display Setting" { spawn "sh" "-c" "monique"; }
     Mod+Alt+W         hotkey-overlay-title="Wallpapers" { spawn "sh" "-c" "sxiv -t $(find ~/Public/gitrepo/wallpapers/sway ~/Public/gitrepo/wallpapers/wallhaven ~/Public/gitrepo/wallpapers/nickjj -type f)"; }
 }// }}}
 
