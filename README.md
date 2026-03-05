@@ -57,6 +57,13 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   ```
   sudo apt install thunar gvfs gvfs-backends udisks2 tumbler thunar-archive-plugin file-roller
   ```
+  ## Install [Nord VPN](https://nordvpn.com/download/linux/?nv_tri=TC_444661881110088_1772699876235&nv_trs=1772699876236_1772700088770_1_112#install-nordvpn)
+  ```
+  sh <(wget -qO - https://downloads.nordcdn.com/apps/linux/install.sh) -p nordvpn-gui
+  sudo groupadd nordvpn
+  sudo usermod -aG nordvpn $USER
+  reboot
+  ```
   
   ## Install wiremix, bluetui
   ```
