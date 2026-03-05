@@ -475,6 +475,7 @@ window-rule {
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     match app-id="1password"
+    match app-id="Todoist"
 
     open-floating true
 
