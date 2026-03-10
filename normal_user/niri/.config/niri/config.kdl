@@ -803,8 +803,8 @@ binds {
  
     // Applications
     Mod+B             hotkey-overlay-title="Firefox" { spawn "firefox"; }
-    Mod+E         hotkey-overlay-title="Files (thunar floating)" { spawn "thunar" "--name=dot.floating"; }
-    Mod+Alt+E             hotkey-overlay-title="Files (thunar)" { spawn "dot-launch-or-focus" "thunar"; }
+    Mod+E             hotkey-overlay-title="Files (thunar floating)" { spawn "thunar" "--name=dot.floating"; }
+    Mod+Alt+E         hotkey-overlay-title="Files (thunar)" { spawn "dot-launch-or-focus" "thunar"; }
     Mod+Alt+N         hotkey-overlay-title="Files (nautilus)" { spawn "nautilus"; }
     Mod+Y             hotkey-overlay-title="Yazi" { spawn "ghostty" "--class=dot.floating" "-e" "yazi"; }
     Mod+Shift+E       hotkey-overlay-title="Emoji" { spawn "sh" "-c" "fuzzel-emoji"; }

@@ -227,6 +227,7 @@ alias zos='cd $HOME/dev/tote-tocc-zos-connect'
 alias ytv='youtube-viewer'
 
 alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
+alias outdated='sudo apt update -qq && apt list --upgradable'
 # }}} 
 
 # -------- Git {{{
