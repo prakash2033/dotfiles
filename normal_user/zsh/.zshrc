@@ -228,6 +228,7 @@ alias ytv='youtube-viewer'
 
 alias wikimd="$EDITOR ~/.vimwiki/wikimd/index.md"
 alias outdated='sudo apt update -qq && apt list --upgradable'
+alias update='sudo apt update && sudo apt upgrade -y'
 # }}} 
 
 # -------- Git {{{
