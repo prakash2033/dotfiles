@@ -8,6 +8,6 @@
 [includeIf "gitdir:~/Public/gitrepo/**"]
 	path = ~/Public/gitrepo/dotfiles/.gitconfig
 [core]
-	autocrlf = false
+	autocrlf = input
 [safe]
 	directory = /opt/update-vcclc
