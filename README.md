@@ -28,6 +28,12 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
 
   curl https://sh.rustup.rs -sSf | sh
   ```
+
+  ### Building [wayland from source](https://gitlab.freedesktop.org/wayland/wayland)
+  ```
+  meson setup build/ --prefix=/usr/local -Ddocumentation=false
+  ninja -C build/ install
+  ```
   
   ### Building from [source](https://niri-wm.github.io/niri/Getting-Started.html#manual-installation)
   ```
