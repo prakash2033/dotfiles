@@ -80,6 +80,10 @@ bindkey -M vicmd v edit-command-line
 # 10ms for key sequences
 KEYTIMEOUT=1
 
+# Hide right prompt content on previously executed prompts.
+# This keeps vim mode text visible only on the current active prompt.
+setopt TRANSIENT_RPROMPT
+
 # show vim status with date and set cursor shape
 # http://zshwiki.org/home/examples/zlewidgets
 function zle-line-init zle-keymap-select {
