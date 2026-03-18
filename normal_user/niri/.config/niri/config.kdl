@@ -799,7 +799,7 @@ binds {
     Mod+Shift+N       hotkey-overlay-title="Dismiss last notification" { spawn "makoctl" "dismiss"; }
     Mod+Alt+Ctrl+N    hotkey-overlay-title="Notifications Old" { spawn "sh" "-c" "makoctl history | fuzzel --dmenu"; }
     Mod+Ctrl+N        hotkey-overlay-title="Dismiss all notifications" { spawn "makoctl" "dismiss" "--all"; }
-    Mod+Ctrl+Shift+N  hotkey-overlay-title="Toggle silencing notifications" { spawn-sh "makoctl mode -t do-not-disturb && makoctl mode | grep -q 'do-not-disturb' && notify-send 'Silenced notifications' || notify-send 'Enabled notifications'"; }
+    Mod+Ctrl+Shift+N  hotkey-overlay-title="Toggle silencing notifications" { spawn-sh "makoctl mode -t dnd && makoctl mode | grep -q 'dnd' && notify-send 'Silenced notifications' || notify-send 'Enabled notifications'"; }
  
     // Applications
     Mod+B             hotkey-overlay-title="Firefox" { spawn "firefox"; }
