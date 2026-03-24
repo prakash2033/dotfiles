@@ -20,5 +20,8 @@ border-color=#ffffff
 layer=top
 border-color=#ffffff
 
-[mode=dnd]
-invisible=1
+[mode=do-not-disturb]
+invisible=true
+
+[mode=do-not-disturb app-name=notify-send]
+invisible=false
