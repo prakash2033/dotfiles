@@ -59,6 +59,12 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   sudo install -m 755 target/release/niri /usr/local/bin/niri
   ```
   
+  ## Install [Tokynight Theme](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme)
+  sudo apt install gtk2-engines-murrine 
+  git clone https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme.git
+  cd Tokyonight-GTK-Theme/themes
+  ./install.sh
+  
   ## Install thunar
   ```
   sudo apt install thunar gvfs gvfs-backends udisks2 tumbler thunar-archive-plugin file-roller
