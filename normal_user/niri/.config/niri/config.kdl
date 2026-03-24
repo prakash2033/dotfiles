@@ -784,8 +784,8 @@ binds {
     XF86Calculator    repeat=false hotkey-overlay-title="Launcher (calculator)" { spawn "walker" "--provider" "calc"; }
 
     // Launcher.
-    Mod+Space         hotkey-overlay-title="Launcher" { spawn "walker"; }
-    Mod+W             repeat=false hotkey-overlay-title="Launcher (windows)" { spawn "walker" "--provider" "windows"; }
+    Mod+Space         repeat=false hotkey-overlay-title="Launcher" { spawn "walker"; }
+    Alt+Space         repeat=false hotkey-overlay-title="Launcher (windows)" { spawn "walker" "--provider" "windows"; }
     Mod+V             repeat=false hotkey-overlay-title="Launcher (clipboard)" { spawn "walker" "--provider" "clipboard"; }
 
     // Notifications.

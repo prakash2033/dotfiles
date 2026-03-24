@@ -3,6 +3,8 @@ additional_theme_location = "./themes/base"
 
 [keybinds]
 quick_activate = []
+next = ["Down", "ctrl n", "ctrl j"]
+previous = ["Up", "ctrl p", "ctrl k"]
 
 [providers]
 default = ["desktopapplications", "menus"]
