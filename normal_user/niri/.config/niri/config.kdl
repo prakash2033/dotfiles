@@ -474,6 +474,7 @@ window-rule {
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.Nautilus"
     match app-id="com.github.monique"
+    match app-id="de.haeckerfelix.Shortwave"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     match app-id="1password"
