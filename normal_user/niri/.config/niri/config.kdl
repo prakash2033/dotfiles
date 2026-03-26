@@ -797,8 +797,9 @@ binds {
     Mod+Ctrl+Shift+N hotkey-overlay-title="Toggle silencing notifications" { spawn-sh "makoctl mode -t do-not-disturb && makoctl mode | grep -q 'do-not-disturb' && notify-send --urgency critical 'Silenced notifications' || notify-send 'Enabled notifications'"; }
  
     // Applications
-    Mod+B             hotkey-overlay-title="Browser" { spawn "brave-browser"; }
-    Mod+Alt+B         hotkey-overlay-title="Browser (private)" { spawn "brave-browser" "--incognito"; }
+    Mod+B             hotkey-overlay-title="Browser" { spawn "firefox"; }
+    Mod+Alt+B         hotkey-overlay-title="Browser (private)" { spawn "firefox" "-private-window"; }
+    Mod+Ctrl+Alt+B    hotkey-overlay-title="Browser (isolated profile)" { spawn-sh "firefox -P default-isolated"; }
     Mod+E             hotkey-overlay-title="Files (thunar floating)" { spawn "thunar" "--name=dot.floating"; }
     Mod+Alt+E         hotkey-overlay-title="Files (thunar)" { spawn "dot-launch-or-focus" "thunar"; }
     Mod+Alt+N         hotkey-overlay-title="Files (nautilus)" { spawn "nautilus"; }
