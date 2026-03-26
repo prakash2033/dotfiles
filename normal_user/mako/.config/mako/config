@@ -7,7 +7,7 @@ default-timeout=5000
 history=1
 icons=1
 
-[urgency=high]
+[urgency=high urgency=critical]
 layer=overlay
 border-color=#ffffff
 default-timeout=0
@@ -23,5 +23,5 @@ border-color=#ffffff
 [mode=do-not-disturb]
 invisible=true
 
-[mode=do-not-disturb app-name=notify-send]
+[mode=do-not-disturb urgency=critical]
 invisible=false
