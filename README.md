@@ -2,7 +2,7 @@
 
   # Install packages
   ```
-  sudo apt install curl zoxide pipx wl-clipboard tmux zsh zsh-syntax-highlighting git stow coreutils xdotool  \
+  sudo apt install curl zoxide pipx wl-clipboard tmux zsh zsh-syntax-highlighting git git-delta stow coreutils xdotool  \
   cmus jq fzf dmenu qpdfview task-spooler xcb libxcb-util0-dev libxcb-cursor-dev \
   python3-pip python-is-python3 w3m imagemagick lynx \
   libxext-dev gvfs-backends git stow vim vim-athena chafa screenkey cliphist fonts-cantarell \
