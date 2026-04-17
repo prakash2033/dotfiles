@@ -280,6 +280,14 @@ layout {
 
 // }}}
 
+blur {
+    // off
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.5
+}
+
 // -------- Recent Windows {{{
 recent-windows {
     // off
@@ -443,6 +451,14 @@ window-rule {
     default-column-width {}
 }
 
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+
+    background-effect {
+        blur true
+    }
+}
+
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
     // This app-id regular expression will work for both:
@@ -510,6 +526,17 @@ window-rule {
     draw-border-with-background false
 }
 // }}}
+
+//-------- Layer Rules{{{
+// Enable blur behind the fuzzel launcher.
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+    }
+}
+//}}}
 
 // -------- Keybinds {{{
 binds {
