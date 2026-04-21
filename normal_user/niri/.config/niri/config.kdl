@@ -280,6 +280,7 @@ layout {
 
 // }}}
 
+// -------- Blur {{{
 blur {
     // off
     passes 3
@@ -287,6 +288,7 @@ blur {
     noise 0.02
     saturation 1.5
 }
+//}}}
 
 // -------- Recent Windows {{{
 recent-windows {
