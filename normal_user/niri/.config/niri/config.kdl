@@ -843,6 +843,7 @@ binds {
     Mod+Alt+M         hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
     Mod+P             hotkey-overlay-title="Display Setting" { spawn "sh" "-c" "monique"; }
     Mod+Alt+W         hotkey-overlay-title="Wallpapers" { spawn "sh" "-c" "sxiv -t $(find ~/Public/gitrepo/wallpapers/sway ~/Public/gitrepo/wallpapers/wallhaven ~/Public/gitrepo/wallpapers/nickjj -type f)"; }
+    Mod+Ctrl+Alt+W    hotkey-overlay-title="Win11" { spawn "sh" "-c" "virt-manager --connect qemu:///system --show-domain-console win11"; }
 }// }}}
 
 //-------- Imports {{{
