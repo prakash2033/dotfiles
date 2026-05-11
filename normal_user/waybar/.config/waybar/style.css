@@ -12,6 +12,10 @@
   margin-left: 0;
 }
 
+.modules-center {
+  margin-left: 0;
+}
+
 .modules-right {
   margin-right: 0;
 }
@@ -40,6 +44,7 @@
 #clock,
 #idle_inhibitor,
 #custom-menu,
+#custom-weather,
 #custom-timer,
 #window,
 #custom-expand-icon {

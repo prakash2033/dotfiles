@@ -10,7 +10,8 @@
     "niri/workspaces"
   ],
   "modules-center": [
-    "niri/window"
+    "clock",
+    "custom/weather"
   ],
   "modules-right": [
     "privacy",
@@ -23,13 +24,19 @@
     "backlight",
     "network",
     "cpu",
-    "battery",
-    "clock"
+    "battery"
   ],
   "custom/menu": {
     "format": "󰌽",
     "on-click": "walker",
     "tooltip-format": "System menu"
+  },
+  "custom/weather": {
+    "exec": "weather",
+    "return-type": "json",
+    "interval": 60,
+    "tooltip": false,
+    "on-click": "notify-send -u low \"$(weather-status)\""
   },
   "niri/workspaces": {
     "format": "{icon}",
@@ -90,8 +97,8 @@
     "escape": true
   },
   "clock": {
-    "format": "󰥔  {:%a, W%V %b %d %I:%M:%S %p %Z}",
-    "format-alt": "󰥔  {:%a, W%V %b %d %H:%M:%S %Z}",
+    "format": "{:L%A %H:%M}",
+    "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": true,
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
