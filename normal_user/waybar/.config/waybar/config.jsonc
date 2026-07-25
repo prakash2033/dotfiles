@@ -97,8 +97,8 @@
     "escape": true
   },
   "clock": {
-    "format": "{:L%A %H:%M}",
-    "format-alt": "{:L%d %B W%V %Y}",
+    "format": "{:%I:%M %p %Z :: %d %B W%V %Y}",
+    "format-alt": "{:%H:%M %Z :: %d %B W%V %Y}",
     "tooltip": true,
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
