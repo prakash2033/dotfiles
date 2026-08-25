@@ -28,7 +28,7 @@ pw-mon | while read -r line; do
                 disp="${disp:-0}%"
             } || unset vol disp
 
-            notify-send -a "volume" -r "$notif_id" -t 300 ${vol+-h int:value:$vol} "Volume: ${disp-muted}"
+            notify-send --urgency critical -a "volume" -r "$notif_id" -t 300 ${vol+-h int:value:$vol} "Volume: ${disp-muted}"
             ;;
     esac
 done
