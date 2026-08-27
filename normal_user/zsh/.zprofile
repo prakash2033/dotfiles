@@ -51,6 +51,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.opencode/bin" ] && PATH="$HOME/.opencode/bin:$PATH"
 [ -f "$HOME/.env" ] && source "$HOME/.env"
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+[ -d "/opt/mssql-tools18/bin" ] && PATH="/opt/mssql-tools18/bin:$PATH"
 # }}}
 
 # -------- Perl for YouTube-Viewer {{{    
