@@ -305,7 +305,7 @@ recent-windows {
     }
 
     previews {
-        off
+        /* off */
         max-height 480
         max-scale 0.5
     }
