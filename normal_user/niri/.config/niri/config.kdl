@@ -350,7 +350,6 @@ overview {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "discord"
-spawn-at-startup "1password"
 spawn-at-startup "flatpak" "run" "com.slack.Slack"
 spawn-at-startup "flatpak" "run" "org.telegram.desktop"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store &"
