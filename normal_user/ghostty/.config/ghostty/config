@@ -1,6 +1,5 @@
 # Font Configuration
-#font-family = monospace
-#font-family = "CaskaydiaMono Nerd Font"
+font-family = monospace
 font-feature = -calt, -liga, -dlig
 
 # Window Configuration
