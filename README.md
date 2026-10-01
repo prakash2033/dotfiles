@@ -57,6 +57,14 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   touch ~/.local/ghostty/config.local
   
   sudo install -m 755 target/release/niri /usr/local/bin/niri
+
+  systemctl --user add-wants niri.service waybar.service
+  systemctl --user add-wants niri.service elephant.service
+  systemctl --user add-wants niri.service swayidle.service
+  systemctl --user add-wants niri.service swaybg.service
+
+  # to remove
+  systemctl --user remove-wants niri.service elephant.service
   ```
   
   ## Install [Tokynight Theme](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme)
