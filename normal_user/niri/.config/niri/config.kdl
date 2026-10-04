@@ -492,7 +492,6 @@ window-rule {
     match app-id="dot.ghostty.nmtui"
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.Nautilus"
-    match app-id="com.github.monique"
     match app-id="de.haeckerfelix.Shortwave"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
@@ -826,8 +825,6 @@ binds {
  
     // Applications
     Mod+B             hotkey-overlay-title="Browser" { spawn "microsoft-edge"; }
-    Mod+Alt+B         hotkey-overlay-title="Browser (private)" { spawn "firefox" "-private-window"; }
-    Mod+Ctrl+Alt+B    hotkey-overlay-title="Browser (isolated profile)" { spawn-sh "firefox -P default-isolated"; }
     Mod+E             hotkey-overlay-title="Files (thunar floating)" { spawn "thunar" "--name=dot.floating"; }
     Mod+Alt+E         hotkey-overlay-title="Files (thunar)" { spawn "dot-launch-or-focus" "thunar"; }
     Mod+Alt+N         hotkey-overlay-title="Files (nautilus)" { spawn "nautilus"; }
@@ -839,15 +836,12 @@ binds {
     Mod+Alt+Q         hotkey-overlay-title="qutebrowser" { spawn "qutebrowser"; } 
     Mod+Alt+P         hotkey-overlay-title="1Password" { spawn "dot-launch-or-focus" "1password"; }
     Mod+Alt+M         hotkey-overlay-title="Music" { spawn "dot-launch-or-focus-tui" "rmpc"; }
-    Mod+P             hotkey-overlay-title="Display Setting" { spawn "sh" "-c" "monique"; }
     Mod+Alt+W         hotkey-overlay-title="Wallpapers" { spawn "sh" "-c" "sxiv -t $(find ~/Public/gitrepo/wallpapers/sway ~/Public/gitrepo/wallpapers/wallhaven ~/Public/gitrepo/wallpapers/nickjj -type f)"; }
     Mod+Ctrl+Alt+W    hotkey-overlay-title="Win11" { spawn "sh" "-c" "virt-manager --connect qemu:///system --show-domain-console win11"; }
 }// }}}
 
 //-------- Imports {{{
 
-// Monique monitor configuration
-include "monitors.kdl"
 
 // }}}
 
