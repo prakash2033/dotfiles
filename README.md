@@ -14,84 +14,9 @@
   sudo apt install brightnessctl
   sudo usermod -aG netdev,video,input $USER
   ```
-
-  ## Installing niri dependencies
-  ```
-  sudo apt install xdg-desktop-portal-wlr xdg-desktop-portal-gnome xdg-desktop-portal-gtk swaybg qimgv
-  sudo apt-get install -y gcc clang libudev-dev libgbm-dev libxkbcommon-dev libegl1-mesa-dev libwayland-dev \
-libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpango1.0-dev libdisplay-info-dev
-  sudo apt install waybar pulseaudio-utils fuzzel mako-notifier swaybg swayidle swaylock slurp grim meson scdoc
-
-  ###Add to .zshenv
-  export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt
-  export SSL_CERT_DIR=/etc/ssl/certs
-
-  curl https://sh.rustup.rs -sSf | sh
-  ```
-
-  ### Building [wayland from source](https://gitlab.freedesktop.org/wayland/wayland)
-  ```
-  meson setup build/ --prefix=/usr/local -Ddocumentation=false
-  ninja -C build/ install
-  ```
-  
-  ### Building from [source](https://niri-wm.github.io/niri/Getting-Started.html#manual-installation)
-  ```
-  git clone https://github.com/niri-wm/niri.git
-  cargo build --release
-
-  sudo cp target/release/niri /usr/local/bin/
-  
-  #
-  sudo cp resources/niri-session /usr/local/bin/
-  sudo cp resources/niri.desktop /usr/local/share/wayland-sessions/
-  sudo cp resources/niri-portals.conf /usr/local/share/xdg-desktop-portal/
-  sudo cp resources/niri.service /etc/systemd/user/
-  sudo cp resources/niri-shutdown.target /etc/systemd/user/
-  
-  
-  # if dinit system
-  sudo cp resources/dinit/niri /etc/dinit.d/user/
-  sudo cp resources/dinit/niri.target /etc/dinit.d/user/
-
-  touch ~/.local/ghostty/config.local
-  
-  sudo install -m 755 target/release/niri /usr/local/bin/niri
-
-  systemctl --user add-wants niri.service waybar.service
-  systemctl --user add-wants niri.service elephant.service
-  systemctl --user add-wants niri.service swayidle.service
-  systemctl --user add-wants niri.service swaybg.service
-
-  # to remove
-  systemctl --user remove-wants niri.service elephant.service
-  ```
-  
-  ## Install [Tokynight Theme](https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme)
-  ```
-  sudo apt install gtk2-engines-murrine 
-  git clone https://github.com/Fausto-Korpsvart/Tokyonight-GTK-Theme.git
-  cd Tokyonight-GTK-Theme/themes
-  ./install.sh
-  ```
-  
   ## Install thunar
   ```
   sudo apt install thunar gvfs gvfs-backends udisks2 tumbler thunar-archive-plugin file-roller
-  ```
-  ## Install wlsunset for night light
-  ```
-  git clone https://github.com/kennylevinsen/wlsunset.git
-  cd wlsunset
-  meson build
-  ninja -C build
-  sudo ninja -C build install
-  ```
-  
-  ## Install monique
-  ```
-  git clone https://github.com/ToRvaLDz/monique.git
-  pipx install .
   ```
   
   ## Install [Nord VPN](https://nordvpn.com/download/linux/?nv_tri=TC_444661881110088_1772699876235&nv_trs=1772699876236_1772700088770_1_112#install-nordvpn)
@@ -102,20 +27,6 @@ libinput-dev libdbus-1-dev libsystemd-dev libseat-dev libpipewire-0.3-dev libpan
   reboot
   ```
   
-  ## Install wiremix, bluetui
-  ```
-  sudo apt install cargo libpipewire-0.3-dev pkg-config clang
-  cargo install wiremix bluetui
-  ```
-
-  ## swaylock-effects
-  ```
-  git clone https://github.com/mortie/swaylock-effects.git
-  cd swaylock-effects
-  meson build
-  ninja -C build
-  sudo ninja -C build install
-  ```
   ## Install gnu-screen-recorder
   ```
   sudo bash -c "$(wget -q https://pacstall.dev/q/install -O -)" 
