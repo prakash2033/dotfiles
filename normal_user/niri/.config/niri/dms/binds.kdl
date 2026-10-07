@@ -117,7 +117,6 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Shift+Right { move-column-right; }
-    Mod+Shift+T { toggle-window-floating; }
     Mod+Shift+Up { move-window-up; }
     Mod+Shift+V { switch-focus-between-floating-and-tiling; }
     Mod+Shift+WheelScrollDown { focus-column-right; }
@@ -126,10 +125,10 @@ binds {
     Mod+W { toggle-column-tabbed-display; }
     Mod+WheelScrollLeft { focus-column-left; }
     Mod+WheelScrollRight { focus-column-right; }
+    Mod+Z { toggle-window-floating; }
     Mod+Shift+P { power-off-monitors; }
     Mod+Shift+E { quit; }
-    Ctrl+T hotkey-overlay-title="Open Terminal" { spawn "ghostty"; }
-    Mod+B hotkey-overlay-title="MS Edge" allow-inhibiting=false { spawn "microsoft-edge-stable" "--profile-directory=Default"; }
+    Mod+B allow-inhibiting=false hotkey-overlay-title="MS Edge" { spawn "microsoft-edge-stable" "--profile-directory=Default"; }
     Mod+Shift+B { spawn "microsoft-edge-stable" "--profile-directory=Profile 1"; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
     Mod+O repeat=false { toggle-overview; }

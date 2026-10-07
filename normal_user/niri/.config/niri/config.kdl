@@ -84,7 +84,7 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
+    focus-follows-mouse max-scroll-amount="0%"
 }
 
 // You can configure outputs by their name, which you can find
@@ -134,12 +134,24 @@ layout {
     //
     // Alternatively, you can override it with a window rule called
     // `draw-border-with-background`.
+    // You can change how the focus ring looks.
+    focus-ring {
+        width 1
+
+        active-gradient from="#33ccffee" to="#00ff99ee" angle=45
+        active-color "#ffffff"
+
+        inactive-color "#505050"
+    }
     border {
         off
         width 4
-        active-color   "#707070"      // Neutral gray
-        inactive-color "#d0d0d0"      // Light gray
-        urgent-color   "#cc4444"      // Softer red
+        // active-color   "#707070"      // Neutral gray
+        // inactive-color "#d0d0d0"      // Light gray
+        // urgent-color   "#cc4444"      // Softer red
+        active-color "#ffc87f"
+        inactive-color "#505050"
+        urgent-color "#9b0000"
     }
     shadow {
         softness 30
@@ -267,6 +279,8 @@ window-rule {
     match app-id="org.gnome.Calculator"
     match app-id="org.gnome.Nautilus"
     match app-id="de.haeckerfelix.Shortwave"
+    match app-id="com.onepassword.OnePassword"
+    match app-id="com.danklinux.dms"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
     match app-id="1password"
@@ -298,6 +312,11 @@ recent-windows {
 }
 
 binds {
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Plus { set-column-width "+10%"; }
+    Mod+Shift+Minus { set-window-height "-10%"; }
+    Mod+Shift+Plus { set-window-height "+10%"; }
+
     Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     section hotkey-overlay-title="Terminal Ghostty (floating)" { spawn "ghostty" "--class=dot.floating.ghostty" "-e" "tmux" "new-session" "-A" "-s" "1"; }
 }
