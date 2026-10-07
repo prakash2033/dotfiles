@@ -266,6 +266,7 @@ window-rule {
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="zoom"
+    match app-id="me.kavishdevar.librepods"
     open-floating true
 }
 window-rule {
