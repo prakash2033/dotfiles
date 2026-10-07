@@ -14,6 +14,16 @@
   sudo apt install brightnessctl
   sudo usermod -aG netdev,video,input $USER
   ```
+  ## Install librepods
+  ```
+  git clone https://github.com/librepods-org/librepods.git
+  mkdir build
+  cd build
+  cmake ..
+  make -j $(nproc)
+  sudo make install # system wide installation
+  ```
+
   ## Install thunar
   ```
   sudo apt install thunar gvfs gvfs-backends udisks2 tumbler thunar-archive-plugin file-roller
