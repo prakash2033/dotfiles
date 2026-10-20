@@ -281,6 +281,7 @@ window-rule {
     match app-id="org.gnome.Nautilus"
     match app-id="de.haeckerfelix.Shortwave"
     match app-id="com.onepassword.OnePassword"
+    match app-id="org.telegram.desktop"
     match app-id="com.danklinux.dms"
     match app-id="Cisco Secure Client"
     match app-id="Sxiv"
