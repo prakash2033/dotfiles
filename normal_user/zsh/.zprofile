@@ -40,6 +40,7 @@ export W3M_HOTKEY_RELOAD='r'
 [ -d "$HOME/.scripts" ] && PATH="$HOME/.scripts:$PATH" 
 [ -d "/usr/sbin" ] && PATH="/usr/sbin:$PATH"
 [ -d "$HOME/Public/gitrepo/diff-so-fancy" ] && PATH="$HOME/Public/gitrepo/diff-so-fancy:$PATH"
+[ -d "$HOME/Public/gitrepo/git-filter-repo" ] && PATH="$HOME/Public/gitrepo/git-filter-repo:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
 [ -d "$HOME/.opencode/bin" ] && PATH="$HOME/.opencode/bin:$PATH"
