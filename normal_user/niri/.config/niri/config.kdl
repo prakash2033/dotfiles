@@ -294,6 +294,15 @@ window-rule {
     default-column-width { proportion 0.6; }
     default-window-height { proportion 0.75; }
 }
+// Keep Edge's Teams sharing indicator on its own workspace.
+workspace "sharing-indicators"
+window-rule {
+    match title=r#"^teams\.cloud\.microsoft is sharing your screen\.$"#
+    open-on-workspace "sharing-indicators"
+    open-focused false
+    open-floating true
+}
+
 debug {
     honor-xdg-activation-with-invalid-serial
 }
