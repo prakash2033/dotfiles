@@ -176,6 +176,8 @@ overview {
 // which may be more convenient to use.
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
+// Apply 250% scaling to external 4K monitors, including after hotplugging.
+spawn-at-startup "sh" "-c" "exec python3 \"${XDG_CONFIG_HOME:-$HOME/.config}/niri/auto-scale-4k.py\""
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
