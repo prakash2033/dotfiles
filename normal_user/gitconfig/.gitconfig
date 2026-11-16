@@ -1,6 +1,7 @@
 [user]
         email = pvishwa1@volvocars.com
         name = Prakash Vishwakarma
+	signingkey = /home/pvishwa1/.ssh/id_rsa.pub
 [pull]
 	rebase = false
 [push]
@@ -11,3 +12,9 @@
 	autocrlf = input
 [safe]
 	directory = /opt/update-vcclc
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
+[gpg "ssh"]
+	allowedSignersFile = /home/pvishwa1/.ssh/allowed_signers

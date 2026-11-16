@@ -254,7 +254,7 @@ grep -o '[a-f0-9]\{7\}' |
 head -1"
 
 _viewGitLogLine="$_gitLogLineToHash | 
-xargs -I % sh -c 'git show --color=always % | 
+xargs -I % sh -c 'git show --show-signature --color=always % 2>&1 |
 diff-so-fancy'"
 
 glog() {  # search for commit with preview and copy hash
